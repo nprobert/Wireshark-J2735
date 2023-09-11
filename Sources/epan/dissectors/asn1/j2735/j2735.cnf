@@ -1,0 +1,112 @@
+# j2735.cnf
+# SAE J2735 conformation file
+
+#.OPT
+PER
+UNALIGNED
+#.END
+
+#.PDU
+MessageFrame
+#.END
+
+#.MAKE_ENUM
+DSRCmsgID
+PartII-Id
+
+#.FIELD_RENAME
+#.END
+
+#.OMIT_ASSIGNMENT
+#.END
+
+#.FN_PARS DSRCmsgID VAL_PTR = &DSRCmsgID
+#.FN_FTR DSRCmsgID
+  col_add_fstr(actx->pinfo->cinfo, COL_INFO, "%s",
+    val_to_str_const(DSRCmsgID, j2735_DSRCmsgID_vals, "Unknown"));
+
+#.FN_PARS MessageFrame/value  FN_VARIANT=_pdu_new  TYPE_REF_FN=dissect_j2735_DSRCmsgID_msg
+
+#.FN_PARS PartII-Id VAL_PTR = &PartII_Id
+
+#.FN_PARS PartIIcontent/partII-Value  FN_VARIANT=_pdu_new  TYPE_REF_FN=dissect_j2735_partii_value
+
+#.ASSIGN_VALUE_TO_TYPE
+mapData                           DSRCmsgID
+signalPhaseAndTimingMessage       DSRCmsgID
+basicSafetyMessage                DSRCmsgID
+commonSafetyRequest               DSRCmsgID
+emergencyVehicleAlert             DSRCmsgID
+intersectionCollision             DSRCmsgID
+nmeaCorrections                   DSRCmsgID
+probeDataManagement               DSRCmsgID
+probeVehicleData                  DSRCmsgID
+roadSideAlert                     DSRCmsgID
+rtcmCorrections                   DSRCmsgID
+signalRequestMessage              DSRCmsgID
+signalStatusMessage               DSRCmsgID
+travelerInformation               DSRCmsgID
+personalSafetyMessage             DSRCmsgID
+roadSafetyMessage                 DSRCmsgID
+roadWeatherMessage                DSRCmsgID
+probeDataConfigMessage            DSRCmsgID
+probeDataReportMessage            DSRCmsgID
+tollAdvertisementMessage          DSRCmsgID
+tollUsageMessage                  DSRCmsgID
+tollUsageAckMessage               DSRCmsgID
+cooperativeControlMessage         DSRCmsgID
+sensorDataSharingMessage          DSRCmsgID
+maneuverSharingAndCoordinatingMessage DSRCmsgID
+roadGeometryAndAttributes         DSRCmsgID
+personalSafetyMessage2            DSRCmsgID
+trafficSignalPhaseAndTiming       DSRCmsgID
+signalControlAndPrioritizationRequest DSRCmsgID
+signalControlAndPrioritizationStatus  DSRCmsgID
+
+vehicleSafetyExt       PartII-Id
+specialVehicleExt      PartII-Id
+supplementalVehicleExt PartII-Id
+
+#.END
+
+#.REGISTER
+
+MapData                           N j2735.msg mapData
+SPAT                              N j2735.msg signalPhaseAndTimingMessage
+BasicSafetyMessage                N j2735.msg basicSafetyMessage
+CommonSafetyRequest               N j2735.msg commonSafetyRequest
+EmergencyVehicleAlert             N j2735.msg emergencyVehicleAlert
+IntersectionCollision             N j2735.msg intersectionCollision
+NMEAcorrections                   N j2735.msg nmeaCorrections
+ProbeDataManagement               N j2735.msg probeDataManagement
+ProbeVehicleData                  N j2735.msg probeVehicleData
+RoadSideAlert                     N j2735.msg roadSideAlert
+RTCMcorrections                   N j2735.msg rtcmCorrections
+SignalRequestMessage              N j2735.msg signalRequestMessage
+SignalStatusMessage               N j2735.msg signalStatusMessage
+TravelerInformation               N j2735.msg travelerInformation
+PersonalSafetyMessage             N j2735.msg personalSafetyMessage
+RoadSafetyMessage                 N j2735.msg roadSafetyMessage
+RoadWeatherMessage                N j2735.msg roadWeatherMessage
+ProbeDataConfigMessage            N j2735.msg probeDataConfigMessage
+ProbeDataReportMessage            N j2735.msg probeDataReportMessage
+TollAdvertisementMessage          N j2735.msg tollAdvertisementMessage
+TollUsageMessage                  N j2735.msg tollUsageMessage
+TollUsageAckMessage               N j2735.msg tollUsageAckMessage
+CooperativeControlMessage         N j2735.msg cooperativeControlMessage
+SensorDataSharingMessage          N j2735.msg sensorDataSharingMessage
+ManeuverSharingAndCoordinatingMessage  N j2735.msg maneuverSharingAndCoordinatingMessage
+RoadGeometryAndAttributes         N j2735.msg roadGeometryAndAttributes
+PersonalSafetyMessage2            N j2735.msg personalSafetyMessage2
+TrafficSignalPhaseAndTiming       N j2735.msg trafficSignalPhaseAndTiming
+SignalControlAndPrioritizationRequest  N j2735.msg signalControlAndPrioritizationRequest
+SignalControlAndPrioritizationStatus   N j2735.msg signalControlAndPrioritizationStatus
+
+VehicleSafetyExtensions           N j2735.partii-id vehicleSafetyExt
+SpecialVehicleExtensions          N j2735.partii-id specialVehicleExt
+SupplementalVehicleExtensions     N j2735.partii-id supplementalVehicleExt
+
+#.END
+
+#.END_OF_CNF
+

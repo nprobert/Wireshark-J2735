@@ -1,0 +1,17 @@
+# Do not modify this file. Changes will be overwritten.
+# Generated automatically by the ASN.1 to Wireshark dissector compiler
+# j2735-exp.cnf
+# asn2wrs.py -u -p j2735 -e J2735_201603DA-wireshark.ASN
+
+#.MODULE
+DSRC     j2735
+REGION   j2735
+AddGrpC  j2735
+AddGrpB  j2735
+NTCIP    j2735
+ITIS     j2735
+#.END
+
+#.TYPE_ATTR
+#.END
+

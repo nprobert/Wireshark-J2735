@@ -1,4 +1,4 @@
-# Wireshark-DSRC
+# Wireshark-J2735
 **Wireshark custom build with DSRC (IEEE 802.11p, WSMP and 1609.2) support and SAE J2735 Dissector**
 
 1. Wireshark builds have moved to Ubuntu 22.04 and 4.1.X development branch
@@ -7,7 +7,7 @@
 4. **Do not use J2735-2022 due to bugs**
 5. IEEE 1609.3 is not fully supported and 1609.4 will probably never be supported
 6. 64-bit only
-7. Does not support C-V2X
+7. Does not support C-V2X yet
 
 **Releases**
 Use latest release build only, using SAE J2735-2023 and above

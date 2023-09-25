@@ -64,6 +64,7 @@ set(ASN1_SRC_DIRS
 	its
 	j2735
 	kerberos
+	kpm-v2
 	lcsap
 	ldap
 	lnpdqp

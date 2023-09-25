@@ -13,15 +13,12 @@ set( ASN_FILE_LIST
 J2735-AddGrpB.asn
 J2735-AddGrpC.asn
 J2735-BasicSafetyMessage-v4.asn
-J2735-Common.asn
 J2735-CommonSafetyRequest.asn
 J2735-Common-v7.asn
 J2735-EmergencyVehicleAlert.asn
 J2735-IntersectionCollision.asn
 J2735-ITIS.asn
-J2735-MapData.asn
 J2735-MapData-v1.asn
-J2735-MessageFrame.asn
 J2735-MessageFrame-v5.asn
 J2735-NMEAcorrections.asn
 J2735-NTCIP.asn
@@ -33,7 +30,6 @@ J2735-RoadSideAlert.asn
 J2735-RTCMcorrections.asn
 J2735-SignalRequestMessage.asn
 J2735-SignalStatusMessage.asn
-J2735-SPAT.asn
 J2735-SPAT-v2.asn
 J2735-TestMessage00.asn
 J2735-TestMessage01.asn
@@ -51,7 +47,6 @@ J2735-TestMessage12.asn
 J2735-TestMessage13.asn
 J2735-TestMessage14.asn
 J2735-TestMessage15.asn
-J2735-TravelerInformation.asn
 J2735-TravelerInformation-v2.asn
 CooperativeControlMsg-v1-ph.asn
 MnvrSharingCoordMsg-v1-ph.asn

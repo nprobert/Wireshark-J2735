@@ -121,6 +121,7 @@ set(CLEAN_ASN1_DISSECTOR_SRC
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-isdn-sup.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-its.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-kerberos.c
+	${CMAKE_CURRENT_SOURCE_DIR}/packet-kpm-v2.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-lcsap.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-ldap.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-lnpdqp.c
@@ -660,6 +661,7 @@ set(DISSECTOR_PUBLIC_HEADERS
 	packet-yppasswd.h
 	packet-ypserv.h
 	packet-ypxfr.h
+	packet-zbee-direct.h
 	packet-zbee.h
 	packet-zbee-aps.h
 	packet-zbee-nwk.h
@@ -1784,6 +1786,7 @@ set(DISSECTOR_SRC
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-rsvp.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-rsync.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-rtacser.c
+	${CMAKE_CURRENT_SOURCE_DIR}/packet-rtag.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-rtcdc.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-rtcp.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-rtitcp.c
@@ -1874,6 +1877,7 @@ set(DISSECTOR_SRC
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-sml.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-smp.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-smpp.c
+	${CMAKE_CURRENT_SOURCE_DIR}/packet-smpte-2110-20.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-smtp.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-sna.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-snaeth.c
@@ -2095,8 +2099,10 @@ set(DISSECTOR_SRC
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-yppasswd.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-ypserv.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-ypxfr.c
+	${CMAKE_CURRENT_SOURCE_DIR}/packet-z21.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-z3950.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-zabbix.c
+	${CMAKE_CURRENT_SOURCE_DIR}/packet-zbee-direct.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-zbee-aps.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-zbee-nwk.c
 	${CMAKE_CURRENT_SOURCE_DIR}/packet-zbee-nwk-gp.c
@@ -2216,6 +2222,7 @@ target_include_directories(dissectors
 		${LIBXML2_INCLUDE_DIRS}
 		${LZ4_INCLUDE_DIRS}
 		${NGHTTP2_INCLUDE_DIRS}
+		${NGHTTP3_INCLUDE_DIRS}
 		${SMI_INCLUDE_DIRS}
 		${SNAPPY_INCLUDE_DIRS}
 		${ZLIB_INCLUDE_DIRS}

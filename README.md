@@ -6,8 +6,11 @@
 3. **Do not use J2735-2022 due to bugs**, use the J2735-2023 release
 4. Supports the IEEE 1609.2, 1609.3-WSMP and SAE J2735-2023 standards
 5. IEEE 1609.3 is not fully supported and 1609.4 will probably never be supported
-6. Does not support C-V2X cellular stack yet
-7. Most C-V2X OBU vendors will output a UDP packet with Non-IP Type Header of 0x88DC followed by WSMP layer
+
+1. Does not support C-V2X cellular stack yet, but most C-V2X OBU vendors will output a special packet:
+2. Sets destination MAC address to all ffs (broadcast)
+3. Sets source MAC address to all 0s for RX packets and all FFs for TX packets
+4. Non-IP Type Header of Ethertype 0x88DC followed by WSMP layer which contains the 1609.2 layer and J2735 data
 
 **Releases**
 Use latest release build only, using SAE J2735-2023 and above

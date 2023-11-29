@@ -35,4 +35,6 @@ For DIY folks, the build for Windows is here: https://www.wireshark.org/docs/wsd
 **Issues**
 1. Does not dissect 3rd party regional extensions to J2735 as this required modified ASN.1 to compiled with
 
-**I cannot release the ASN.1 file for SAE J2735 because it is copyrighted material!  However the J2735 documentation and J2945 ASN.1 are free from SAE here: https://www.sae.org/standards/content/j2735_202309/ and https://www.sae.org/standards/content/j2735ASN_202309/**
+**I cannot release the ASN.1 file for SAE J2735 because it is copyrighted material!  However the J2735 documentation and J2945 ASN.1 are free from SAE here:**
+1. https://www.sae.org/standards/content/j2735_202309/
+2. https://www.sae.org/standards/content/j2735ASN_202309/

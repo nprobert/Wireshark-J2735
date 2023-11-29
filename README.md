@@ -28,11 +28,11 @@ For DIY folks, the build for Windows is here: https://www.wireshark.org/docs/wsd
 
 **Sources**
 1. git clone https://code.wireshark.org/review/wireshark
-2. The files under Sources go into the Wireshark root directory
+2. The files under Sources go into the Wireshark root directory "wireshark"
 3. Please diff the CMakeLists.txt files so that you don't break your build
-4. The SAE J2735 ASN files go into epan/dissectors/asn1/j2735
+4. The SAE J2735 ASN.1 files go into epan/dissectors/asn1/j2735
 
 **Issues**
-1. Does not dissect 3rd party regional extensions to J2735 as this required modified ASN to compiled with
+1. Does not dissect 3rd party regional extensions to J2735 as this required modified ASN.1 to compiled with
 
 **I cannot release the ASN.1 file for SAE J2735 because it is copyrighted material!  However the J2735 documentation and J2945 ASN.1 are free from SAE here: https://www.sae.org/standards/content/j2735_202309/ and https://www.sae.org/standards/content/j2735ASN_202309/**

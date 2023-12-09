@@ -2,15 +2,18 @@
 **Wireshark custom build with DSRC (IEEE 802.11p, WSMP and 1609.2) support and SAE J2735 Dissector**
 1. Wireshark builds have moved to Ubuntu 22.04, Windows 10/11 and 4.3.X development branch, 64-bit only
 2. Wireshark 3.0.0 added support for EU ITS, WSMP and 1609.2 thanks to ETSI and Wireshark Devs
-3. **Do not use J2735-2022 due to bugs**, use the J2735-2023 release
-4. Supports the IEEE 1609.2, 1609.3-WSMP and SAE J2735-2023 standards
-5. IEEE 1609.3 is not fully supported and 1609.4 will probably never be supported
+3. Supports the IEEE 1609.2, 1609.3-WSMP and SAE J2735-2023 standards
+4. IEEE 1609.3 is not fully supported and 1609.4 will probably never be supported
 
 **C-V2X**
 1. Does not support C-V2X cellular stack yet, but most C-V2X OBU vendors will output a special packet:
 2. Sets destination MAC address to all ffs (broadcast)
 3. Sets source MAC address to all 0s for RX packets and all FFs for TX packets
 4. Non-IP Type Header of Ethertype 0x88DC followed by WSMP layer which contains the 1609.2 layer and J2735 data
+
+**Issues**
+1. **Do not use J2735-2022 due to bugs**, use the J2735-2023 release
+2. The J2735-2023 release is backwards incompatible with J2735-2020 using the BSM frame VehicleData
 
 **Releases**
 Use latest release build only, using SAE J2735-2023 and above

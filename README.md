@@ -1,6 +1,6 @@
 # Wireshark-J2735
 **Wireshark custom build with DSRC (IEEE 802.11p, WSMP and 1609.2) support and SAE J2735 Dissector**
-1. Wireshark builds have moved to Ubuntu 22.04, Windows 10/11 and 4.3.X development branch, 64-bit only
+1. Wireshark builds have moved to Ubuntu 24.04, Windows 10/11 and 4.3.X development branch, 64-bit only
 2. Wireshark 3.0.0 added support for EU ITS, WSMP and 1609.2 thanks to ETSI and Wireshark Devs
 3. Supports the IEEE 1609.2, 1609.3-WSMP and SAE J2735-2023 standards
 4. IEEE 1609.3 is not fully supported and 1609.4 will probably never be supported

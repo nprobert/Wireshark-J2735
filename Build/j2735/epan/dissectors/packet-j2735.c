@@ -1,8 +1,11 @@
 /* Do not modify this file. Changes will be overwritten.                      */
 /* Generated automatically by the ASN.1 to Wireshark dissector compiler       */
 /* packet-j2735.c                                                             */
-/* asn2wrs.py -u -L -p j2735 -c ./j2735.cnf -s ./packet-j2735-template -D . -O ../.. ISO17573-EfcDataDictionary.asn J2540-2-J2540ITIS-2024-rel-v1.1.asn J2735-AddGrpB-2024-rel-v1.1.asn J2735-AddGrpC-2024-rel-v1.1.asn J2735-BasicSafetyMessage-2024-rel-v1.1.asn J2735-Common-2024-rel-v1.1.asn J2735-CommonSafetyRequest-2024-rel-v1.1.asn J2735-EmergencyVehicleAlert-2024-rel-v1.1.asn J2735-IntersectionCollision-2024-rel-v1.1.asn J2735-ITIS-2024-rel-v1.1.asn J2735-MapData-2024-rel-v1.1.asn J2735-MessageFrame-2024-rel-v1.1.asn J2735-NMEAcorrections-2024-rel-v1.1.asn J2735-NTCIP-2024-rel-v1.1.asn J2735-PersonalSafetyMessage-2024-rel-v1.1.asn J2735-ProbeDataManagement-2024-rel-v1.1.asn J2735-ProbeVehicleData-2024-rel-v1.1.asn J2735-REGION-2024-rel-v1.1.asn J2735-RoadSideAlert-2024-rel-v1.1.asn J2735-RTCMcorrections-2024-rel-v1.1.asn J2735-SCPR-2024-ph-v1.1.asn J2735-SCPS-2024-ph-v1.1.asn J2735-SignalRequestMessage-2024-rel-v1.1.asn J2735-SignalStatusMessage-2024-rel-v1.1.asn J2735-SPAT-2024-rel-v1.1.asn J2735-TestMessages-2024-rel-v1.1.asn J2735-TrafficLightStatusMessage-2024-rel-v1.1.asn J2735-TravelerInformation-2024-rel-v1.1.asn J2735-TSPAT-2024-ph-v1.1.asn J2945-3-RoadWeatherMessage-2024-rel-v2.1.asn J2945-4-RoadSafetyMessage-2024-rel-v1.1.asn J2945-6-CooperativeControlMessage-2024-rel-v1.1.asn J2945-9-PersonalSafetyMessage2-2024-ph-v1.1.asn J2945-A-RGA-2024-ph-v1.1.asn J2945-C-ProbeDataConfig-2024-rel-v1.1.asn J2945-C-ProbeDataReport-2024-rel-v1.1.asn J3186-ManeuverSharingandCoordinatingMessage-2024-rel-v1.1.asn J3217-R-RoadUserChargingConfigMsg-2024-rel-v1.1.asn J3217-R-RoadUserChargingReportMsg-2024-rel-v1.1.asn J3217-TollAdvertisementMsg-2024-rel-v1.1.asn J3217-TollUsageAckMsg-2024-rel-v1.1.asn J3217-TollUsageMsg-2024-rel-v1.1.asn J3224-SensorDataSharingMessage-2024-rel-v1.1.asn */
+/* asn2wrs.py -u -p j2735 -c j2735.cnf -s ./packet-j2735-template -D . -O ../.. ISO17573-EfcDataDictionary.asn J2540-2-J2540ITIS-2024-rel-v1.1.asn J2735-AddGrpB-2024-rel-v1.1.asn J2735-AddGrpC-2024-rel-v1.1.asn J2735-BasicSafetyMessage-2024-rel-v1.1.1.asn J2735-Common-2024-rel-v1.1.asn J2735-CommonSafetyRequest-2024-rel-v1.1.asn J2735-EmergencyVehicleAlert-2024-rel-v1.1.asn J2735-ITIS-2024-rel-v1.1.asn J2735-IntersectionCollision-2024-rel-v1.1.asn J2735-MapData-2024-rel-v1.1.asn J2735-MessageFrame-2024-rel-v1.1.1.asn J2735-NMEAcorrections-2024-rel-v1.1.asn J2735-NTCIP-2024-rel-v1.1.asn J2735-PersonalSafetyMessage-2024-rel-v1.1.asn J2735-ProbeDataManagement-2024-rel-v1.1.asn J2735-ProbeVehicleData-2024-rel-v1.1.asn J2735-REGION-2024-rel-v1.1.asn J2735-RTCMcorrections-2024-rel-v1.1.asn J2735-RoadSideAlert-2024-rel-v1.1.asn J2735-SCPR-2024-ph-v1.1.asn J2735-SCPS-2024-ph-v1.1.asn J2735-SPAT-2024-rel-v1.1.asn J2735-SignalRequestMessage-2024-rel-v1.1.asn J2735-SignalStatusMessage-2024-rel-v1.1.asn J2735-TSPAT-2024-ph-v1.1.asn J2735-TestMessages-2024-rel-v1.1.asn J2735-TrafficLightStatusMessage-2024-rel-v1.1.asn J2735-TravelerInformation-2024-rel-v1.1.asn J2945-3-RoadWeatherMessage-2024-rel-v2.1.asn J2945-4-RoadSafetyMessage-2024-rel-v1.1.1.asn J2945-6-CooperativeControlMessage-2024-rel-v1.1.1.asn J2945-9-PersonalSafetyMessage2-2024-ph-v1.1.asn J2945-A-RGA-2024-ph-v1.1.asn J2945-C-ProbeDataConfig-2024-rel-v1.1.asn J2945-C-ProbeDataReport-2024-rel-v1.1.asn J3186-ManeuverSharingandCoordinatingMessage-2024-rel-v1.1.asn J3217-R-RoadUserChargingConfigMsg-2024-rel-v1.1.1.asn J3217-R-RoadUserChargingReportMsg-2024-rel-v1.1.asn J3217-TollAdvertisementMsg-2024-rel-v1.1.asn J3217-TollUsageAckMsg-2024-rel-v1.1.asn J3217-TollUsageMsg-2024-rel-v1.1.asn J3224-SensorDataSharingMessage-2024-rel-v1.1.asn */
 
+/* Input file: packet-j2735-template.c */
+
+#line 1 "./asn1/j2735/packet-j2735-template.c"
 /* packet-j2735.c
  *
  *
@@ -45,6 +48,9 @@ static dissector_handle_t j2735_handle;
 
 /* Initialize the protocol and registered fields */
 int proto_j2735 = -1;
+
+/*--- Included file: packet-j2735-hf.c ---*/
+#line 1 "./asn1/j2735/packet-j2735-hf.c"
 static int hf_j2735_BasicSafetyMessage_PDU;       /* BasicSafetyMessage */
 static int hf_j2735_SpecialVehicleExtensions_PDU;  /* SpecialVehicleExtensions */
 static int hf_j2735_SupplementalVehicleExtensions_PDU;  /* SupplementalVehicleExtensions */
@@ -58,15 +64,15 @@ static int hf_j2735_NMEAcorrections_PDU;          /* NMEAcorrections */
 static int hf_j2735_PersonalSafetyMessage_PDU;    /* PersonalSafetyMessage */
 static int hf_j2735_ProbeDataManagement_PDU;      /* ProbeDataManagement */
 static int hf_j2735_ProbeVehicleData_PDU;         /* ProbeVehicleData */
-static int hf_j2735_RoadSideAlert_PDU;            /* RoadSideAlert */
 static int hf_j2735_RTCMcorrections_PDU;          /* RTCMcorrections */
+static int hf_j2735_RoadSideAlert_PDU;            /* RoadSideAlert */
 static int hf_j2735_SignalControlAndPrioritizationRequest_PDU;  /* SignalControlAndPrioritizationRequest */
 static int hf_j2735_SignalControlAndPrioritizationStatus_PDU;  /* SignalControlAndPrioritizationStatus */
+static int hf_j2735_SPAT_PDU;                     /* SPAT */
 static int hf_j2735_SignalRequestMessage_PDU;     /* SignalRequestMessage */
 static int hf_j2735_SignalStatusMessage_PDU;      /* SignalStatusMessage */
-static int hf_j2735_SPAT_PDU;                     /* SPAT */
-static int hf_j2735_TravelerInformation_PDU;      /* TravelerInformation */
 static int hf_j2735_TrafficSignalPhaseAndTiming_PDU;  /* TrafficSignalPhaseAndTiming */
+static int hf_j2735_TravelerInformation_PDU;      /* TravelerInformation */
 static int hf_j2735_RoadWeatherMessage_PDU;       /* RoadWeatherMessage */
 static int hf_j2735_RoadSafetyMessage_PDU;        /* RoadSafetyMessage */
 static int hf_j2735_CooperativeControlMessage_PDU;  /* CooperativeControlMessage */
@@ -79,10 +85,10 @@ static int hf_j2735_TollAdvertisementMessage_PDU;  /* TollAdvertisementMessage *
 static int hf_j2735_TollUsageAckMessage_PDU;      /* TollUsageAckMessage */
 static int hf_j2735_TollUsageMessage_PDU;         /* TollUsageMessage */
 static int hf_j2735_SensorDataSharingMessage_PDU;  /* SensorDataSharingMessage */
-static int hf_j2735_gnssLon;                      /* LongitudeX */
-static int hf_j2735_gnssLat;                      /* LatitudeX */
-static int hf_j2735_longitude;                    /* LongitudeX */
-static int hf_j2735_latitude;                     /* LatitudeX */
+static int hf_j2735_gnssLon;                      /* LongitudeEfc */
+static int hf_j2735_gnssLat;                      /* LatitudeEfc */
+static int hf_j2735_longitude;                    /* LongitudeEfc */
+static int hf_j2735_latitude;                     /* LatitudeEfc */
 static int hf_j2735_altitude;                     /* Altitude */
 static int hf_j2735_axleNumber;                   /* Int1Unsigned */
 static int hf_j2735_maxLadenWeightOnAxle;         /* Int2Unsigned */
@@ -269,12 +275,16 @@ static int hf_j2735_adviceInstructionsMandatory;  /* AdviceInstructionsMandatory
 static int hf_j2735_laneRoadway;                  /* LaneRoadway */
 static int hf_j2735_alternateRoute;               /* AlternateRoute */
 static int hf_j2735_transitMode;                  /* TransitMode */
-static int hf_j2735_vehicleGroupAffected;         /* VehicleGroupAffectedValues */
+static int hf_j2735_vehicleGroupAffected;         /* VehicleGroupAffectedDef */
 static int hf_j2735_travelerGroupAffected;        /* TravelerGroupAffected */
-static int hf_j2735_responderGroupAffected;       /* ResponderGroupAffectedValues */
-static int hf_j2735_incidentResponseEquipment;    /* IncidentResponseEquipmentValues */
+static int hf_j2735_responderGroupAffected;       /* ResponderGroupAffected */
+static int hf_j2735_incidentResponseEquipment;    /* IncidentResponseEquipmentJ2540 */
 static int hf_j2735_transitOperations;            /* TransitOperations */
 static int hf_j2735_regulatorySigns;              /* RegulatoryAndWarningSigns */
+static int hf_j2735_ITIScodesAndTextJ2540_item;   /* ITIScodesAndTextJ2540_item */
+static int hf_j2735_item;                         /* T_item */
+static int hf_j2735_itis;                         /* ITIScodesJ2540 */
+static int hf_j2735_text;                         /* ITIStextJ2540 */
 static int hf_j2735_d;                            /* DegreesLat */
 static int hf_j2735_m;                            /* MinutesAngle */
 static int hf_j2735_s;                            /* SecondsAngle */
@@ -348,18 +358,18 @@ static int hf_j2735_rtcmHeader;                   /* RTCMheader */
 static int hf_j2735_msgs;                         /* RTCMmessageList */
 static int hf_j2735_vehicleAlerts;                /* EmergencyDetails */
 static int hf_j2735_description_02;               /* EventDescription */
-static int hf_j2735_deprecated;                   /* TrailerData */
+static int hf_j2735_doNotUse;                     /* TrailerData */
 static int hf_j2735_SpeedProfileMeasurementList_item;  /* SpeedProfileMeasurement */
 static int hf_j2735_speedReports;                 /* SpeedProfileMeasurementList */
 static int hf_j2735_classification;               /* BasicVehicleClass */
 static int hf_j2735_classDetails;                 /* VehicleClassification */
 static int hf_j2735_vehicleData;                  /* VehicleData */
-static int hf_j2735_deprecated1;                  /* WeatherReport */
-static int hf_j2735_deprecated2;                  /* WeatherProbe */
-static int hf_j2735_deprecated3;                  /* ObstacleDetection */
+static int hf_j2735_doNotUse1;                    /* WeatherReport */
+static int hf_j2735_doNotUse2;                    /* WeatherProbe */
+static int hf_j2735_doNotUse3;                    /* ObstacleDetection */
 static int hf_j2735_status;                       /* DisabledVehicle */
-static int hf_j2735_deprecated4;                  /* SpeedProfile */
-static int hf_j2735_deprecated5;                  /* RTCMPackage */
+static int hf_j2735_doNotUse4;                    /* SpeedProfile */
+static int hf_j2735_doNotUse5;                    /* RTCMPackage */
 static int hf_j2735_fhwaVehicleClass;             /* RptVehicleClass */
 static int hf_j2735_trailers;                     /* TrailersJ2945Slash1B */
 static int hf_j2735_schoolBus;                    /* SchoolBusJ2945Slash1C */
@@ -385,11 +395,11 @@ static int hf_j2735_rearWheelOffset;              /* Offset_B12 */
 static int hf_j2735_crumbData;                    /* TrailerHistoryPointList */
 static int hf_j2735_bumpers;                      /* BumperHeights */
 static int hf_j2735_mass_01;                      /* VehicleMass */
-static int hf_j2735_deprecated_01;                /* TrailerWeight */
+static int hf_j2735_doNotUse_01;                  /* TrailerWeight */
 static int hf_j2735_trailerPresent;               /* BOOLEAN */
 static int hf_j2735_pivotPoint;                   /* PivotPointDescription */
 static int hf_j2735_axles_01;                     /* Axles */
-static int hf_j2735_rollAngle;                    /* INTEGER_M90_90 */
+static int hf_j2735_leanAngle;                    /* INTEGER_M90_90 */
 static int hf_j2735_airTemp;                      /* AmbientAirTemperature */
 static int hf_j2735_airPressure;                  /* AmbientAirPressure */
 static int hf_j2735_rainRates;                    /* WiperSet */
@@ -603,15 +613,15 @@ static int hf_j2735_RequestedItemList_item;       /* RequestedItem */
 static int hf_j2735_rsaMsg;                       /* RoadSideAlert */
 static int hf_j2735_details;                      /* EmergencyDetails */
 static int hf_j2735_basicType;                    /* VehicleType */
+static int hf_j2735_ITIScodesAndText_item;        /* ITIScodesAndText_item */
+static int hf_j2735_item_01;                      /* T_item_01 */
+static int hf_j2735_itis_01;                      /* ITIScodes */
+static int hf_j2735_text_01;                      /* ITIStext */
 static int hf_j2735_partOne;                      /* BSMcoreData */
 static int hf_j2735_path;                         /* PathHistory */
 static int hf_j2735_intersectionID;               /* IntersectionReferenceID */
 static int hf_j2735_laneNumber;                   /* ApproachOrLane */
 static int hf_j2735_eventFlag;                    /* VehicleEventFlags */
-static int hf_j2735_ITIScodesAndText_item;        /* ITIScodesAndText_item */
-static int hf_j2735_item;                         /* T_item */
-static int hf_j2735_itis;                         /* ITIScodes */
-static int hf_j2735_text;                         /* ITIStext */
 static int hf_j2735_layerType;                    /* LayerType */
 static int hf_j2735_layerID;                      /* LayerID */
 static int hf_j2735_intersections;                /* IntersectionGeometryList */
@@ -791,40 +801,12 @@ static int hf_j2735_vehicleIdent;                 /* VehicleIdent */
 static int hf_j2735_j1939data;                    /* J1939data */
 static int hf_j2735_weatherReport;                /* T_weatherReport */
 static int hf_j2735_gnssStatus;                   /* GNSSstatus */
-static int hf_j2735_position_01;                  /* FullPositionVector */
-static int hf_j2735_furtherInfoID;                /* FurtherInfoID */
 static int hf_j2735_rev_01;                       /* RTCM_Revision */
 static int hf_j2735_anchorPoint;                  /* FullPositionVector */
-static int hf_j2735_sequenceNumber;               /* MsgCount */
-static int hf_j2735_requests_01;                  /* SignalRequestList */
-static int hf_j2735_requestor;                    /* RequestorDescription */
-static int hf_j2735_type_10;                      /* RequestorType */
-static int hf_j2735_position_02;                  /* RequestorPositionVector */
-static int hf_j2735_routeName;                    /* DescriptiveName */
-static int hf_j2735_transitStatus;                /* TransitVehicleStatus */
-static int hf_j2735_transitOccupancy;             /* TransitVehicleOccupancy */
-static int hf_j2735_transitSchedule;              /* DeltaTime */
-static int hf_j2735_heading_04;                   /* Angle */
-static int hf_j2735_SignalRequestList_item;       /* SignalRequestPackage */
-static int hf_j2735_request_01;                   /* SignalRequest */
-static int hf_j2735_minute_02;                    /* MinuteOfTheYear */
-static int hf_j2735_duration;                     /* DSecond */
-static int hf_j2735_requestID;                    /* RequestID */
-static int hf_j2735_requestType;                  /* PriorityRequestType */
-static int hf_j2735_inBoundLane;                  /* IntersectionAccessPoint */
-static int hf_j2735_outBoundLane;                 /* IntersectionAccessPoint */
-static int hf_j2735_status_02;                    /* SignalStatusList */
-static int hf_j2735_request_02;                   /* RequestID */
-static int hf_j2735_typeData;                     /* RequestorType */
-static int hf_j2735_SignalStatusList_item;        /* SignalStatus */
-static int hf_j2735_SignalStatusPackageList_item;  /* SignalStatusPackage */
-static int hf_j2735_requester;                    /* SignalRequesterInfo */
-static int hf_j2735_inboundOn;                    /* IntersectionAccessPoint */
-static int hf_j2735_outboundOn;                   /* IntersectionAccessPoint */
-static int hf_j2735_status_03;                    /* PrioritizationResponseStatus */
-static int hf_j2735_sigStatus;                    /* SignalStatusPackageList */
+static int hf_j2735_position_01;                  /* FullPositionVector */
+static int hf_j2735_furtherInfoID;                /* FurtherInfoID */
 static int hf_j2735_intersections_01;             /* IntersectionStateList */
-static int hf_j2735_type_11;                      /* AdvisorySpeedType */
+static int hf_j2735_type_10;                      /* AdvisorySpeedType */
 static int hf_j2735_speed_04;                     /* SpeedAdvice */
 static int hf_j2735_confidence_04;                /* SpeedConfidence */
 static int hf_j2735_distance;                     /* ZoneLength */
@@ -835,7 +817,7 @@ static int hf_j2735_availableStorageLength;       /* ZoneLength */
 static int hf_j2735_waitOnStop;                   /* WaitOnStopline */
 static int hf_j2735_pedBicycleDetect;             /* PedestrianBicycleDetect */
 static int hf_j2735_EnabledLaneList_item;         /* LaneID */
-static int hf_j2735_status_04;                    /* IntersectionStatusObject */
+static int hf_j2735_status_02;                    /* IntersectionStatusObject */
 static int hf_j2735_moy;                          /* MinuteOfTheYear */
 static int hf_j2735_timeStamp_01;                 /* DSecond */
 static int hf_j2735_enabledLanes;                 /* EnabledLaneList */
@@ -855,6 +837,34 @@ static int hf_j2735_minEndTime_01;                /* TimeMark */
 static int hf_j2735_maxEndTime_01;                /* TimeMark */
 static int hf_j2735_likelyTime_01;                /* TimeMark */
 static int hf_j2735_nextTime_01;                  /* TimeMark */
+static int hf_j2735_sequenceNumber;               /* MsgCount */
+static int hf_j2735_requests_01;                  /* SignalRequestList */
+static int hf_j2735_requestor;                    /* RequestorDescription */
+static int hf_j2735_type_11;                      /* RequestorType */
+static int hf_j2735_position_02;                  /* RequestorPositionVector */
+static int hf_j2735_routeName;                    /* DescriptiveName */
+static int hf_j2735_transitStatus;                /* TransitVehicleStatus */
+static int hf_j2735_transitOccupancy;             /* TransitVehicleOccupancy */
+static int hf_j2735_transitSchedule;              /* DeltaTime */
+static int hf_j2735_heading_04;                   /* Angle */
+static int hf_j2735_SignalRequestList_item;       /* SignalRequestPackage */
+static int hf_j2735_request_01;                   /* SignalRequest */
+static int hf_j2735_minute_02;                    /* MinuteOfTheYear */
+static int hf_j2735_duration;                     /* DSecond */
+static int hf_j2735_requestID;                    /* RequestID */
+static int hf_j2735_requestType;                  /* PriorityRequestType */
+static int hf_j2735_inBoundLane;                  /* IntersectionAccessPoint */
+static int hf_j2735_outBoundLane;                 /* IntersectionAccessPoint */
+static int hf_j2735_status_03;                    /* SignalStatusList */
+static int hf_j2735_request_02;                   /* RequestID */
+static int hf_j2735_typeData;                     /* RequestorType */
+static int hf_j2735_SignalStatusList_item;        /* SignalStatus */
+static int hf_j2735_SignalStatusPackageList_item;  /* SignalStatusPackage */
+static int hf_j2735_requester;                    /* SignalRequesterInfo */
+static int hf_j2735_inboundOn;                    /* IntersectionAccessPoint */
+static int hf_j2735_outboundOn;                   /* IntersectionAccessPoint */
+static int hf_j2735_status_04;                    /* PrioritizationResponseStatus */
+static int hf_j2735_sigStatus;                    /* SignalStatusPackageList */
 static int hf_j2735_header;                       /* Header */
 static int hf_j2735_traffiLightID;                /* TrafficLightID */
 static int hf_j2735_operationStatus;              /* TrafficLightOperationStatus */
@@ -893,14 +903,14 @@ static int hf_j2735_geometry;                     /* GeometricProjection */
 static int hf_j2735_oldRegion;                    /* ValidRegion */
 static int hf_j2735_circle;                       /* Circle */
 static int hf_j2735_ExitService_item;             /* ExitService_item */
-static int hf_j2735_item_01;                      /* T_item_01 */
-static int hf_j2735_text_01;                      /* ITIStextPhrase */
-static int hf_j2735_GenericSignage_item;          /* GenericSignage_item */
 static int hf_j2735_item_02;                      /* T_item_02 */
-static int hf_j2735_SpeedLimit_item;              /* SpeedLimit_item */
+static int hf_j2735_text_02;                      /* ITIStextPhrase */
+static int hf_j2735_GenericSignage_item;          /* GenericSignage_item */
 static int hf_j2735_item_03;                      /* T_item_03 */
-static int hf_j2735_WorkZone_item;                /* WorkZone_item */
+static int hf_j2735_SpeedLimit_item;              /* SpeedLimit_item */
 static int hf_j2735_item_04;                      /* T_item_04 */
+static int hf_j2735_WorkZone_item;                /* WorkZone_item */
+static int hf_j2735_item_05;                      /* T_item_05 */
 static int hf_j2735_lon_03;                       /* OffsetLL_B12 */
 static int hf_j2735_lat_04;                       /* OffsetLL_B12 */
 static int hf_j2735_lon_04;                       /* OffsetLL_B14 */
@@ -1118,6 +1128,9 @@ static int hf_j2735_alongPath;                    /* Offset3D */
 static int hf_j2735_inCoordinateFrame;            /* Offset3D */
 static int hf_j2735_RSMPolygon_item;              /* NodePointLLE */
 static int hf_j2735_urlLink;                      /* IA5String_SIZE_1_500 */
+static int hf_j2735_partII_01;                    /* SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent */
+static int hf_j2735_partII_item_01;               /* CCMPartIIcontent */
+static int hf_j2735_partII_Id_01;                 /* CCMPartII_Id */
 static int hf_j2735_partII_Value_01;              /* T_partII_Value_01 */
 static int hf_j2735_longCntrlState;               /* LongitudinalControlState */
 static int hf_j2735_targetId;                     /* TemporaryID */
@@ -1382,7 +1395,9 @@ static int hf_j2735_workZoneCharDetect_01;        /* NULL */
 static int hf_j2735_inclWeatherDetect_01;         /* NULL */
 static int hf_j2735_railrdCrossActiv;             /* NULL */
 static int hf_j2735_drawBridgeActiv;              /* NULL */
+static int hf_j2735_meanVerticalVariation_01;     /* MeanVariationC */
 static int hf_j2735_verticalVariationStdDev_01;   /* StdDev */
+static int hf_j2735_meanHorizontalVariation_01;   /* MeanVariationC */
 static int hf_j2735_horizontalVariationStdDev_01;  /* StdDev */
 static int hf_j2735_intersectionID_01;            /* IntersectionID */
 static int hf_j2735_trafficMetrics;               /* RptTrafficMetrics */
@@ -1686,8 +1701,6 @@ static int hf_j2735_yaw_02;                       /* YawDetected */
 static int hf_j2735_pitchConfidence;              /* HeadingConfidence */
 static int hf_j2735_rollConfidence;               /* HeadingConfidence */
 static int hf_j2735_yawConfidence;                /* HeadingConfidence */
-static int hf_j2735_pitchRate_01;                 /* PitchRateX */
-static int hf_j2735_rollRate_01;                  /* RollRateX */
 static int hf_j2735_pitchRateConfidence;          /* PitchRateConfidence */
 static int hf_j2735_rollRateConfidence;           /* RollRateConfidence */
 static int hf_j2735_vehicleWidthConfidence;       /* SizeValueConfidence */
@@ -1882,12 +1895,6 @@ static int hf_j2735_UserSizeAndBehaviour_smallStature;
 static int hf_j2735_UserSizeAndBehaviour_largeStature;
 static int hf_j2735_UserSizeAndBehaviour_erraticMoving;
 static int hf_j2735_UserSizeAndBehaviour_slowMoving;
-static int hf_j2735_TransitVehicleStatus_loading;
-static int hf_j2735_TransitVehicleStatus_anADAuse;
-static int hf_j2735_TransitVehicleStatus_aBikeLoad;
-static int hf_j2735_TransitVehicleStatus_doorOpen;
-static int hf_j2735_TransitVehicleStatus_charging;
-static int hf_j2735_TransitVehicleStatus_atStopLine;
 static int hf_j2735_IntersectionStatusObject_manualControlIsEnabled;
 static int hf_j2735_IntersectionStatusObject_stopTimeIsActivated;
 static int hf_j2735_IntersectionStatusObject_failureFlash;
@@ -1902,6 +1909,12 @@ static int hf_j2735_IntersectionStatusObject_recentMAPmessageUpdate;
 static int hf_j2735_IntersectionStatusObject_recentChangeInMAPassignedLanesIDsUsed;
 static int hf_j2735_IntersectionStatusObject_noValidMAPisAvailableAtThisTime;
 static int hf_j2735_IntersectionStatusObject_noValidSPATisAvailableAtThisTime;
+static int hf_j2735_TransitVehicleStatus_loading;
+static int hf_j2735_TransitVehicleStatus_anADAuse;
+static int hf_j2735_TransitVehicleStatus_aBikeLoad;
+static int hf_j2735_TransitVehicleStatus_doorOpen;
+static int hf_j2735_TransitVehicleStatus_charging;
+static int hf_j2735_TransitVehicleStatus_atStopLine;
 static int hf_j2735_TrafficLightControllerStatus_conflict;
 static int hf_j2735_TrafficLightControllerStatus_center_comm_error;
 static int hf_j2735_TrafficLightControllerStatus_scu_comm_error;
@@ -1927,8 +1940,14 @@ static int hf_j2735_CCMFaultMode_serviceBrkCtlFault;
 static int hf_j2735_CCMFaultMode_transRetarderFault;
 static int hf_j2735_CCMFaultMode_engineCtlFault;
 
+/*--- End of included file: packet-j2735-hf.c ---*/
+#line 44 "./asn1/j2735/packet-j2735-template.c"
+
 /* Initialize the subtree pointers */
 static int ett_j2735 = -1;
+
+/*--- Included file: packet-j2735-ett.c ---*/
+#line 1 "./asn1/j2735/packet-j2735-ett.c"
 static gint ett_j2735_AbsolutePosition2d;
 static gint ett_j2735_AbsolutePosition3d;
 static gint ett_j2735_AxleWeightLimit;
@@ -1937,7 +1956,7 @@ static gint ett_j2735_DateCompact;
 static gint ett_j2735_DieselEmissionValues;
 static gint ett_j2735_DriverCharacteristics;
 static gint ett_j2735_Distance;
-static gint ett_j2735_DurationX;
+static gint ett_j2735_DurationEfc;
 static gint ett_j2735_EngineDetails;
 static gint ett_j2735_ExhaustEmissionValues;
 static gint ett_j2735_NumberOfAxles;
@@ -1981,6 +2000,9 @@ static gint ett_j2735_DetectedChargeObject;
 static gint ett_j2735_TariffClassDescription;
 static gint ett_j2735_VehicleDescription;
 static gint ett_j2735_ITISEventType;
+static gint ett_j2735_ITIScodesAndTextJ2540;
+static gint ett_j2735_ITIScodesAndTextJ2540_item;
+static gint ett_j2735_T_item;
 static gint ett_j2735_LatitudeDMS2;
 static gint ett_j2735_LongitudeDMS2;
 static gint ett_j2735_Node_LLdms_48b;
@@ -2109,11 +2131,11 @@ static gint ett_j2735_VerticalAccelerationThreshold;
 static gint ett_j2735_CommonSafetyRequest;
 static gint ett_j2735_RequestedItemList;
 static gint ett_j2735_EmergencyVehicleAlert;
-static gint ett_j2735_IntersectionCollision;
-static gint ett_j2735_ApproachOrLane;
 static gint ett_j2735_ITIScodesAndText;
 static gint ett_j2735_ITIScodesAndText_item;
-static gint ett_j2735_T_item;
+static gint ett_j2735_T_item_01;
+static gint ett_j2735_IntersectionCollision;
+static gint ett_j2735_ApproachOrLane;
 static gint ett_j2735_MapData;
 static gint ett_j2735_ConnectingLane;
 static gint ett_j2735_Connection;
@@ -2181,21 +2203,8 @@ static gint ett_j2735_T_accelSets;
 static gint ett_j2735_T_object;
 static gint ett_j2735_T_vehicleData;
 static gint ett_j2735_T_weatherReport;
-static gint ett_j2735_RoadSideAlert;
 static gint ett_j2735_RTCMcorrections;
-static gint ett_j2735_SignalRequestMessage;
-static gint ett_j2735_RequestorDescription;
-static gint ett_j2735_RequestorPositionVector;
-static gint ett_j2735_SignalRequestList;
-static gint ett_j2735_SignalRequestPackage;
-static gint ett_j2735_SignalRequest;
-static gint ett_j2735_TransitVehicleStatus;
-static gint ett_j2735_SignalStatusMessage;
-static gint ett_j2735_SignalRequesterInfo;
-static gint ett_j2735_SignalStatusList;
-static gint ett_j2735_SignalStatusPackageList;
-static gint ett_j2735_SignalStatusPackage;
-static gint ett_j2735_SignalStatus;
+static gint ett_j2735_RoadSideAlert;
 static gint ett_j2735_SPAT;
 static gint ett_j2735_AdvisorySpeed;
 static gint ett_j2735_AdvisorySpeedList;
@@ -2210,6 +2219,19 @@ static gint ett_j2735_MovementList;
 static gint ett_j2735_MovementState;
 static gint ett_j2735_TimeChangeDetails;
 static gint ett_j2735_IntersectionStatusObject;
+static gint ett_j2735_SignalRequestMessage;
+static gint ett_j2735_RequestorDescription;
+static gint ett_j2735_RequestorPositionVector;
+static gint ett_j2735_SignalRequestList;
+static gint ett_j2735_SignalRequestPackage;
+static gint ett_j2735_SignalRequest;
+static gint ett_j2735_TransitVehicleStatus;
+static gint ett_j2735_SignalStatusMessage;
+static gint ett_j2735_SignalRequesterInfo;
+static gint ett_j2735_SignalStatusList;
+static gint ett_j2735_SignalStatusPackageList;
+static gint ett_j2735_SignalStatusPackage;
+static gint ett_j2735_SignalStatus;
 static gint ett_j2735_TestMessage00;
 static gint ett_j2735_TestMessage01;
 static gint ett_j2735_TestMessage02;
@@ -2239,16 +2261,16 @@ static gint ett_j2735_T_description;
 static gint ett_j2735_GeometricProjection;
 static gint ett_j2735_ExitService;
 static gint ett_j2735_ExitService_item;
-static gint ett_j2735_T_item_01;
+static gint ett_j2735_T_item_02;
 static gint ett_j2735_GenericSignage;
 static gint ett_j2735_GenericSignage_item;
-static gint ett_j2735_T_item_02;
+static gint ett_j2735_T_item_03;
 static gint ett_j2735_SpeedLimit;
 static gint ett_j2735_SpeedLimit_item;
-static gint ett_j2735_T_item_03;
+static gint ett_j2735_T_item_04;
 static gint ett_j2735_WorkZone;
 static gint ett_j2735_WorkZone_item;
-static gint ett_j2735_T_item_04;
+static gint ett_j2735_T_item_05;
 static gint ett_j2735_Node_LL_24B;
 static gint ett_j2735_Node_LL_28B;
 static gint ett_j2735_Node_LL_32B;
@@ -2337,7 +2359,8 @@ static gint ett_j2735_RegionUncertainty;
 static gint ett_j2735_RSMPolygon;
 static gint ett_j2735_VisualLink;
 static gint ett_j2735_CooperativeControlMessage;
-static gint ett_j2735_CCM_PartIIcontent;
+static gint ett_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent;
+static gint ett_j2735_CCMPartIIcontent;
 static gint ett_j2735_LightVehicleCCMExtensions;
 static gint ett_j2735_HeavyTruckCCMExtensions;
 static gint ett_j2735_AccelTimeConstant;
@@ -2498,6 +2521,9 @@ static gint ett_j2735_VehicleSizeConfidence;
 static gint ett_j2735_ObstacleSize;
 static gint ett_j2735_ObstacleSizeConfidence;
 
+/*--- End of included file: packet-j2735-ett.c ---*/
+#line 48 "./asn1/j2735/packet-j2735-template.c"
+
 /* Global variables */
 static guint32 DSRCmsgID;
 static guint32 PartII_Id;
@@ -2506,13 +2532,13 @@ static dissector_table_t dsrcmsgid_dissector_table;
 static dissector_table_t j2735_partii_id_dissector_table;
 
 
+/*--- Included file: packet-j2735-val.h ---*/
+#line 1 "./asn1/j2735/packet-j2735-val.h"
+
 typedef enum _PartII_Id_enum {
   vehicleSafetyExt =   0,
   specialVehicleExt =   1,
-  supplementalVehicleExt =   2,
-  vehicleSafetyCCMExt =   0,
-  lightVehicleCCMExt =   1,
-  heavyTruckCCMExt =   2
+  supplementalVehicleExt =   2
 } PartII_Id_enum;
 
 typedef enum _DSRCmsgID_enum {
@@ -2585,6 +2611,9 @@ typedef enum _DSRCmsgID_enum {
   testMessage15 = 255
 } DSRCmsgID_enum;
 
+/*--- End of included file: packet-j2735-val.h ---*/
+#line 57 "./asn1/j2735/packet-j2735-template.c"
+
 static int dissect_j2735_DSRCmsgID_msg(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void *data _U_)
 {
     return (dissector_try_uint_new(dsrcmsgid_dissector_table, DSRCmsgID, tvb, pinfo, tree, FALSE, NULL)) ? tvb_captured_length(tvb) : 0;
@@ -2595,6 +2624,9 @@ static int dissect_j2735_partii_value(tvbuff_t *tvb, packet_info *pinfo, proto_t
     return (dissector_try_uint_new(j2735_partii_id_dissector_table, PartII_Id, tvb, pinfo, tree, FALSE, NULL)) ? tvb_captured_length(tvb) : 0;
 }
 
+
+/*--- Included file: packet-j2735-fn.c ---*/
+#line 1 "./asn1/j2735/packet-j2735-fn.c"
 
 
 static int
@@ -2661,6 +2693,26 @@ static int
 dissect_j2735_Int4Signed(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             G_MININT32, 2147483647U, NULL, FALSE);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_Int8Unsigned(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer_64b(tvb, offset, actx, tree, hf_index,
+                                                            0U, G_GUINT64_CONSTANT(9223372036854775807), NULL, FALSE);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_Int8Signed(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer_64b(tvb, offset, actx, tree, hf_index,
+                                                            G_GINT64_CONSTANT(-9223372036854775808), G_GUINT64_CONSTANT(9223372036854775807), NULL, FALSE);
 
   return offset;
 }
@@ -2959,7 +3011,7 @@ dissect_j2735_IssuerIdentifier(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *ac
 
 
 static int
-dissect_j2735_LatitudeX(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_LatitudeEfc(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_j2735_Int4Signed(tvb, offset, actx, tree, hf_index);
 
   return offset;
@@ -3009,7 +3061,7 @@ dissect_j2735_LocationClassId(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *act
 
 
 static int
-dissect_j2735_LongitudeX(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_LongitudeEfc(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_j2735_Int4Signed(tvb, offset, actx, tree, hf_index);
 
   return offset;
@@ -3343,8 +3395,8 @@ dissect_j2735_Weekday(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, p
 
 
 static const per_sequence_t AbsolutePosition2d_sequence[] = {
-  { &hf_j2735_gnssLon       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LongitudeX },
-  { &hf_j2735_gnssLat       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LatitudeX },
+  { &hf_j2735_gnssLon       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LongitudeEfc },
+  { &hf_j2735_gnssLat       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LatitudeEfc },
   { NULL, 0, 0, NULL }
 };
 
@@ -3358,8 +3410,8 @@ dissect_j2735_AbsolutePosition2d(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *
 
 
 static const per_sequence_t AbsolutePosition3d_sequence[] = {
-  { &hf_j2735_longitude     , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LongitudeX },
-  { &hf_j2735_latitude      , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LatitudeX },
+  { &hf_j2735_longitude     , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LongitudeEfc },
+  { &hf_j2735_latitude      , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_LatitudeEfc },
   { &hf_j2735_altitude      , ASN1_NO_EXTENSIONS     , ASN1_OPTIONAL    , dissect_j2735_Altitude },
   { NULL, 0, 0, NULL }
 };
@@ -3522,16 +3574,16 @@ dissect_j2735_Distance(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, 
 }
 
 
-static const per_sequence_t DurationX_sequence[] = {
+static const per_sequence_t DurationEfc_sequence[] = {
   { &hf_j2735_durationValue , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_Int4Unsigned },
   { &hf_j2735_timeUnit      , ASN1_NO_EXTENSIONS     , ASN1_OPTIONAL    , dissect_j2735_TimeUnit },
   { NULL, 0, 0, NULL }
 };
 
 static int
-dissect_j2735_DurationX(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_DurationEfc(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_DurationX, DurationX_sequence);
+                                   ett_j2735_DurationEfc, DurationEfc_sequence);
 
   return offset;
 }
@@ -4810,7 +4862,7 @@ dissect_j2735_Disturbances(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _
 }
 
 
-static const value_string j2735_GenericLocationValues_vals[] = {
+static const value_string j2735_GenericLocationsJ2540_vals[] = {
   { 7937, "on-bridges" },
   { 7938, "in-tunnels" },
   { 7939, "entering-or-leaving-tunnels" },
@@ -4913,7 +4965,7 @@ static const value_string j2735_GenericLocationValues_vals[] = {
 
 
 static int
-dissect_j2735_GenericLocationValues(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_GenericLocationsJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -4921,7 +4973,7 @@ dissect_j2735_GenericLocationValues(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_
 }
 
 
-static const value_string j2735_IncidentResponseEquipmentValues_vals[] = {
+static const value_string j2735_IncidentResponseEquipmentJ2540_vals[] = {
   { 9985, "ground-fire-suppression" },
   { 9986, "heavy-ground-equipment" },
   { 9988, "aircraft" },
@@ -5000,7 +5052,7 @@ static const value_string j2735_IncidentResponseEquipmentValues_vals[] = {
 
 
 static int
-dissect_j2735_IncidentResponseEquipmentValues(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_IncidentResponseEquipmentJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -5165,6 +5217,17 @@ dissect_j2735_AdviceInstructionsRecommendations(tvbuff_t *tvb _U_, int offset _U
 }
 
 
+
+static int
+dissect_j2735_ITIStextJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_IA5String(tvb, offset, actx, tree, hf_index,
+                                          1, 500, FALSE,
+                                          NULL);
+
+  return offset;
+}
+
+
 static const value_string j2735_ITISgroups_vals[] = {
   {   1, "trafficConditions" },
   {   2, "accidentsAndIncidents" },
@@ -5196,14 +5259,14 @@ static const value_string j2735_ITISgroups_vals[] = {
   {  28, "adviceInstructionsRecommendations" },
   {  29, "adviceInstructionsMandatory" },
   {  30, "qualifiers" },
-  {  31, "genericLocations" },
+  {  31, "genericLocationsJ2540" },
   {  32, "laneRoadway" },
   {  33, "alternateRoute" },
   {  34, "units" },
   {  35, "transitMode" },
   {  36, "vehicleGroupAffected" },
   {  37, "travelerGroupAffected" },
-  {  38, "responderGroupAffected" },
+  {  38, "responderGroupAffectedJ2540" },
   {  39, "incidentResponseEquipment" },
   {  40, "assetStatus" },
   {  41, "roadsideAssets" },
@@ -5232,7 +5295,7 @@ dissect_j2735_ITISgroups(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_
 }
 
 
-static const value_string j2735_ITISCodeValues_vals[] = {
+static const value_string j2735_ITIScodesJ2540_vals[] = {
   { 257, "stopped-traffic" },
   { 258, "stop-and-go-traffic" },
   { 259, "slow-traffic" },
@@ -7694,7 +7757,7 @@ static const value_string j2735_ITISCodeValues_vals[] = {
 
 
 static int
-dissect_j2735_ITISCodeValues(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_ITIScodesJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -8552,7 +8615,7 @@ dissect_j2735_RegulatoryAndWarningSigns(tvbuff_t *tvb _U_, int offset _U_, asn1_
 }
 
 
-static const value_string j2735_ResponderGroupAffectedValues_vals[] = {
+static const value_string j2735_ResponderGroupAffectedJ2540_vals[] = {
   { 9729, "emergency-vehicle-units" },
   { 9730, "federal-law-enforcement-units" },
   { 9731, "state-police-units" },
@@ -8573,7 +8636,7 @@ static const value_string j2735_ResponderGroupAffectedValues_vals[] = {
 
 
 static int
-dissect_j2735_ResponderGroupAffectedValues(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_ResponderGroupAffectedJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -9886,7 +9949,7 @@ dissect_j2735_ValidManeuvers(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx
 }
 
 
-static const value_string j2735_VehicleGroupAffectedValues_vals[] = {
+static const value_string j2735_VehicleGroupAffectedDef_vals[] = {
   { 9217, "all-vehicles" },
   { 9218, "bicycles" },
   { 9219, "motorcycles" },
@@ -9937,7 +10000,7 @@ static const value_string j2735_VehicleGroupAffectedValues_vals[] = {
 
 
 static int
-dissect_j2735_VehicleGroupAffectedValues(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_VehicleGroupAffectedDef(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -10175,6 +10238,35 @@ dissect_j2735_WinterDrivingRestrictions(tvbuff_t *tvb _U_, int offset _U_, asn1_
 }
 
 
+static const value_string j2735_ResponderGroupAffected_vals[] = {
+  { 9729, "emergency-vehicle-units" },
+  { 9730, "federal-law-enforcement-units" },
+  { 9731, "state-police-units" },
+  { 9732, "county-police-units" },
+  { 9733, "local-police-units" },
+  { 9734, "ambulance-units" },
+  { 9735, "rescue-units" },
+  { 9736, "fire-units" },
+  { 9737, "hAZMAT-units" },
+  { 9738, "light-tow-unit" },
+  { 9739, "heavy-tow-unit" },
+  { 9740, "freeway-service-patrols" },
+  { 9741, "transportation-response-units" },
+  { 9742, "private-contractor-response-units" },
+  { 0, NULL }
+};
+
+static uint32_t ResponderGroupAffected_value_map[14+0] = {9729, 9730, 9731, 9732, 9733, 9734, 9735, 9736, 9737, 9738, 9739, 9740, 9741, 9742};
+
+static int
+dissect_j2735_ResponderGroupAffected(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
+                                     14, NULL, TRUE, 0, ResponderGroupAffected_value_map);
+
+  return offset;
+}
+
+
 static const value_string j2735_ITISEventType_vals[] = {
   {   0, "trafficConditions" },
   {   1, "accidentsAndIncidents" },
@@ -10250,10 +10342,10 @@ static const per_choice_t ITISEventType_choice[] = {
   {  29, &hf_j2735_laneRoadway   , ASN1_NO_EXTENSIONS     , dissect_j2735_LaneRoadway },
   {  30, &hf_j2735_alternateRoute, ASN1_NO_EXTENSIONS     , dissect_j2735_AlternateRoute },
   {  31, &hf_j2735_transitMode   , ASN1_NO_EXTENSIONS     , dissect_j2735_TransitMode },
-  {  32, &hf_j2735_vehicleGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_VehicleGroupAffectedValues },
+  {  32, &hf_j2735_vehicleGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_VehicleGroupAffectedDef },
   {  33, &hf_j2735_travelerGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_TravelerGroupAffected },
-  {  34, &hf_j2735_responderGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_ResponderGroupAffectedValues },
-  {  35, &hf_j2735_incidentResponseEquipment, ASN1_NO_EXTENSIONS     , dissect_j2735_IncidentResponseEquipmentValues },
+  {  34, &hf_j2735_responderGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_ResponderGroupAffected },
+  {  35, &hf_j2735_incidentResponseEquipment, ASN1_NO_EXTENSIONS     , dissect_j2735_IncidentResponseEquipmentJ2540 },
   {  36, &hf_j2735_transitOperations, ASN1_NO_EXTENSIONS     , dissect_j2735_TransitOperations },
   {  37, &hf_j2735_regulatorySigns, ASN1_NO_EXTENSIONS     , dissect_j2735_RegulatoryAndWarningSigns },
   { 0, NULL, 0, NULL }
@@ -10264,6 +10356,56 @@ dissect_j2735_ITISEventType(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx 
   offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
                                  ett_j2735_ITISEventType, ITISEventType_choice,
                                  NULL);
+
+  return offset;
+}
+
+
+static const value_string j2735_T_item_vals[] = {
+  {   0, "itis" },
+  {   1, "text" },
+  { 0, NULL }
+};
+
+static const per_choice_t T_item_choice[] = {
+  {   0, &hf_j2735_itis          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodesJ2540 },
+  {   1, &hf_j2735_text          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextJ2540 },
+  { 0, NULL, 0, NULL }
+};
+
+static int
+dissect_j2735_T_item(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
+                                 ett_j2735_T_item, T_item_choice,
+                                 NULL);
+
+  return offset;
+}
+
+
+static const per_sequence_t ITIScodesAndTextJ2540_item_sequence[] = {
+  { &hf_j2735_item          , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_ITIScodesAndTextJ2540_item(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_ITIScodesAndTextJ2540_item, ITIScodesAndTextJ2540_item_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t ITIScodesAndTextJ2540_sequence_of[1] = {
+  { &hf_j2735_ITIScodesAndTextJ2540_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_ITIScodesAndTextJ2540_item },
+};
+
+static int
+dissect_j2735_ITIScodesAndTextJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
+                                                  ett_j2735_ITIScodesAndTextJ2540, ITIScodesAndTextJ2540_sequence_of,
+                                                  1, 100, FALSE);
 
   return offset;
 }
@@ -11601,9 +11743,6 @@ static const value_string j2735_PartII_Id_vals[] = {
   { vehicleSafetyExt, "vehicleSafetyExt" },
   { specialVehicleExt, "specialVehicleExt" },
   { supplementalVehicleExt, "supplementalVehicleExt" },
-  { vehicleSafetyCCMExt, "vehicleSafetyCCMExt" },
-  { lightVehicleCCMExt, "lightVehicleCCMExt" },
-  { heavyTruckCCMExt, "heavyTruckCCMExt" },
   { 0, NULL }
 };
 
@@ -11695,120 +11834,9 @@ dissect_j2735_ITIScodes(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 }
 
 
-static const value_string j2735_GenericLocations_vals[] = {
-  { 7937, "on-bridges" },
-  { 7938, "in-tunnels" },
-  { 7939, "entering-or-leaving-tunnels" },
-  { 7940, "on-ramps" },
-  { 7941, "in-road-construction-area" },
-  { 7942, "around-a-curve" },
-  { 8026, "on-curve" },
-  { 8009, "on-tracks" },
-  { 8025, "in-street" },
-  { 8027, "shoulder" },
-  { 7943, "on-minor-roads" },
-  { 7944, "in-the-opposing-lanes" },
-  { 7945, "adjacent-to-roadway" },
-  { 8024, "across-tracks" },
-  { 7946, "on-bend" },
-  { 8032, "intersection" },
-  { 7947, "entire-intersection" },
-  { 7948, "in-the-median" },
-  { 7949, "moved-to-side-of-road" },
-  { 7950, "moved-to-shoulder" },
-  { 7951, "on-the-roadway" },
-  { 8010, "dip" },
-  { 8011, "traffic-circle" },
-  { 8028, "crossover" },
-  { 8029, "cross-road" },
-  { 8030, "side-road" },
-  { 8014, "to" },
-  { 8015, "by" },
-  { 8016, "through" },
-  { 8017, "area-of" },
-  { 8018, "under" },
-  { 8019, "over" },
-  { 8020, "from" },
-  { 8021, "approaching" },
-  { 8022, "entering-at" },
-  { 8023, "exiting-at" },
-  { 7952, "in-shaded-areas" },
-  { 7953, "in-low-lying-areas" },
-  { 7954, "in-the-downtown-area" },
-  { 7955, "in-the-inner-city-area" },
-  { 7956, "in-parts" },
-  { 7957, "in-some-places" },
-  { 7958, "in-the-ditch" },
-  { 7959, "in-the-valley" },
-  { 7960, "on-hill-top" },
-  { 7961, "near-the-foothills" },
-  { 7962, "at-high-altitudes" },
-  { 7963, "near-the-lake" },
-  { 7964, "near-the-shore" },
-  { 8008, "nearby-basin" },
-  { 7965, "over-the-crest-of-a-hill" },
-  { 7966, "other-than-on-the-roadway" },
-  { 7967, "near-the-beach" },
-  { 7968, "near-beach-access-point" },
-  { 8006, "mountain-pass" },
-  { 7969, "lower-level" },
-  { 7970, "upper-level" },
-  { 7971, "airport" },
-  { 7972, "concourse" },
-  { 7973, "gate" },
-  { 7974, "baggage-claim" },
-  { 7975, "customs-point" },
-  { 8007, "reservation-center" },
-  { 7976, "station" },
-  { 7977, "platform" },
-  { 7978, "dock" },
-  { 7979, "depot" },
-  { 7980, "ev-charging-point" },
-  { 7981, "information-welcome-point" },
-  { 7982, "at-rest-area" },
-  { 7983, "at-service-area" },
-  { 7984, "at-weigh-station" },
-  { 8033, "roadside-park" },
-  { 7985, "picnic-areas" },
-  { 7986, "rest-area" },
-  { 7987, "service-stations" },
-  { 7988, "toilets" },
-  { 8031, "bus-stop" },
-  { 8012, "park-and-ride-lot" },
-  { 7989, "on-the-right" },
-  { 7990, "on-the-left" },
-  { 7991, "in-the-center" },
-  { 7992, "in-the-opposite-direction" },
-  { 7993, "cross-traffic" },
-  { 7994, "northbound-traffic" },
-  { 7995, "eastbound-traffic" },
-  { 7996, "southbound-traffic" },
-  { 7997, "westbound-traffic" },
-  { 7998, "north" },
-  { 7999, "south" },
-  { 8000, "east" },
-  { 8001, "west" },
-  { 8002, "northeast" },
-  { 8003, "northwest" },
-  { 8004, "southeast" },
-  { 8005, "southwest" },
-  { 0, NULL }
-};
-
-static uint32_t GenericLocations_value_map[96+0] = {7937, 7938, 7939, 7940, 7941, 7942, 8026, 8009, 8025, 8027, 7943, 7944, 7945, 8024, 7946, 8032, 7947, 7948, 7949, 7950, 7951, 8010, 8011, 8028, 8029, 8030, 8014, 8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023, 7952, 7953, 7954, 7955, 7956, 7957, 7958, 7959, 7960, 7961, 7962, 7963, 7964, 8008, 7965, 7966, 7967, 7968, 8006, 7969, 7970, 7971, 7972, 7973, 7974, 7975, 8007, 7976, 7977, 7978, 7979, 7980, 7981, 7982, 7983, 7984, 8033, 7985, 7986, 7987, 7988, 8031, 8012, 7989, 7990, 7991, 7992, 7993, 7994, 7995, 7996, 7997, 7998, 7999, 8000, 8001, 8002, 8003, 8004, 8005};
-
-static int
-dissect_j2735_GenericLocations(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     96, NULL, TRUE, 0, GenericLocations_value_map);
-
-  return offset;
-}
-
-
 static const per_sequence_t DisabledVehicle_sequence[] = {
   { &hf_j2735_statusDetails , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ITIScodes },
-  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_GenericLocations },
+  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_ITIS_GenericLocations },
   { NULL, 0, 0, NULL }
 };
 
@@ -12054,7 +12082,7 @@ static const per_sequence_t ObstacleDetection_sequence[] = {
   { &hf_j2735_obDist        , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ObstacleDistance },
   { &hf_j2735_obDirect      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ObstacleDirection },
   { &hf_j2735_description_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ITIScodes },
-  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_GenericLocations },
+  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_ITIS_GenericLocations },
   { &hf_j2735_dateTime      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_DDateTime },
   { &hf_j2735_vertEvent     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VerticalAccelerationThreshold },
   { NULL, 0, 0, NULL }
@@ -12512,7 +12540,7 @@ dissect_j2735_TrailerData(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U
 static const per_sequence_t SpecialVehicleExtensions_sequence[] = {
   { &hf_j2735_vehicleAlerts , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_EmergencyDetails },
   { &hf_j2735_description_02, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_EventDescription },
-  { &hf_j2735_deprecated    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TrailerData },
+  { &hf_j2735_doNotUse      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TrailerData },
   { NULL, 0, 0, NULL }
 };
 
@@ -12856,35 +12884,6 @@ dissect_j2735_IncidentResponseEquipment(tvbuff_t *tvb _U_, int offset _U_, asn1_
 }
 
 
-static const value_string j2735_ResponderGroupAffected_vals[] = {
-  { 9729, "emergency-vehicle-units" },
-  { 9730, "federal-law-enforcement-units" },
-  { 9731, "state-police-units" },
-  { 9732, "county-police-units" },
-  { 9733, "local-police-units" },
-  { 9734, "ambulance-units" },
-  { 9735, "rescue-units" },
-  { 9736, "fire-units" },
-  { 9737, "hAZMAT-units" },
-  { 9738, "light-tow-unit" },
-  { 9739, "heavy-tow-unit" },
-  { 9740, "freeway-service-patrols" },
-  { 9741, "transportation-response-units" },
-  { 9742, "private-contractor-response-units" },
-  { 0, NULL }
-};
-
-static uint32_t ResponderGroupAffected_value_map[14+0] = {9729, 9730, 9731, 9732, 9733, 9734, 9735, 9736, 9737, 9738, 9739, 9740, 9741, 9742};
-
-static int
-dissect_j2735_ResponderGroupAffected(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     14, NULL, TRUE, 0, ResponderGroupAffected_value_map);
-
-  return offset;
-}
-
-
 static const value_string j2735_FuelType_vals[] = {
   {   0, "unknownFuel" },
   {   1, "gasoline" },
@@ -13001,11 +13000,11 @@ static const per_sequence_t VehicleData_sequence[] = {
   { &hf_j2735_height        , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VehicleHeight },
   { &hf_j2735_bumpers       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_BumperHeights },
   { &hf_j2735_mass_01       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VehicleMass },
-  { &hf_j2735_deprecated_01 , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TrailerWeight },
+  { &hf_j2735_doNotUse_01   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TrailerWeight },
   { &hf_j2735_trailerPresent, ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_BOOLEAN },
   { &hf_j2735_pivotPoint    , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_PivotPointDescription },
   { &hf_j2735_axles_01      , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_Axles },
-  { &hf_j2735_rollAngle     , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_INTEGER_M90_90 },
+  { &hf_j2735_leanAngle     , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_INTEGER_M90_90 },
   { NULL, 0, 0, NULL }
 };
 
@@ -13300,12 +13299,12 @@ static const per_sequence_t SupplementalVehicleExtensions_sequence[] = {
   { &hf_j2735_classification, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_BasicVehicleClass },
   { &hf_j2735_classDetails  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VehicleClassification },
   { &hf_j2735_vehicleData   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VehicleData },
-  { &hf_j2735_deprecated1   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_WeatherReport },
-  { &hf_j2735_deprecated2   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_WeatherProbe },
-  { &hf_j2735_deprecated3   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ObstacleDetection },
+  { &hf_j2735_doNotUse1     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_WeatherReport },
+  { &hf_j2735_doNotUse2     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_WeatherProbe },
+  { &hf_j2735_doNotUse3     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ObstacleDetection },
   { &hf_j2735_status        , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DisabledVehicle },
-  { &hf_j2735_deprecated4   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SpeedProfile },
-  { &hf_j2735_deprecated5   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RTCMPackage },
+  { &hf_j2735_doNotUse4     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SpeedProfile },
+  { &hf_j2735_doNotUse5     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RTCMPackage },
   { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
   { &hf_j2735_fhwaVehicleClass, ASN1_NOT_EXTENSION_ROOT, ASN1_NOT_OPTIONAL, dissect_j2735_RptVehicleClass },
   { &hf_j2735_trailers      , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_TrailersJ2945Slash1B },
@@ -15236,6 +15235,178 @@ dissect_j2735_EmergencyVehicleAlert(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_
 }
 
 
+static const value_string j2735_GenericLocationsDef_vals[] = {
+  { 7937, "on-bridges" },
+  { 7938, "in-tunnels" },
+  { 7939, "entering-or-leaving-tunnels" },
+  { 7940, "on-ramps" },
+  { 7941, "in-road-construction-area" },
+  { 7942, "around-a-curve" },
+  { 8026, "on-curve" },
+  { 8009, "on-tracks" },
+  { 8025, "in-street" },
+  { 8027, "shoulder" },
+  { 7943, "on-minor-roads" },
+  { 7944, "in-the-opposing-lanes" },
+  { 7945, "adjacent-to-roadway" },
+  { 8024, "across-tracks" },
+  { 7946, "on-bend" },
+  { 8032, "intersection" },
+  { 7947, "entire-intersection" },
+  { 7948, "in-the-median" },
+  { 7949, "moved-to-side-of-road" },
+  { 7950, "moved-to-shoulder" },
+  { 7951, "on-the-roadway" },
+  { 8010, "dip" },
+  { 8011, "traffic-circle" },
+  { 8028, "crossover" },
+  { 8029, "cross-road" },
+  { 8030, "side-road" },
+  { 8014, "to" },
+  { 8015, "by" },
+  { 8016, "through" },
+  { 8017, "area-of" },
+  { 8018, "under" },
+  { 8019, "over" },
+  { 8020, "from" },
+  { 8021, "approaching" },
+  { 8022, "entering-at" },
+  { 8023, "exiting-at" },
+  { 7952, "in-shaded-areas" },
+  { 7953, "in-low-lying-areas" },
+  { 7954, "in-the-downtown-area" },
+  { 7955, "in-the-inner-city-area" },
+  { 7956, "in-parts" },
+  { 7957, "in-some-places" },
+  { 7958, "in-the-ditch" },
+  { 7959, "in-the-valley" },
+  { 7960, "on-hill-top" },
+  { 7961, "near-the-foothills" },
+  { 7962, "at-high-altitudes" },
+  { 7963, "near-the-lake" },
+  { 7964, "near-the-shore" },
+  { 8008, "nearby-basin" },
+  { 7965, "over-the-crest-of-a-hill" },
+  { 7966, "other-than-on-the-roadway" },
+  { 7967, "near-the-beach" },
+  { 7968, "near-beach-access-point" },
+  { 8006, "mountain-pass" },
+  { 7969, "lower-level" },
+  { 7970, "upper-level" },
+  { 7971, "airport" },
+  { 7972, "concourse" },
+  { 7973, "gate" },
+  { 7974, "baggage-claim" },
+  { 7975, "customs-point" },
+  { 8007, "reservation-center" },
+  { 7976, "station" },
+  { 7977, "platform" },
+  { 7978, "dock" },
+  { 7979, "depot" },
+  { 7980, "ev-charging-point" },
+  { 7981, "information-welcome-point" },
+  { 7982, "at-rest-area" },
+  { 7983, "at-service-area" },
+  { 7984, "at-weigh-station" },
+  { 8033, "roadside-park" },
+  { 7985, "picnic-areas" },
+  { 7986, "rest-area" },
+  { 7987, "service-stations" },
+  { 7988, "toilets" },
+  { 8031, "bus-stop" },
+  { 8012, "park-and-ride-lot" },
+  { 7989, "on-the-right" },
+  { 7990, "on-the-left" },
+  { 7991, "in-the-center" },
+  { 7992, "in-the-opposite-direction" },
+  { 7993, "cross-traffic" },
+  { 7994, "northbound-traffic" },
+  { 7995, "eastbound-traffic" },
+  { 7996, "southbound-traffic" },
+  { 7997, "westbound-traffic" },
+  { 7998, "north" },
+  { 7999, "south" },
+  { 8000, "east" },
+  { 8001, "west" },
+  { 8002, "northeast" },
+  { 8003, "northwest" },
+  { 8004, "southeast" },
+  { 8005, "southwest" },
+  { 0, NULL }
+};
+
+static uint32_t GenericLocationsDef_value_map[96+0] = {7937, 7938, 7939, 7940, 7941, 7942, 8026, 8009, 8025, 8027, 7943, 7944, 7945, 8024, 7946, 8032, 7947, 7948, 7949, 7950, 7951, 8010, 8011, 8028, 8029, 8030, 8014, 8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023, 7952, 7953, 7954, 7955, 7956, 7957, 7958, 7959, 7960, 7961, 7962, 7963, 7964, 8008, 7965, 7966, 7967, 7968, 8006, 7969, 7970, 7971, 7972, 7973, 7974, 7975, 8007, 7976, 7977, 7978, 7979, 7980, 7981, 7982, 7983, 7984, 8033, 7985, 7986, 7987, 7988, 8031, 8012, 7989, 7990, 7991, 7992, 7993, 7994, 7995, 7996, 7997, 7998, 7999, 8000, 8001, 8002, 8003, 8004, 8005};
+
+static int
+dissect_j2735_GenericLocationsDef(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
+                                     96, NULL, TRUE, 0, GenericLocationsDef_value_map);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_ITIStext(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_IA5String(tvb, offset, actx, tree, hf_index,
+                                          1, 500, FALSE,
+                                          NULL);
+
+  return offset;
+}
+
+
+static const value_string j2735_T_item_01_vals[] = {
+  {   0, "itis" },
+  {   1, "text" },
+  { 0, NULL }
+};
+
+static const per_choice_t T_item_01_choice[] = {
+  {   0, &hf_j2735_itis_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
+  {   1, &hf_j2735_text_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStext },
+  { 0, NULL, 0, NULL }
+};
+
+static int
+dissect_j2735_T_item_01(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
+                                 ett_j2735_T_item_01, T_item_01_choice,
+                                 NULL);
+
+  return offset;
+}
+
+
+static const per_sequence_t ITIScodesAndText_item_sequence[] = {
+  { &hf_j2735_item_01       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_01 },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_ITIScodesAndText_item(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_ITIScodesAndText_item, ITIScodesAndText_item_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t ITIScodesAndText_sequence_of[1] = {
+  { &hf_j2735_ITIScodesAndText_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_ITIScodesAndText_item },
+};
+
+static int
+dissect_j2735_ITIScodesAndText(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
+                                                  ett_j2735_ITIScodesAndText, ITIScodesAndText_sequence_of,
+                                                  1, 100, FALSE);
+
+  return offset;
+}
+
+
 static const value_string j2735_ApproachOrLane_vals[] = {
   {   0, "approach" },
   {   1, "lane" },
@@ -15276,67 +15447,6 @@ static int
 dissect_j2735_IntersectionCollision(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_IntersectionCollision, IntersectionCollision_sequence);
-
-  return offset;
-}
-
-
-
-static int
-dissect_j2735_ITIStext(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_IA5String(tvb, offset, actx, tree, hf_index,
-                                          1, 500, FALSE,
-                                          NULL);
-
-  return offset;
-}
-
-
-static const value_string j2735_T_item_vals[] = {
-  {   0, "itis" },
-  {   1, "text" },
-  { 0, NULL }
-};
-
-static const per_choice_t T_item_choice[] = {
-  {   0, &hf_j2735_itis          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
-  {   1, &hf_j2735_text          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStext },
-  { 0, NULL, 0, NULL }
-};
-
-static int
-dissect_j2735_T_item(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
-                                 ett_j2735_T_item, T_item_choice,
-                                 NULL);
-
-  return offset;
-}
-
-
-static const per_sequence_t ITIScodesAndText_item_sequence[] = {
-  { &hf_j2735_item          , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_ITIScodesAndText_item(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_ITIScodesAndText_item, ITIScodesAndText_item_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t ITIScodesAndText_sequence_of[1] = {
-  { &hf_j2735_ITIScodesAndText_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_ITIScodesAndText_item },
-};
-
-static int
-dissect_j2735_ITIScodesAndText(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
-                                                  ett_j2735_ITIScodesAndText, ITIScodesAndText_sequence_of,
-                                                  1, 100, FALSE);
 
   return offset;
 }
@@ -16080,8 +16190,10 @@ dissect_j2735_DSRCmsgID(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 32767U, &DSRCmsgID, FALSE);
 
+#line 25 "./asn1/j2735/j2735.cnf"
   col_add_fstr(actx->pinfo->cinfo, COL_INFO, "%s",
     val_to_str_const(DSRCmsgID, j2735_DSRCmsgID_vals, "Unknown"));
+
 
   return offset;
 }
@@ -17561,285 +17673,6 @@ dissect_j2735_SignalControlAndPrioritizationStatus(tvbuff_t *tvb _U_, int offset
 }
 
 
-static const value_string j2735_PriorityRequestType_vals[] = {
-  {   0, "priorityRequestTypeReserved" },
-  {   1, "priorityRequest" },
-  {   2, "priorityRequestUpdate" },
-  {   3, "priorityCancellation" },
-  { 0, NULL }
-};
-
-
-static int
-dissect_j2735_PriorityRequestType(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     4, NULL, TRUE, 0, NULL);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalRequest_sequence[] = {
-  { &hf_j2735_id_03         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionReferenceID },
-  { &hf_j2735_requestID     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_RequestID },
-  { &hf_j2735_requestType   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PriorityRequestType },
-  { &hf_j2735_inBoundLane   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionAccessPoint },
-  { &hf_j2735_outBoundLane  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_IntersectionAccessPoint },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalRequest(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalRequest, SignalRequest_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalRequestPackage_sequence[] = {
-  { &hf_j2735_request_01    , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignalRequest },
-  { &hf_j2735_minute_02     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
-  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
-  { &hf_j2735_duration      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalRequestPackage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalRequestPackage, SignalRequestPackage_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalRequestList_sequence_of[1] = {
-  { &hf_j2735_SignalRequestList_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_SignalRequestPackage },
-};
-
-static int
-dissect_j2735_SignalRequestList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
-                                                  ett_j2735_SignalRequestList, SignalRequestList_sequence_of,
-                                                  1, 32, FALSE);
-
-  return offset;
-}
-
-
-static const per_sequence_t RequestorPositionVector_sequence[] = {
-  { &hf_j2735_position      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_Position3D },
-  { &hf_j2735_heading_04    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_Angle },
-  { &hf_j2735_speed_01      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TransmissionAndSpeed },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_RequestorPositionVector(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_RequestorPositionVector, RequestorPositionVector_sequence);
-
-  return offset;
-}
-
-
-static int * const TransitVehicleStatus_bits[] = {
-  &hf_j2735_TransitVehicleStatus_loading,
-  &hf_j2735_TransitVehicleStatus_anADAuse,
-  &hf_j2735_TransitVehicleStatus_aBikeLoad,
-  &hf_j2735_TransitVehicleStatus_doorOpen,
-  &hf_j2735_TransitVehicleStatus_charging,
-  &hf_j2735_TransitVehicleStatus_atStopLine,
-  NULL
-};
-
-static int
-dissect_j2735_TransitVehicleStatus(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_bit_string(tvb, offset, actx, tree, hf_index,
-                                     8, 8, FALSE, TransitVehicleStatus_bits, 6, NULL, NULL);
-
-  return offset;
-}
-
-
-static const value_string j2735_TransitVehicleOccupancy_vals[] = {
-  {   0, "occupancyUnknown" },
-  {   1, "occupancyEmpty" },
-  {   2, "occupancyVeryLow" },
-  {   3, "occupancyLow" },
-  {   4, "occupancyMed" },
-  {   5, "occupancyHigh" },
-  {   6, "occupancyNearlyFull" },
-  {   7, "occupancyFull" },
-  { 0, NULL }
-};
-
-
-static int
-dissect_j2735_TransitVehicleOccupancy(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     8, NULL, FALSE, 0, NULL);
-
-  return offset;
-}
-
-
-
-static int
-dissect_j2735_DeltaTime(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -122, 121U, NULL, FALSE);
-
-  return offset;
-}
-
-
-static const per_sequence_t RequestorDescription_sequence[] = {
-  { &hf_j2735_id_06         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_VehicleID },
-  { &hf_j2735_type_10       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RequestorType },
-  { &hf_j2735_position_02   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RequestorPositionVector },
-  { &hf_j2735_name          , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DescriptiveName },
-  { &hf_j2735_routeName     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DescriptiveName },
-  { &hf_j2735_transitStatus , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TransitVehicleStatus },
-  { &hf_j2735_transitOccupancy, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TransitVehicleOccupancy },
-  { &hf_j2735_transitSchedule, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DeltaTime },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_RequestorDescription(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_RequestorDescription, RequestorDescription_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalRequestMessage_sequence[] = {
-  { &hf_j2735_timeStamp     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
-  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_DSecond },
-  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MsgCount },
-  { &hf_j2735_requests_01   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SignalRequestList },
-  { &hf_j2735_requestor     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_RequestorDescription },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalRequestMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalRequestMessage, SignalRequestMessage_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalRequesterInfo_sequence[] = {
-  { &hf_j2735_id_06         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_VehicleID },
-  { &hf_j2735_request_02    , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_RequestID },
-  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MsgCount },
-  { &hf_j2735_role          , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_BasicVehicleRole },
-  { &hf_j2735_typeData      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RequestorType },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalRequesterInfo(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalRequesterInfo, SignalRequesterInfo_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalStatusPackage_sequence[] = {
-  { &hf_j2735_requester     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SignalRequesterInfo },
-  { &hf_j2735_inboundOn     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionAccessPoint },
-  { &hf_j2735_outboundOn    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_IntersectionAccessPoint },
-  { &hf_j2735_minute_02     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
-  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
-  { &hf_j2735_duration      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
-  { &hf_j2735_status_03     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PrioritizationResponseStatus },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalStatusPackage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalStatusPackage, SignalStatusPackage_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalStatusPackageList_sequence_of[1] = {
-  { &hf_j2735_SignalStatusPackageList_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatusPackage },
-};
-
-static int
-dissect_j2735_SignalStatusPackageList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
-                                                  ett_j2735_SignalStatusPackageList, SignalStatusPackageList_sequence_of,
-                                                  1, 32, FALSE);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalStatus_sequence[] = {
-  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MsgCount },
-  { &hf_j2735_id_03         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionReferenceID },
-  { &hf_j2735_sigStatus     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatusPackageList },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalStatus(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalStatus, SignalStatus_sequence);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalStatusList_sequence_of[1] = {
-  { &hf_j2735_SignalStatusList_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatus },
-};
-
-static int
-dissect_j2735_SignalStatusList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
-                                                  ett_j2735_SignalStatusList, SignalStatusList_sequence_of,
-                                                  1, 32, FALSE);
-
-  return offset;
-}
-
-
-static const per_sequence_t SignalStatusMessage_sequence[] = {
-  { &hf_j2735_timeStamp     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
-  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_DSecond },
-  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MsgCount },
-  { &hf_j2735_status_02     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatusList },
-  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
-  { NULL, 0, 0, NULL }
-};
-
-static int
-dissect_j2735_SignalStatusMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_SignalStatusMessage, SignalStatusMessage_sequence);
-
-  return offset;
-}
-
-
 static int * const IntersectionStatusObject_bits[] = {
   &hf_j2735_IntersectionStatusObject_manualControlIsEnabled,
   &hf_j2735_IntersectionStatusObject_stopTimeIsActivated,
@@ -17973,7 +17806,7 @@ dissect_j2735_ZoneLength(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_
 
 
 static const per_sequence_t AdvisorySpeed_sequence[] = {
-  { &hf_j2735_type_11       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_AdvisorySpeedType },
+  { &hf_j2735_type_10       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_AdvisorySpeedType },
   { &hf_j2735_speed_04      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SpeedAdvice },
   { &hf_j2735_confidence_04 , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SpeedConfidence },
   { &hf_j2735_distance      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ZoneLength },
@@ -18123,7 +17956,7 @@ static const per_sequence_t IntersectionState_sequence[] = {
   { &hf_j2735_name          , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DescriptiveName },
   { &hf_j2735_id_03         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionReferenceID },
   { &hf_j2735_revision      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MsgCount },
-  { &hf_j2735_status_04     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionStatusObject },
+  { &hf_j2735_status_02     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionStatusObject },
   { &hf_j2735_moy           , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
   { &hf_j2735_timeStamp_01  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
   { &hf_j2735_enabledLanes  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_EnabledLaneList },
@@ -18169,6 +18002,294 @@ static int
 dissect_j2735_SPAT(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_SPAT, SPAT_sequence);
+
+  return offset;
+}
+
+
+static const value_string j2735_PriorityRequestType_vals[] = {
+  {   0, "priorityRequestTypeReserved" },
+  {   1, "priorityRequest" },
+  {   2, "priorityRequestUpdate" },
+  {   3, "priorityCancellation" },
+  { 0, NULL }
+};
+
+
+static int
+dissect_j2735_PriorityRequestType(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
+                                     4, NULL, TRUE, 0, NULL);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalRequest_sequence[] = {
+  { &hf_j2735_id_03         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionReferenceID },
+  { &hf_j2735_requestID     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_RequestID },
+  { &hf_j2735_requestType   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PriorityRequestType },
+  { &hf_j2735_inBoundLane   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionAccessPoint },
+  { &hf_j2735_outBoundLane  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_IntersectionAccessPoint },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalRequest(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalRequest, SignalRequest_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalRequestPackage_sequence[] = {
+  { &hf_j2735_request_01    , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignalRequest },
+  { &hf_j2735_minute_02     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
+  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
+  { &hf_j2735_duration      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalRequestPackage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalRequestPackage, SignalRequestPackage_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalRequestList_sequence_of[1] = {
+  { &hf_j2735_SignalRequestList_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_SignalRequestPackage },
+};
+
+static int
+dissect_j2735_SignalRequestList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
+                                                  ett_j2735_SignalRequestList, SignalRequestList_sequence_of,
+                                                  1, 32, FALSE);
+
+  return offset;
+}
+
+
+static const per_sequence_t RequestorPositionVector_sequence[] = {
+  { &hf_j2735_position      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_Position3D },
+  { &hf_j2735_heading_04    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_Angle },
+  { &hf_j2735_speed_01      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TransmissionAndSpeed },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_RequestorPositionVector(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_RequestorPositionVector, RequestorPositionVector_sequence);
+
+  return offset;
+}
+
+
+static int * const TransitVehicleStatus_bits[] = {
+  &hf_j2735_TransitVehicleStatus_loading,
+  &hf_j2735_TransitVehicleStatus_anADAuse,
+  &hf_j2735_TransitVehicleStatus_aBikeLoad,
+  &hf_j2735_TransitVehicleStatus_doorOpen,
+  &hf_j2735_TransitVehicleStatus_charging,
+  &hf_j2735_TransitVehicleStatus_atStopLine,
+  NULL
+};
+
+static int
+dissect_j2735_TransitVehicleStatus(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_bit_string(tvb, offset, actx, tree, hf_index,
+                                     8, 8, FALSE, TransitVehicleStatus_bits, 6, NULL, NULL);
+
+  return offset;
+}
+
+
+static const value_string j2735_TransitVehicleOccupancy_vals[] = {
+  {   0, "occupancyUnknown" },
+  {   1, "occupancyEmpty" },
+  {   2, "occupancyVeryLow" },
+  {   3, "occupancyLow" },
+  {   4, "occupancyMed" },
+  {   5, "occupancyHigh" },
+  {   6, "occupancyNearlyFull" },
+  {   7, "occupancyFull" },
+  { 0, NULL }
+};
+
+
+static int
+dissect_j2735_TransitVehicleOccupancy(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
+                                     8, NULL, FALSE, 0, NULL);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_DeltaTime(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            -122, 121U, NULL, FALSE);
+
+  return offset;
+}
+
+
+static const per_sequence_t RequestorDescription_sequence[] = {
+  { &hf_j2735_id_06         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_VehicleID },
+  { &hf_j2735_type_11       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RequestorType },
+  { &hf_j2735_position_02   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RequestorPositionVector },
+  { &hf_j2735_name          , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DescriptiveName },
+  { &hf_j2735_routeName     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DescriptiveName },
+  { &hf_j2735_transitStatus , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TransitVehicleStatus },
+  { &hf_j2735_transitOccupancy, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TransitVehicleOccupancy },
+  { &hf_j2735_transitSchedule, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DeltaTime },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_RequestorDescription(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_RequestorDescription, RequestorDescription_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalRequestMessage_sequence[] = {
+  { &hf_j2735_timeStamp     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
+  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_DSecond },
+  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MsgCount },
+  { &hf_j2735_requests_01   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SignalRequestList },
+  { &hf_j2735_requestor     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_RequestorDescription },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalRequestMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalRequestMessage, SignalRequestMessage_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalRequesterInfo_sequence[] = {
+  { &hf_j2735_id_06         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_VehicleID },
+  { &hf_j2735_request_02    , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_RequestID },
+  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MsgCount },
+  { &hf_j2735_role          , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_BasicVehicleRole },
+  { &hf_j2735_typeData      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_RequestorType },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalRequesterInfo(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalRequesterInfo, SignalRequesterInfo_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalStatusPackage_sequence[] = {
+  { &hf_j2735_requester     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SignalRequesterInfo },
+  { &hf_j2735_inboundOn     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionAccessPoint },
+  { &hf_j2735_outboundOn    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_IntersectionAccessPoint },
+  { &hf_j2735_minute_02     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
+  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
+  { &hf_j2735_duration      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DSecond },
+  { &hf_j2735_status_04     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PrioritizationResponseStatus },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalStatusPackage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalStatusPackage, SignalStatusPackage_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalStatusPackageList_sequence_of[1] = {
+  { &hf_j2735_SignalStatusPackageList_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatusPackage },
+};
+
+static int
+dissect_j2735_SignalStatusPackageList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
+                                                  ett_j2735_SignalStatusPackageList, SignalStatusPackageList_sequence_of,
+                                                  1, 32, FALSE);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalStatus_sequence[] = {
+  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MsgCount },
+  { &hf_j2735_id_03         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_IntersectionReferenceID },
+  { &hf_j2735_sigStatus     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatusPackageList },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalStatus(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalStatus, SignalStatus_sequence);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalStatusList_sequence_of[1] = {
+  { &hf_j2735_SignalStatusList_item, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatus },
+};
+
+static int
+dissect_j2735_SignalStatusList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
+                                                  ett_j2735_SignalStatusList, SignalStatusList_sequence_of,
+                                                  1, 32, FALSE);
+
+  return offset;
+}
+
+
+static const per_sequence_t SignalStatusMessage_sequence[] = {
+  { &hf_j2735_timeStamp     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MinuteOfTheYear },
+  { &hf_j2735_second_01     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_DSecond },
+  { &hf_j2735_sequenceNumber, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MsgCount },
+  { &hf_j2735_status_03     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignalStatusList },
+  { &hf_j2735_regional      , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_SignalStatusMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_SignalStatusMessage, SignalStatusMessage_sequence);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_TrafficSignalPhaseAndTiming(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_null(tvb, offset, actx, tree, hf_index);
 
   return offset;
 }
@@ -19501,22 +19622,22 @@ dissect_j2735_ITIStextPhrase(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx
 }
 
 
-static const value_string j2735_T_item_04_vals[] = {
+static const value_string j2735_T_item_05_vals[] = {
   {   0, "itis" },
   {   1, "text" },
   { 0, NULL }
 };
 
-static const per_choice_t T_item_04_choice[] = {
-  {   0, &hf_j2735_itis          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
-  {   1, &hf_j2735_text_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
+static const per_choice_t T_item_05_choice[] = {
+  {   0, &hf_j2735_itis_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
+  {   1, &hf_j2735_text_02       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
   { 0, NULL, 0, NULL }
 };
 
 static int
-dissect_j2735_T_item_04(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_T_item_05(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
-                                 ett_j2735_T_item_04, T_item_04_choice,
+                                 ett_j2735_T_item_05, T_item_05_choice,
                                  NULL);
 
   return offset;
@@ -19524,7 +19645,7 @@ dissect_j2735_T_item_04(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 
 
 static const per_sequence_t WorkZone_item_sequence[] = {
-  { &hf_j2735_item_04       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_04 },
+  { &hf_j2735_item_05       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_05 },
   { NULL, 0, 0, NULL }
 };
 
@@ -19551,22 +19672,22 @@ dissect_j2735_WorkZone(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, 
 }
 
 
-static const value_string j2735_T_item_02_vals[] = {
+static const value_string j2735_T_item_03_vals[] = {
   {   0, "itis" },
   {   1, "text" },
   { 0, NULL }
 };
 
-static const per_choice_t T_item_02_choice[] = {
-  {   0, &hf_j2735_itis          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
-  {   1, &hf_j2735_text_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
+static const per_choice_t T_item_03_choice[] = {
+  {   0, &hf_j2735_itis_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
+  {   1, &hf_j2735_text_02       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
   { 0, NULL, 0, NULL }
 };
 
 static int
-dissect_j2735_T_item_02(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_T_item_03(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
-                                 ett_j2735_T_item_02, T_item_02_choice,
+                                 ett_j2735_T_item_03, T_item_03_choice,
                                  NULL);
 
   return offset;
@@ -19574,7 +19695,7 @@ dissect_j2735_T_item_02(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 
 
 static const per_sequence_t GenericSignage_item_sequence[] = {
-  { &hf_j2735_item_02       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_02 },
+  { &hf_j2735_item_03       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_03 },
   { NULL, 0, 0, NULL }
 };
 
@@ -19601,22 +19722,22 @@ dissect_j2735_GenericSignage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx
 }
 
 
-static const value_string j2735_T_item_03_vals[] = {
+static const value_string j2735_T_item_04_vals[] = {
   {   0, "itis" },
   {   1, "text" },
   { 0, NULL }
 };
 
-static const per_choice_t T_item_03_choice[] = {
-  {   0, &hf_j2735_itis          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
-  {   1, &hf_j2735_text_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
+static const per_choice_t T_item_04_choice[] = {
+  {   0, &hf_j2735_itis_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
+  {   1, &hf_j2735_text_02       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
   { 0, NULL, 0, NULL }
 };
 
 static int
-dissect_j2735_T_item_03(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_T_item_04(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
-                                 ett_j2735_T_item_03, T_item_03_choice,
+                                 ett_j2735_T_item_04, T_item_04_choice,
                                  NULL);
 
   return offset;
@@ -19624,7 +19745,7 @@ dissect_j2735_T_item_03(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 
 
 static const per_sequence_t SpeedLimit_item_sequence[] = {
-  { &hf_j2735_item_03       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_03 },
+  { &hf_j2735_item_04       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_04 },
   { NULL, 0, 0, NULL }
 };
 
@@ -19651,22 +19772,22 @@ dissect_j2735_SpeedLimit(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_
 }
 
 
-static const value_string j2735_T_item_01_vals[] = {
+static const value_string j2735_T_item_02_vals[] = {
   {   0, "itis" },
   {   1, "text" },
   { 0, NULL }
 };
 
-static const per_choice_t T_item_01_choice[] = {
-  {   0, &hf_j2735_itis          , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
-  {   1, &hf_j2735_text_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
+static const per_choice_t T_item_02_choice[] = {
+  {   0, &hf_j2735_itis_01       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIScodes },
+  {   1, &hf_j2735_text_02       , ASN1_NO_EXTENSIONS     , dissect_j2735_ITIStextPhrase },
   { 0, NULL, 0, NULL }
 };
 
 static int
-dissect_j2735_T_item_01(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_T_item_02(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_choice(tvb, offset, actx, tree, hf_index,
-                                 ett_j2735_T_item_01, T_item_01_choice,
+                                 ett_j2735_T_item_02, T_item_02_choice,
                                  NULL);
 
   return offset;
@@ -19674,7 +19795,7 @@ dissect_j2735_T_item_01(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 
 
 static const per_sequence_t ExitService_item_sequence[] = {
-  { &hf_j2735_item_01       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_01 },
+  { &hf_j2735_item_02       , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_item_02 },
   { NULL, 0, 0, NULL }
 };
 
@@ -19815,15 +19936,6 @@ static int
 dissect_j2735_TravelerInformation(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_TravelerInformation, TravelerInformation_sequence);
-
-  return offset;
-}
-
-
-
-static int
-dissect_j2735_TrafficSignalPhaseAndTiming(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_null(tvb, offset, actx, tree, hf_index);
 
   return offset;
 }
@@ -21427,16 +21539,18 @@ dissect_j2735_RoadSafetyMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *a
 }
 
 
-static const per_sequence_t CooperativeControlMessage_sequence[] = {
-  { &hf_j2735_coreData      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_BSMcoreData },
-  { &hf_j2735_partII        , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_8_OF_PartIIcontent },
-  { NULL, 0, 0, NULL }
+static const value_string j2735_CCMPartII_Id_vals[] = {
+  {   0, "vehicleSafetyCCMExt" },
+  {   1, "lightVehicleCCMExt" },
+  {   2, "heavyTruckCCMExt" },
+  { 0, NULL }
 };
 
+
 static int
-dissect_j2735_CooperativeControlMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_CooperativeControlMessage, CooperativeControlMessage_sequence);
+dissect_j2735_CCMPartII_Id(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            0U, 63U, NULL, FALSE);
 
   return offset;
 }
@@ -21451,26 +21565,45 @@ dissect_j2735_T_partII_Value_01(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *a
 }
 
 
-static const per_sequence_t CCM_PartIIcontent_sequence[] = {
-  { &hf_j2735_partII_Id     , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_PartII_Id },
+static const per_sequence_t CCMPartIIcontent_sequence[] = {
+  { &hf_j2735_partII_Id_01  , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_CCMPartII_Id },
   { &hf_j2735_partII_Value_01, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_partII_Value_01 },
   { NULL, 0, 0, NULL }
 };
 
 static int
-dissect_j2735_CCM_PartIIcontent(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_CCMPartIIcontent(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
-                                   ett_j2735_CCM_PartIIcontent, CCM_PartIIcontent_sequence);
+                                   ett_j2735_CCMPartIIcontent, CCMPartIIcontent_sequence);
 
   return offset;
 }
 
 
+static const per_sequence_t SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent_sequence_of[1] = {
+  { &hf_j2735_partII_item_01, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_CCMPartIIcontent },
+};
 
 static int
-dissect_j2735_CCM_PartII_Id(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            0U, 63U, NULL, FALSE);
+dissect_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_sequence_of(tvb, offset, actx, tree, hf_index,
+                                                  ett_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent, SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent_sequence_of,
+                                                  1, 8, FALSE);
+
+  return offset;
+}
+
+
+static const per_sequence_t CooperativeControlMessage_sequence[] = {
+  { &hf_j2735_coreData      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_BSMcoreData },
+  { &hf_j2735_partII_01     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_CooperativeControlMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_CooperativeControlMessage, CooperativeControlMessage_sequence);
 
   return offset;
 }
@@ -21636,7 +21769,7 @@ dissect_j2735_Roll(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, prot
 static int
 dissect_j2735_PitchRate(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -3000, 3001U, NULL, FALSE);
+                                                            -32767, 32767U, NULL, FALSE);
 
   return offset;
 }
@@ -21646,7 +21779,7 @@ dissect_j2735_PitchRate(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 static int
 dissect_j2735_RollRate(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -3000, 3001U, NULL, FALSE);
+                                                            -32767, 32767U, NULL, FALSE);
 
   return offset;
 }
@@ -21794,6 +21927,26 @@ static int
 dissect_j2735_HeavyTruckCCMExtensions(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_HeavyTruckCCMExtensions, HeavyTruckCCMExtensions_sequence);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_PitchRate6(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            -3000, 3001U, NULL, FALSE);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_RollRate6(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            -3000, 3001U, NULL, FALSE);
 
   return offset;
 }
@@ -22907,10 +23060,20 @@ dissect_j2735_RptVehicleEvents(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *ac
 }
 
 
+
+static int
+dissect_j2735_MeanVariationC(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            0U, 25000U, NULL, FALSE);
+
+  return offset;
+}
+
+
 static const per_sequence_t RptRoadRoughness_sequence[] = {
-  { &hf_j2735_meanVerticalVariation, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MeanVariation },
+  { &hf_j2735_meanVerticalVariation_01, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MeanVariationC },
   { &hf_j2735_verticalVariationStdDev_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_StdDev },
-  { &hf_j2735_meanHorizontalVariation, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MeanVariation },
+  { &hf_j2735_meanHorizontalVariation_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MeanVariationC },
   { &hf_j2735_horizontalVariationStdDev_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_StdDev },
   { NULL, 0, 0, NULL }
 };
@@ -25350,29 +25513,9 @@ dissect_j2735_AttitudeConfidence(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *
 }
 
 
-
-static int
-dissect_j2735_PitchRateX(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -32767, 32767U, NULL, FALSE);
-
-  return offset;
-}
-
-
-
-static int
-dissect_j2735_RollRateX(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -32767, 32767U, NULL, FALSE);
-
-  return offset;
-}
-
-
 static const per_sequence_t AngularVelocity_sequence[] = {
-  { &hf_j2735_pitchRate_01  , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_PitchRateX },
-  { &hf_j2735_rollRate_01   , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_RollRateX },
+  { &hf_j2735_pitchRate     , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_PitchRate },
+  { &hf_j2735_rollRate      , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_RollRate },
   { NULL, 0, 0, NULL }
 };
 
@@ -25764,19 +25907,19 @@ static int dissect_ProbeVehicleData_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U
   offset += 7; offset >>= 3;
   return offset;
 }
-static int dissect_RoadSideAlert_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
-  int offset = 0;
-  asn1_ctx_t asn1_ctx;
-  asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
-  offset = dissect_j2735_RoadSideAlert(tvb, offset, &asn1_ctx, tree, hf_j2735_RoadSideAlert_PDU);
-  offset += 7; offset >>= 3;
-  return offset;
-}
 static int dissect_RTCMcorrections_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
   int offset = 0;
   asn1_ctx_t asn1_ctx;
   asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
   offset = dissect_j2735_RTCMcorrections(tvb, offset, &asn1_ctx, tree, hf_j2735_RTCMcorrections_PDU);
+  offset += 7; offset >>= 3;
+  return offset;
+}
+static int dissect_RoadSideAlert_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
+  int offset = 0;
+  asn1_ctx_t asn1_ctx;
+  asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
+  offset = dissect_j2735_RoadSideAlert(tvb, offset, &asn1_ctx, tree, hf_j2735_RoadSideAlert_PDU);
   offset += 7; offset >>= 3;
   return offset;
 }
@@ -25796,6 +25939,14 @@ static int dissect_SignalControlAndPrioritizationStatus_PDU(tvbuff_t *tvb _U_, p
   offset += 7; offset >>= 3;
   return offset;
 }
+static int dissect_SPAT_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
+  int offset = 0;
+  asn1_ctx_t asn1_ctx;
+  asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
+  offset = dissect_j2735_SPAT(tvb, offset, &asn1_ctx, tree, hf_j2735_SPAT_PDU);
+  offset += 7; offset >>= 3;
+  return offset;
+}
 static int dissect_SignalRequestMessage_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
   int offset = 0;
   asn1_ctx_t asn1_ctx;
@@ -25812,11 +25963,11 @@ static int dissect_SignalStatusMessage_PDU(tvbuff_t *tvb _U_, packet_info *pinfo
   offset += 7; offset >>= 3;
   return offset;
 }
-static int dissect_SPAT_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
+static int dissect_TrafficSignalPhaseAndTiming_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
   int offset = 0;
   asn1_ctx_t asn1_ctx;
   asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
-  offset = dissect_j2735_SPAT(tvb, offset, &asn1_ctx, tree, hf_j2735_SPAT_PDU);
+  offset = dissect_j2735_TrafficSignalPhaseAndTiming(tvb, offset, &asn1_ctx, tree, hf_j2735_TrafficSignalPhaseAndTiming_PDU);
   offset += 7; offset >>= 3;
   return offset;
 }
@@ -25825,14 +25976,6 @@ static int dissect_TravelerInformation_PDU(tvbuff_t *tvb _U_, packet_info *pinfo
   asn1_ctx_t asn1_ctx;
   asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
   offset = dissect_j2735_TravelerInformation(tvb, offset, &asn1_ctx, tree, hf_j2735_TravelerInformation_PDU);
-  offset += 7; offset >>= 3;
-  return offset;
-}
-static int dissect_TrafficSignalPhaseAndTiming_PDU(tvbuff_t *tvb _U_, packet_info *pinfo _U_, proto_tree *tree _U_, void *data _U_) {
-  int offset = 0;
-  asn1_ctx_t asn1_ctx;
-  asn1_ctx_init(&asn1_ctx, ASN1_ENC_PER, FALSE, pinfo);
-  offset = dissect_j2735_TrafficSignalPhaseAndTiming(tvb, offset, &asn1_ctx, tree, hf_j2735_TrafficSignalPhaseAndTiming_PDU);
   offset += 7; offset >>= 3;
   return offset;
 }
@@ -25934,6 +26077,9 @@ static int dissect_SensorDataSharingMessage_PDU(tvbuff_t *tvb _U_, packet_info *
 }
 
 
+/*--- End of included file: packet-j2735-fn.c ---*/
+#line 69 "./asn1/j2735/packet-j2735-template.c"
+
 
 static int
 dissect_j2735(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void* data _U_)
@@ -25961,6 +26107,9 @@ void proto_register_j2735(void) {
 
   /* List of fields */
   static hf_register_info hf[] = {
+
+/*--- Included file: packet-j2735-hfarr.c ---*/
+#line 1 "./asn1/j2735/packet-j2735-hfarr.c"
     { &hf_j2735_BasicSafetyMessage_PDU,
       { "BasicSafetyMessage", "j2735.BasicSafetyMessage_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -26013,12 +26162,12 @@ void proto_register_j2735(void) {
       { "ProbeVehicleData", "j2735.ProbeVehicleData_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_RoadSideAlert_PDU,
-      { "RoadSideAlert", "j2735.RoadSideAlert_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
     { &hf_j2735_RTCMcorrections_PDU,
       { "RTCMcorrections", "j2735.RTCMcorrections_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_RoadSideAlert_PDU,
+      { "RoadSideAlert", "j2735.RoadSideAlert_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
     { &hf_j2735_SignalControlAndPrioritizationRequest_PDU,
@@ -26029,6 +26178,10 @@ void proto_register_j2735(void) {
       { "SignalControlAndPrioritizationStatus", "j2735.SignalControlAndPrioritizationStatus_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
+    { &hf_j2735_SPAT_PDU,
+      { "SPAT", "j2735.SPAT_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
     { &hf_j2735_SignalRequestMessage_PDU,
       { "SignalRequestMessage", "j2735.SignalRequestMessage_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -26037,16 +26190,12 @@ void proto_register_j2735(void) {
       { "SignalStatusMessage", "j2735.SignalStatusMessage_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_SPAT_PDU,
-      { "SPAT", "j2735.SPAT_element",
+    { &hf_j2735_TrafficSignalPhaseAndTiming_PDU,
+      { "TrafficSignalPhaseAndTiming", "j2735.TrafficSignalPhaseAndTiming_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
     { &hf_j2735_TravelerInformation_PDU,
       { "TravelerInformation", "j2735.TravelerInformation_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
-    { &hf_j2735_TrafficSignalPhaseAndTiming_PDU,
-      { "TrafficSignalPhaseAndTiming", "j2735.TrafficSignalPhaseAndTiming_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
     { &hf_j2735_RoadWeatherMessage_PDU,
@@ -26100,19 +26249,19 @@ void proto_register_j2735(void) {
     { &hf_j2735_gnssLon,
       { "gnssLon", "j2735.gnssLon",
         FT_INT32, BASE_DEC, NULL, 0,
-        "LongitudeX", HFILL }},
+        "LongitudeEfc", HFILL }},
     { &hf_j2735_gnssLat,
       { "gnssLat", "j2735.gnssLat",
         FT_INT32, BASE_DEC, NULL, 0,
-        "LatitudeX", HFILL }},
+        "LatitudeEfc", HFILL }},
     { &hf_j2735_longitude,
       { "longitude", "j2735.longitude",
         FT_INT32, BASE_DEC, NULL, 0,
-        "LongitudeX", HFILL }},
+        "LongitudeEfc", HFILL }},
     { &hf_j2735_latitude,
       { "latitude", "j2735.latitude",
         FT_INT32, BASE_DEC, NULL, 0,
-        "LatitudeX", HFILL }},
+        "LatitudeEfc", HFILL }},
     { &hf_j2735_altitude,
       { "altitude", "j2735.altitude",
         FT_INT32, BASE_DEC, NULL, 0,
@@ -26859,20 +27008,20 @@ void proto_register_j2735(void) {
         NULL, HFILL }},
     { &hf_j2735_vehicleGroupAffected,
       { "vehicleGroupAffected", "j2735.vehicleGroupAffected",
-        FT_UINT32, BASE_DEC, VALS(j2735_VehicleGroupAffectedValues_vals), 0,
-        "VehicleGroupAffectedValues", HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_VehicleGroupAffectedDef_vals), 0,
+        "VehicleGroupAffectedDef", HFILL }},
     { &hf_j2735_travelerGroupAffected,
       { "travelerGroupAffected", "j2735.travelerGroupAffected",
         FT_UINT32, BASE_DEC, VALS(j2735_TravelerGroupAffected_vals), 0,
         NULL, HFILL }},
     { &hf_j2735_responderGroupAffected,
       { "responderGroupAffected", "j2735.responderGroupAffected",
-        FT_UINT32, BASE_DEC, VALS(j2735_ResponderGroupAffectedValues_vals), 0,
-        "ResponderGroupAffectedValues", HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_ResponderGroupAffected_vals), 0,
+        NULL, HFILL }},
     { &hf_j2735_incidentResponseEquipment,
       { "incidentResponseEquipment", "j2735.incidentResponseEquipment",
-        FT_UINT32, BASE_DEC, VALS(j2735_IncidentResponseEquipmentValues_vals), 0,
-        "IncidentResponseEquipmentValues", HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_IncidentResponseEquipmentJ2540_vals), 0,
+        "IncidentResponseEquipmentJ2540", HFILL }},
     { &hf_j2735_transitOperations,
       { "transitOperations", "j2735.transitOperations",
         FT_UINT32, BASE_DEC, VALS(j2735_TransitOperations_vals), 0,
@@ -26881,6 +27030,22 @@ void proto_register_j2735(void) {
       { "regulatorySigns", "j2735.regulatorySigns",
         FT_UINT32, BASE_DEC, VALS(j2735_RegulatoryAndWarningSigns_vals), 0,
         "RegulatoryAndWarningSigns", HFILL }},
+    { &hf_j2735_ITIScodesAndTextJ2540_item,
+      { "ITIScodesAndTextJ2540 item", "j2735.ITIScodesAndTextJ2540_item_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_item,
+      { "item", "j2735.item",
+        FT_UINT32, BASE_DEC, VALS(j2735_T_item_vals), 0,
+        NULL, HFILL }},
+    { &hf_j2735_itis,
+      { "itis", "j2735.itis",
+        FT_UINT32, BASE_DEC, VALS(j2735_ITIScodesJ2540_vals), 0,
+        "ITIScodesJ2540", HFILL }},
+    { &hf_j2735_text,
+      { "text", "j2735.text",
+        FT_STRING, BASE_NONE, NULL, 0,
+        "ITIStextJ2540", HFILL }},
     { &hf_j2735_d,
       { "d", "j2735.d",
         FT_INT32, BASE_DEC, NULL, 0,
@@ -27098,8 +27263,8 @@ void proto_register_j2735(void) {
         FT_UINT32, BASE_DEC, NULL, 0,
         "ITIScodes", HFILL }},
     { &hf_j2735_locationDetails,
-      { "locationDetails", "j2735.locationDetails",
-        FT_UINT32, BASE_DEC, VALS(j2735_GenericLocations_vals), 0,
+      { "locationDetails", "j2735.locationDetails_element",
+        FT_NONE, BASE_NONE, NULL, 0,
         "GenericLocations", HFILL }},
     { &hf_j2735_typeEvent,
       { "typeEvent", "j2735.typeEvent",
@@ -27173,8 +27338,8 @@ void proto_register_j2735(void) {
       { "description", "j2735.description_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "EventDescription", HFILL }},
-    { &hf_j2735_deprecated,
-      { "deprecated", "j2735.deprecated_element",
+    { &hf_j2735_doNotUse,
+      { "doNotUse", "j2735.doNotUse_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "TrailerData", HFILL }},
     { &hf_j2735_SpeedProfileMeasurementList_item,
@@ -27197,28 +27362,28 @@ void proto_register_j2735(void) {
       { "vehicleData", "j2735.vehicleData_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_deprecated1,
-      { "deprecated1", "j2735.deprecated1_element",
+    { &hf_j2735_doNotUse1,
+      { "doNotUse1", "j2735.doNotUse1_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "WeatherReport", HFILL }},
-    { &hf_j2735_deprecated2,
-      { "deprecated2", "j2735.deprecated2_element",
+    { &hf_j2735_doNotUse2,
+      { "doNotUse2", "j2735.doNotUse2_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "WeatherProbe", HFILL }},
-    { &hf_j2735_deprecated3,
-      { "deprecated3", "j2735.deprecated3_element",
+    { &hf_j2735_doNotUse3,
+      { "doNotUse3", "j2735.doNotUse3_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "ObstacleDetection", HFILL }},
     { &hf_j2735_status,
       { "status", "j2735.status_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "DisabledVehicle", HFILL }},
-    { &hf_j2735_deprecated4,
-      { "deprecated4", "j2735.deprecated4_element",
+    { &hf_j2735_doNotUse4,
+      { "doNotUse4", "j2735.doNotUse4_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "SpeedProfile", HFILL }},
-    { &hf_j2735_deprecated5,
-      { "deprecated5", "j2735.deprecated5_element",
+    { &hf_j2735_doNotUse5,
+      { "doNotUse5", "j2735.doNotUse5_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "RTCMPackage", HFILL }},
     { &hf_j2735_fhwaVehicleClass,
@@ -27321,8 +27486,8 @@ void proto_register_j2735(void) {
       { "mass", "j2735.mass",
         FT_UINT32, BASE_DEC, NULL, 0,
         "VehicleMass", HFILL }},
-    { &hf_j2735_deprecated_01,
-      { "deprecated", "j2735.deprecated",
+    { &hf_j2735_doNotUse_01,
+      { "doNotUse", "j2735.doNotUse",
         FT_UINT32, BASE_DEC, NULL, 0,
         "TrailerWeight", HFILL }},
     { &hf_j2735_trailerPresent,
@@ -27337,8 +27502,8 @@ void proto_register_j2735(void) {
       { "axles", "j2735.axles_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_rollAngle,
-      { "rollAngle", "j2735.rollAngle",
+    { &hf_j2735_leanAngle,
+      { "leanAngle", "j2735.leanAngle",
         FT_INT32, BASE_DEC, NULL, 0,
         "INTEGER_M90_90", HFILL }},
     { &hf_j2735_airTemp,
@@ -28193,6 +28358,22 @@ void proto_register_j2735(void) {
       { "basicType", "j2735.basicType",
         FT_UINT32, BASE_DEC, VALS(j2735_VehicleType_vals), 0,
         "VehicleType", HFILL }},
+    { &hf_j2735_ITIScodesAndText_item,
+      { "ITIScodesAndText item", "j2735.ITIScodesAndText_item_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_item_01,
+      { "item", "j2735.item",
+        FT_UINT32, BASE_DEC, VALS(j2735_T_item_01_vals), 0,
+        "T_item_01", HFILL }},
+    { &hf_j2735_itis_01,
+      { "itis", "j2735.itis",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "ITIScodes", HFILL }},
+    { &hf_j2735_text_01,
+      { "text", "j2735.text",
+        FT_STRING, BASE_NONE, NULL, 0,
+        "ITIStext", HFILL }},
     { &hf_j2735_partOne,
       { "partOne", "j2735.partOne_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -28213,22 +28394,6 @@ void proto_register_j2735(void) {
       { "eventFlag", "j2735.eventFlag",
         FT_BYTES, BASE_NONE, NULL, 0,
         "VehicleEventFlags", HFILL }},
-    { &hf_j2735_ITIScodesAndText_item,
-      { "ITIScodesAndText item", "j2735.ITIScodesAndText_item_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
-    { &hf_j2735_item,
-      { "item", "j2735.item",
-        FT_UINT32, BASE_DEC, VALS(j2735_T_item_vals), 0,
-        NULL, HFILL }},
-    { &hf_j2735_itis,
-      { "itis", "j2735.itis",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "ITIScodes", HFILL }},
-    { &hf_j2735_text,
-      { "text", "j2735.text",
-        FT_STRING, BASE_NONE, NULL, 0,
-        "ITIStext", HFILL }},
     { &hf_j2735_layerType,
       { "layerType", "j2735.layerType",
         FT_UINT32, BASE_DEC, VALS(j2735_LayerType_vals), 0,
@@ -28945,14 +29110,6 @@ void proto_register_j2735(void) {
       { "gnssStatus", "j2735.gnssStatus",
         FT_BYTES, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_position_01,
-      { "position", "j2735.position_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "FullPositionVector", HFILL }},
-    { &hf_j2735_furtherInfoID,
-      { "furtherInfoID", "j2735.furtherInfoID",
-        FT_BYTES, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
     { &hf_j2735_rev_01,
       { "rev", "j2735.rev",
         FT_UINT32, BASE_DEC, VALS(j2735_RTCM_Revision_vals), 0,
@@ -28961,123 +29118,19 @@ void proto_register_j2735(void) {
       { "anchorPoint", "j2735.anchorPoint_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "FullPositionVector", HFILL }},
-    { &hf_j2735_sequenceNumber,
-      { "sequenceNumber", "j2735.sequenceNumber",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "MsgCount", HFILL }},
-    { &hf_j2735_requests_01,
-      { "requests", "j2735.requests",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "SignalRequestList", HFILL }},
-    { &hf_j2735_requestor,
-      { "requestor", "j2735.requestor_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "RequestorDescription", HFILL }},
-    { &hf_j2735_type_10,
-      { "type", "j2735.type_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "RequestorType", HFILL }},
-    { &hf_j2735_position_02,
+    { &hf_j2735_position_01,
       { "position", "j2735.position_element",
         FT_NONE, BASE_NONE, NULL, 0,
-        "RequestorPositionVector", HFILL }},
-    { &hf_j2735_routeName,
-      { "routeName", "j2735.routeName",
-        FT_STRING, BASE_NONE, NULL, 0,
-        "DescriptiveName", HFILL }},
-    { &hf_j2735_transitStatus,
-      { "transitStatus", "j2735.transitStatus",
+        "FullPositionVector", HFILL }},
+    { &hf_j2735_furtherInfoID,
+      { "furtherInfoID", "j2735.furtherInfoID",
         FT_BYTES, BASE_NONE, NULL, 0,
-        "TransitVehicleStatus", HFILL }},
-    { &hf_j2735_transitOccupancy,
-      { "transitOccupancy", "j2735.transitOccupancy",
-        FT_UINT32, BASE_DEC, VALS(j2735_TransitVehicleOccupancy_vals), 0,
-        "TransitVehicleOccupancy", HFILL }},
-    { &hf_j2735_transitSchedule,
-      { "transitSchedule", "j2735.transitSchedule",
-        FT_INT32, BASE_DEC, NULL, 0,
-        "DeltaTime", HFILL }},
-    { &hf_j2735_heading_04,
-      { "heading", "j2735.heading",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "Angle", HFILL }},
-    { &hf_j2735_SignalRequestList_item,
-      { "SignalRequestPackage", "j2735.SignalRequestPackage_element",
-        FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_request_01,
-      { "request", "j2735.request_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "SignalRequest", HFILL }},
-    { &hf_j2735_minute_02,
-      { "minute", "j2735.minute",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "MinuteOfTheYear", HFILL }},
-    { &hf_j2735_duration,
-      { "duration", "j2735.duration",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "DSecond", HFILL }},
-    { &hf_j2735_requestID,
-      { "requestID", "j2735.requestID",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        NULL, HFILL }},
-    { &hf_j2735_requestType,
-      { "requestType", "j2735.requestType",
-        FT_UINT32, BASE_DEC, VALS(j2735_PriorityRequestType_vals), 0,
-        "PriorityRequestType", HFILL }},
-    { &hf_j2735_inBoundLane,
-      { "inBoundLane", "j2735.inBoundLane",
-        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
-        "IntersectionAccessPoint", HFILL }},
-    { &hf_j2735_outBoundLane,
-      { "outBoundLane", "j2735.outBoundLane",
-        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
-        "IntersectionAccessPoint", HFILL }},
-    { &hf_j2735_status_02,
-      { "status", "j2735.status",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "SignalStatusList", HFILL }},
-    { &hf_j2735_request_02,
-      { "request", "j2735.request",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "RequestID", HFILL }},
-    { &hf_j2735_typeData,
-      { "typeData", "j2735.typeData_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "RequestorType", HFILL }},
-    { &hf_j2735_SignalStatusList_item,
-      { "SignalStatus", "j2735.SignalStatus_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
-    { &hf_j2735_SignalStatusPackageList_item,
-      { "SignalStatusPackage", "j2735.SignalStatusPackage_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
-    { &hf_j2735_requester,
-      { "requester", "j2735.requester_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "SignalRequesterInfo", HFILL }},
-    { &hf_j2735_inboundOn,
-      { "inboundOn", "j2735.inboundOn",
-        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
-        "IntersectionAccessPoint", HFILL }},
-    { &hf_j2735_outboundOn,
-      { "outboundOn", "j2735.outboundOn",
-        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
-        "IntersectionAccessPoint", HFILL }},
-    { &hf_j2735_status_03,
-      { "status", "j2735.status",
-        FT_UINT32, BASE_DEC, VALS(j2735_PrioritizationResponseStatus_vals), 0,
-        "PrioritizationResponseStatus", HFILL }},
-    { &hf_j2735_sigStatus,
-      { "sigStatus", "j2735.sigStatus",
-        FT_UINT32, BASE_DEC, NULL, 0,
-        "SignalStatusPackageList", HFILL }},
     { &hf_j2735_intersections_01,
       { "intersections", "j2735.intersections",
         FT_UINT32, BASE_DEC, NULL, 0,
         "IntersectionStateList", HFILL }},
-    { &hf_j2735_type_11,
+    { &hf_j2735_type_10,
       { "type", "j2735.type",
         FT_UINT32, BASE_DEC, VALS(j2735_AdvisorySpeedType_vals), 0,
         "AdvisorySpeedType", HFILL }},
@@ -29121,7 +29174,7 @@ void proto_register_j2735(void) {
       { "LaneID", "j2735.LaneID",
         FT_UINT32, BASE_DEC, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_status_04,
+    { &hf_j2735_status_02,
       { "status", "j2735.status",
         FT_BYTES, BASE_NONE, NULL, 0,
         "IntersectionStatusObject", HFILL }},
@@ -29201,6 +29254,118 @@ void proto_register_j2735(void) {
       { "nextTime", "j2735.nextTime",
         FT_UINT32, BASE_DEC, NULL, 0,
         "TimeMark", HFILL }},
+    { &hf_j2735_sequenceNumber,
+      { "sequenceNumber", "j2735.sequenceNumber",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "MsgCount", HFILL }},
+    { &hf_j2735_requests_01,
+      { "requests", "j2735.requests",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "SignalRequestList", HFILL }},
+    { &hf_j2735_requestor,
+      { "requestor", "j2735.requestor_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "RequestorDescription", HFILL }},
+    { &hf_j2735_type_11,
+      { "type", "j2735.type_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "RequestorType", HFILL }},
+    { &hf_j2735_position_02,
+      { "position", "j2735.position_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "RequestorPositionVector", HFILL }},
+    { &hf_j2735_routeName,
+      { "routeName", "j2735.routeName",
+        FT_STRING, BASE_NONE, NULL, 0,
+        "DescriptiveName", HFILL }},
+    { &hf_j2735_transitStatus,
+      { "transitStatus", "j2735.transitStatus",
+        FT_BYTES, BASE_NONE, NULL, 0,
+        "TransitVehicleStatus", HFILL }},
+    { &hf_j2735_transitOccupancy,
+      { "transitOccupancy", "j2735.transitOccupancy",
+        FT_UINT32, BASE_DEC, VALS(j2735_TransitVehicleOccupancy_vals), 0,
+        "TransitVehicleOccupancy", HFILL }},
+    { &hf_j2735_transitSchedule,
+      { "transitSchedule", "j2735.transitSchedule",
+        FT_INT32, BASE_DEC, NULL, 0,
+        "DeltaTime", HFILL }},
+    { &hf_j2735_heading_04,
+      { "heading", "j2735.heading",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "Angle", HFILL }},
+    { &hf_j2735_SignalRequestList_item,
+      { "SignalRequestPackage", "j2735.SignalRequestPackage_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_request_01,
+      { "request", "j2735.request_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "SignalRequest", HFILL }},
+    { &hf_j2735_minute_02,
+      { "minute", "j2735.minute",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "MinuteOfTheYear", HFILL }},
+    { &hf_j2735_duration,
+      { "duration", "j2735.duration",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "DSecond", HFILL }},
+    { &hf_j2735_requestID,
+      { "requestID", "j2735.requestID",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_requestType,
+      { "requestType", "j2735.requestType",
+        FT_UINT32, BASE_DEC, VALS(j2735_PriorityRequestType_vals), 0,
+        "PriorityRequestType", HFILL }},
+    { &hf_j2735_inBoundLane,
+      { "inBoundLane", "j2735.inBoundLane",
+        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
+        "IntersectionAccessPoint", HFILL }},
+    { &hf_j2735_outBoundLane,
+      { "outBoundLane", "j2735.outBoundLane",
+        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
+        "IntersectionAccessPoint", HFILL }},
+    { &hf_j2735_status_03,
+      { "status", "j2735.status",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "SignalStatusList", HFILL }},
+    { &hf_j2735_request_02,
+      { "request", "j2735.request",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "RequestID", HFILL }},
+    { &hf_j2735_typeData,
+      { "typeData", "j2735.typeData_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "RequestorType", HFILL }},
+    { &hf_j2735_SignalStatusList_item,
+      { "SignalStatus", "j2735.SignalStatus_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_SignalStatusPackageList_item,
+      { "SignalStatusPackage", "j2735.SignalStatusPackage_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_requester,
+      { "requester", "j2735.requester_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "SignalRequesterInfo", HFILL }},
+    { &hf_j2735_inboundOn,
+      { "inboundOn", "j2735.inboundOn",
+        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
+        "IntersectionAccessPoint", HFILL }},
+    { &hf_j2735_outboundOn,
+      { "outboundOn", "j2735.outboundOn",
+        FT_UINT32, BASE_DEC, VALS(j2735_IntersectionAccessPoint_vals), 0,
+        "IntersectionAccessPoint", HFILL }},
+    { &hf_j2735_status_04,
+      { "status", "j2735.status",
+        FT_UINT32, BASE_DEC, VALS(j2735_PrioritizationResponseStatus_vals), 0,
+        "PrioritizationResponseStatus", HFILL }},
+    { &hf_j2735_sigStatus,
+      { "sigStatus", "j2735.sigStatus",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "SignalStatusPackageList", HFILL }},
     { &hf_j2735_header,
       { "header", "j2735.header_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -29353,11 +29518,11 @@ void proto_register_j2735(void) {
       { "ExitService item", "j2735.ExitService_item_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_item_01,
+    { &hf_j2735_item_02,
       { "item", "j2735.item",
-        FT_UINT32, BASE_DEC, VALS(j2735_T_item_01_vals), 0,
-        "T_item_01", HFILL }},
-    { &hf_j2735_text_01,
+        FT_UINT32, BASE_DEC, VALS(j2735_T_item_02_vals), 0,
+        "T_item_02", HFILL }},
+    { &hf_j2735_text_02,
       { "text", "j2735.text",
         FT_STRING, BASE_NONE, NULL, 0,
         "ITIStextPhrase", HFILL }},
@@ -29365,26 +29530,26 @@ void proto_register_j2735(void) {
       { "GenericSignage item", "j2735.GenericSignage_item_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_item_02,
-      { "item", "j2735.item",
-        FT_UINT32, BASE_DEC, VALS(j2735_T_item_02_vals), 0,
-        "T_item_02", HFILL }},
-    { &hf_j2735_SpeedLimit_item,
-      { "SpeedLimit item", "j2735.SpeedLimit_item_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        NULL, HFILL }},
     { &hf_j2735_item_03,
       { "item", "j2735.item",
         FT_UINT32, BASE_DEC, VALS(j2735_T_item_03_vals), 0,
         "T_item_03", HFILL }},
-    { &hf_j2735_WorkZone_item,
-      { "WorkZone item", "j2735.WorkZone_item_element",
+    { &hf_j2735_SpeedLimit_item,
+      { "SpeedLimit item", "j2735.SpeedLimit_item_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
     { &hf_j2735_item_04,
       { "item", "j2735.item",
         FT_UINT32, BASE_DEC, VALS(j2735_T_item_04_vals), 0,
         "T_item_04", HFILL }},
+    { &hf_j2735_WorkZone_item,
+      { "WorkZone item", "j2735.WorkZone_item_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_item_05,
+      { "item", "j2735.item",
+        FT_UINT32, BASE_DEC, VALS(j2735_T_item_05_vals), 0,
+        "T_item_05", HFILL }},
     { &hf_j2735_lon_03,
       { "lon", "j2735.lon",
         FT_INT32, BASE_DEC, NULL, 0,
@@ -30253,6 +30418,18 @@ void proto_register_j2735(void) {
       { "urlLink", "j2735.urlLink",
         FT_STRING, BASE_NONE, NULL, 0,
         "IA5String_SIZE_1_500", HFILL }},
+    { &hf_j2735_partII_01,
+      { "partII", "j2735.partII",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent", HFILL }},
+    { &hf_j2735_partII_item_01,
+      { "CCMPartIIcontent", "j2735.CCMPartIIcontent_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        NULL, HFILL }},
+    { &hf_j2735_partII_Id_01,
+      { "partII-Id", "j2735.partII_Id",
+        FT_UINT32, BASE_DEC, VALS(j2735_CCMPartII_Id_vals), 0,
+        "CCMPartII_Id", HFILL }},
     { &hf_j2735_partII_Value_01,
       { "partII-Value", "j2735.partII_Value_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -31309,10 +31486,18 @@ void proto_register_j2735(void) {
       { "drawBridgeActiv", "j2735.drawBridgeActiv_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
+    { &hf_j2735_meanVerticalVariation_01,
+      { "meanVerticalVariation", "j2735.meanVerticalVariation",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "MeanVariationC", HFILL }},
     { &hf_j2735_verticalVariationStdDev_01,
       { "verticalVariationStdDev", "j2735.verticalVariationStdDev",
         FT_UINT32, BASE_DEC, NULL, 0,
         "StdDev", HFILL }},
+    { &hf_j2735_meanHorizontalVariation_01,
+      { "meanHorizontalVariation", "j2735.meanHorizontalVariation",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "MeanVariationC", HFILL }},
     { &hf_j2735_horizontalVariationStdDev_01,
       { "horizontalVariationStdDev", "j2735.horizontalVariationStdDev",
         FT_UINT32, BASE_DEC, NULL, 0,
@@ -32525,14 +32710,6 @@ void proto_register_j2735(void) {
       { "yawConfidence", "j2735.yawConfidence",
         FT_UINT32, BASE_DEC, VALS(j2735_HeadingConfidence_vals), 0,
         "HeadingConfidence", HFILL }},
-    { &hf_j2735_pitchRate_01,
-      { "pitchRate", "j2735.pitchRate",
-        FT_INT32, BASE_DEC, NULL, 0,
-        "PitchRateX", HFILL }},
-    { &hf_j2735_rollRate_01,
-      { "rollRate", "j2735.rollRate",
-        FT_INT32, BASE_DEC, NULL, 0,
-        "RollRateX", HFILL }},
     { &hf_j2735_pitchRateConfidence,
       { "pitchRateConfidence", "j2735.pitchRateConfidence",
         FT_UINT32, BASE_DEC, VALS(j2735_PitchRateConfidence_vals), 0,
@@ -33305,30 +33482,6 @@ void proto_register_j2735(void) {
       { "slowMoving", "j2735.UserSizeAndBehaviour.slowMoving",
         FT_BOOLEAN, 8, NULL, 0x08,
         NULL, HFILL }},
-    { &hf_j2735_TransitVehicleStatus_loading,
-      { "loading", "j2735.TransitVehicleStatus.loading",
-        FT_BOOLEAN, 8, NULL, 0x80,
-        NULL, HFILL }},
-    { &hf_j2735_TransitVehicleStatus_anADAuse,
-      { "anADAuse", "j2735.TransitVehicleStatus.anADAuse",
-        FT_BOOLEAN, 8, NULL, 0x40,
-        NULL, HFILL }},
-    { &hf_j2735_TransitVehicleStatus_aBikeLoad,
-      { "aBikeLoad", "j2735.TransitVehicleStatus.aBikeLoad",
-        FT_BOOLEAN, 8, NULL, 0x20,
-        NULL, HFILL }},
-    { &hf_j2735_TransitVehicleStatus_doorOpen,
-      { "doorOpen", "j2735.TransitVehicleStatus.doorOpen",
-        FT_BOOLEAN, 8, NULL, 0x10,
-        NULL, HFILL }},
-    { &hf_j2735_TransitVehicleStatus_charging,
-      { "charging", "j2735.TransitVehicleStatus.charging",
-        FT_BOOLEAN, 8, NULL, 0x08,
-        NULL, HFILL }},
-    { &hf_j2735_TransitVehicleStatus_atStopLine,
-      { "atStopLine", "j2735.TransitVehicleStatus.atStopLine",
-        FT_BOOLEAN, 8, NULL, 0x04,
-        NULL, HFILL }},
     { &hf_j2735_IntersectionStatusObject_manualControlIsEnabled,
       { "manualControlIsEnabled", "j2735.IntersectionStatusObject.manualControlIsEnabled",
         FT_BOOLEAN, 8, NULL, 0x80,
@@ -33383,6 +33536,30 @@ void proto_register_j2735(void) {
         NULL, HFILL }},
     { &hf_j2735_IntersectionStatusObject_noValidSPATisAvailableAtThisTime,
       { "noValidSPATisAvailableAtThisTime", "j2735.IntersectionStatusObject.noValidSPATisAvailableAtThisTime",
+        FT_BOOLEAN, 8, NULL, 0x04,
+        NULL, HFILL }},
+    { &hf_j2735_TransitVehicleStatus_loading,
+      { "loading", "j2735.TransitVehicleStatus.loading",
+        FT_BOOLEAN, 8, NULL, 0x80,
+        NULL, HFILL }},
+    { &hf_j2735_TransitVehicleStatus_anADAuse,
+      { "anADAuse", "j2735.TransitVehicleStatus.anADAuse",
+        FT_BOOLEAN, 8, NULL, 0x40,
+        NULL, HFILL }},
+    { &hf_j2735_TransitVehicleStatus_aBikeLoad,
+      { "aBikeLoad", "j2735.TransitVehicleStatus.aBikeLoad",
+        FT_BOOLEAN, 8, NULL, 0x20,
+        NULL, HFILL }},
+    { &hf_j2735_TransitVehicleStatus_doorOpen,
+      { "doorOpen", "j2735.TransitVehicleStatus.doorOpen",
+        FT_BOOLEAN, 8, NULL, 0x10,
+        NULL, HFILL }},
+    { &hf_j2735_TransitVehicleStatus_charging,
+      { "charging", "j2735.TransitVehicleStatus.charging",
+        FT_BOOLEAN, 8, NULL, 0x08,
+        NULL, HFILL }},
+    { &hf_j2735_TransitVehicleStatus_atStopLine,
+      { "atStopLine", "j2735.TransitVehicleStatus.atStopLine",
         FT_BOOLEAN, 8, NULL, 0x04,
         NULL, HFILL }},
     { &hf_j2735_TrafficLightControllerStatus_conflict,
@@ -33481,11 +33658,17 @@ void proto_register_j2735(void) {
       { "engineCtlFault", "j2735.CCMFaultMode.engineCtlFault",
         FT_BOOLEAN, 8, NULL, 0x01,
         NULL, HFILL }},
+
+/*--- End of included file: packet-j2735-hfarr.c ---*/
+#line 98 "./asn1/j2735/packet-j2735-template.c"
   };
 
   /* List of subtrees */
   static gint *ett[] = {
       &ett_j2735,
+
+/*--- Included file: packet-j2735-ettarr.c ---*/
+#line 1 "./asn1/j2735/packet-j2735-ettarr.c"
     &ett_j2735_AbsolutePosition2d,
     &ett_j2735_AbsolutePosition3d,
     &ett_j2735_AxleWeightLimit,
@@ -33494,7 +33677,7 @@ void proto_register_j2735(void) {
     &ett_j2735_DieselEmissionValues,
     &ett_j2735_DriverCharacteristics,
     &ett_j2735_Distance,
-    &ett_j2735_DurationX,
+    &ett_j2735_DurationEfc,
     &ett_j2735_EngineDetails,
     &ett_j2735_ExhaustEmissionValues,
     &ett_j2735_NumberOfAxles,
@@ -33538,6 +33721,9 @@ void proto_register_j2735(void) {
     &ett_j2735_TariffClassDescription,
     &ett_j2735_VehicleDescription,
     &ett_j2735_ITISEventType,
+    &ett_j2735_ITIScodesAndTextJ2540,
+    &ett_j2735_ITIScodesAndTextJ2540_item,
+    &ett_j2735_T_item,
     &ett_j2735_LatitudeDMS2,
     &ett_j2735_LongitudeDMS2,
     &ett_j2735_Node_LLdms_48b,
@@ -33666,11 +33852,11 @@ void proto_register_j2735(void) {
     &ett_j2735_CommonSafetyRequest,
     &ett_j2735_RequestedItemList,
     &ett_j2735_EmergencyVehicleAlert,
-    &ett_j2735_IntersectionCollision,
-    &ett_j2735_ApproachOrLane,
     &ett_j2735_ITIScodesAndText,
     &ett_j2735_ITIScodesAndText_item,
-    &ett_j2735_T_item,
+    &ett_j2735_T_item_01,
+    &ett_j2735_IntersectionCollision,
+    &ett_j2735_ApproachOrLane,
     &ett_j2735_MapData,
     &ett_j2735_ConnectingLane,
     &ett_j2735_Connection,
@@ -33738,21 +33924,8 @@ void proto_register_j2735(void) {
     &ett_j2735_T_object,
     &ett_j2735_T_vehicleData,
     &ett_j2735_T_weatherReport,
-    &ett_j2735_RoadSideAlert,
     &ett_j2735_RTCMcorrections,
-    &ett_j2735_SignalRequestMessage,
-    &ett_j2735_RequestorDescription,
-    &ett_j2735_RequestorPositionVector,
-    &ett_j2735_SignalRequestList,
-    &ett_j2735_SignalRequestPackage,
-    &ett_j2735_SignalRequest,
-    &ett_j2735_TransitVehicleStatus,
-    &ett_j2735_SignalStatusMessage,
-    &ett_j2735_SignalRequesterInfo,
-    &ett_j2735_SignalStatusList,
-    &ett_j2735_SignalStatusPackageList,
-    &ett_j2735_SignalStatusPackage,
-    &ett_j2735_SignalStatus,
+    &ett_j2735_RoadSideAlert,
     &ett_j2735_SPAT,
     &ett_j2735_AdvisorySpeed,
     &ett_j2735_AdvisorySpeedList,
@@ -33767,6 +33940,19 @@ void proto_register_j2735(void) {
     &ett_j2735_MovementState,
     &ett_j2735_TimeChangeDetails,
     &ett_j2735_IntersectionStatusObject,
+    &ett_j2735_SignalRequestMessage,
+    &ett_j2735_RequestorDescription,
+    &ett_j2735_RequestorPositionVector,
+    &ett_j2735_SignalRequestList,
+    &ett_j2735_SignalRequestPackage,
+    &ett_j2735_SignalRequest,
+    &ett_j2735_TransitVehicleStatus,
+    &ett_j2735_SignalStatusMessage,
+    &ett_j2735_SignalRequesterInfo,
+    &ett_j2735_SignalStatusList,
+    &ett_j2735_SignalStatusPackageList,
+    &ett_j2735_SignalStatusPackage,
+    &ett_j2735_SignalStatus,
     &ett_j2735_TestMessage00,
     &ett_j2735_TestMessage01,
     &ett_j2735_TestMessage02,
@@ -33796,16 +33982,16 @@ void proto_register_j2735(void) {
     &ett_j2735_GeometricProjection,
     &ett_j2735_ExitService,
     &ett_j2735_ExitService_item,
-    &ett_j2735_T_item_01,
+    &ett_j2735_T_item_02,
     &ett_j2735_GenericSignage,
     &ett_j2735_GenericSignage_item,
-    &ett_j2735_T_item_02,
+    &ett_j2735_T_item_03,
     &ett_j2735_SpeedLimit,
     &ett_j2735_SpeedLimit_item,
-    &ett_j2735_T_item_03,
+    &ett_j2735_T_item_04,
     &ett_j2735_WorkZone,
     &ett_j2735_WorkZone_item,
-    &ett_j2735_T_item_04,
+    &ett_j2735_T_item_05,
     &ett_j2735_Node_LL_24B,
     &ett_j2735_Node_LL_28B,
     &ett_j2735_Node_LL_32B,
@@ -33894,7 +34080,8 @@ void proto_register_j2735(void) {
     &ett_j2735_RSMPolygon,
     &ett_j2735_VisualLink,
     &ett_j2735_CooperativeControlMessage,
-    &ett_j2735_CCM_PartIIcontent,
+    &ett_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent,
+    &ett_j2735_CCMPartIIcontent,
     &ett_j2735_LightVehicleCCMExtensions,
     &ett_j2735_HeavyTruckCCMExtensions,
     &ett_j2735_AccelTimeConstant,
@@ -34054,6 +34241,9 @@ void proto_register_j2735(void) {
     &ett_j2735_VehicleSizeConfidence,
     &ett_j2735_ObstacleSize,
     &ett_j2735_ObstacleSizeConfidence,
+
+/*--- End of included file: packet-j2735-ettarr.c ---*/
+#line 104 "./asn1/j2735/packet-j2735-template.c"
   };
 
   /* Register protocol */
@@ -34074,6 +34264,9 @@ void proto_register_j2735(void) {
 /*--- proto_reg_handoff_j2735 -------------------------------------------*/
 void proto_reg_handoff_j2735(void) {
 
+
+/*--- Included file: packet-j2735-dis-tab.c ---*/
+#line 1 "./asn1/j2735/packet-j2735-dis-tab.c"
   dissector_add_uint("j2735.msg", mapData, create_dissector_handle(dissect_MapData_PDU, proto_j2735));
   dissector_add_uint("j2735.msg", signalPhaseAndTimingMessage, create_dissector_handle(dissect_SPAT_PDU, proto_j2735));
   dissector_add_uint("j2735.msg", basicSafetyMessage, create_dissector_handle(dissect_BasicSafetyMessage_PDU, proto_j2735));
@@ -34108,6 +34301,9 @@ void proto_reg_handoff_j2735(void) {
   dissector_add_uint("j2735.partii-id", specialVehicleExt, create_dissector_handle(dissect_SpecialVehicleExtensions_PDU, proto_j2735));
   dissector_add_uint("j2735.partii-id", supplementalVehicleExt, create_dissector_handle(dissect_SupplementalVehicleExtensions_PDU, proto_j2735));
 
+
+/*--- End of included file: packet-j2735-dis-tab.c ---*/
+#line 125 "./asn1/j2735/packet-j2735-template.c"
 
   // based on 1609.12
 

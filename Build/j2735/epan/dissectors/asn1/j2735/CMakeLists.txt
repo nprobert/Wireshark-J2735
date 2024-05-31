@@ -11,11 +11,11 @@ set( PROTOCOL_NAME j2735 )
 
 set( ASN_FILE_LIST
 ISO17573-EfcDataDictionary.asn
-J2540-2-J2540ITIS-2024-rel-v1.1.asn
+J2540-2-J2540ITIS-2024-rel-v1.1.1.asn
 J2735-AddGrpB-2024-rel-v1.1.asn
 J2735-AddGrpC-2024-rel-v1.1.asn
-J2735-BasicSafetyMessage-2024-rel-v1.1.1.asn
-J2735-Common-2024-rel-v1.1.asn
+J2735-BasicSafetyMessage-2024-rel-v1.1.2.asn
+J2735-Common-2024-rel-v1.1.2.asn
 J2735-CommonSafetyRequest-2024-rel-v1.1.asn
 J2735-EmergencyVehicleAlert-2024-rel-v1.1.asn
 J2735-IntersectionCollision-2024-rel-v1.1.asn
@@ -34,10 +34,10 @@ J2735-SCPR-2024-ph-v1.1.asn
 J2735-SCPS-2024-ph-v1.1.asn
 J2735-SignalRequestMessage-2024-rel-v1.1.asn
 J2735-SignalStatusMessage-2024-rel-v1.1.asn
-J2735-SPAT-2024-rel-v1.1.asn
+J2735-SPAT-2024-rel-v1.1.1.asn
 J2735-TestMessages-2024-rel-v1.1.asn
-J2735-TrafficLightStatusMessage-2024-rel-v1.1.asn
-J2735-TravelerInformation-2024-rel-v1.1.asn
+J2735-TrafficLightStatusMessage-2024-rel-v1.1.2.asn
+J2735-TravelerInformation-2024-rel-v1.1.2.asn
 J2735-TSPAT-2024-ph-v1.1.asn
 J2945-3-RoadWeatherMessage-2024-rel-v2.1.asn
 J2945-4-RoadSafetyMessage-2024-rel-v1.1.1.asn

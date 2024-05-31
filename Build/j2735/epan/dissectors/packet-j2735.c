@@ -1,7 +1,7 @@
 /* Do not modify this file. Changes will be overwritten.                      */
 /* Generated automatically by the ASN.1 to Wireshark dissector compiler       */
 /* packet-j2735.c                                                             */
-/* asn2wrs.py -u -p j2735 -c j2735.cnf -s ./packet-j2735-template -D . -O ../.. ISO17573-EfcDataDictionary.asn J2540-2-J2540ITIS-2024-rel-v1.1.asn J2735-AddGrpB-2024-rel-v1.1.asn J2735-AddGrpC-2024-rel-v1.1.asn J2735-BasicSafetyMessage-2024-rel-v1.1.1.asn J2735-Common-2024-rel-v1.1.asn J2735-CommonSafetyRequest-2024-rel-v1.1.asn J2735-EmergencyVehicleAlert-2024-rel-v1.1.asn J2735-ITIS-2024-rel-v1.1.asn J2735-IntersectionCollision-2024-rel-v1.1.asn J2735-MapData-2024-rel-v1.1.asn J2735-MessageFrame-2024-rel-v1.1.1.asn J2735-NMEAcorrections-2024-rel-v1.1.asn J2735-NTCIP-2024-rel-v1.1.asn J2735-PersonalSafetyMessage-2024-rel-v1.1.asn J2735-ProbeDataManagement-2024-rel-v1.1.asn J2735-ProbeVehicleData-2024-rel-v1.1.asn J2735-REGION-2024-rel-v1.1.asn J2735-RTCMcorrections-2024-rel-v1.1.asn J2735-RoadSideAlert-2024-rel-v1.1.asn J2735-SCPR-2024-ph-v1.1.asn J2735-SCPS-2024-ph-v1.1.asn J2735-SPAT-2024-rel-v1.1.asn J2735-SignalRequestMessage-2024-rel-v1.1.asn J2735-SignalStatusMessage-2024-rel-v1.1.asn J2735-TSPAT-2024-ph-v1.1.asn J2735-TestMessages-2024-rel-v1.1.asn J2735-TrafficLightStatusMessage-2024-rel-v1.1.asn J2735-TravelerInformation-2024-rel-v1.1.asn J2945-3-RoadWeatherMessage-2024-rel-v2.1.asn J2945-4-RoadSafetyMessage-2024-rel-v1.1.1.asn J2945-6-CooperativeControlMessage-2024-rel-v1.1.1.asn J2945-9-PersonalSafetyMessage2-2024-ph-v1.1.asn J2945-A-RGA-2024-ph-v1.1.asn J2945-C-ProbeDataConfig-2024-rel-v1.1.asn J2945-C-ProbeDataReport-2024-rel-v1.1.asn J3186-ManeuverSharingandCoordinatingMessage-2024-rel-v1.1.asn J3217-R-RoadUserChargingConfigMsg-2024-rel-v1.1.1.asn J3217-R-RoadUserChargingReportMsg-2024-rel-v1.1.asn J3217-TollAdvertisementMsg-2024-rel-v1.1.asn J3217-TollUsageAckMsg-2024-rel-v1.1.asn J3217-TollUsageMsg-2024-rel-v1.1.asn J3224-SensorDataSharingMessage-2024-rel-v1.1.asn */
+/* asn2wrs.py -u -p j2735 -c j2735.cnf -s ./packet-j2735-template -D . -O ../.. ISO17573-EfcDataDictionary.asn J2540-2-J2540ITIS-2024-rel-v1.1.1.asn J2735-AddGrpB-2024-rel-v1.1.asn J2735-AddGrpC-2024-rel-v1.1.asn J2735-BasicSafetyMessage-2024-rel-v1.1.2.asn J2735-Common-2024-rel-v1.1.2.asn J2735-CommonSafetyRequest-2024-rel-v1.1.asn J2735-EmergencyVehicleAlert-2024-rel-v1.1.asn J2735-ITIS-2024-rel-v1.1.asn J2735-IntersectionCollision-2024-rel-v1.1.asn J2735-MapData-2024-rel-v1.1.asn J2735-MessageFrame-2024-rel-v1.1.1.asn J2735-NMEAcorrections-2024-rel-v1.1.asn J2735-NTCIP-2024-rel-v1.1.asn J2735-PersonalSafetyMessage-2024-rel-v1.1.asn J2735-ProbeDataManagement-2024-rel-v1.1.asn J2735-ProbeVehicleData-2024-rel-v1.1.asn J2735-REGION-2024-rel-v1.1.asn J2735-RTCMcorrections-2024-rel-v1.1.asn J2735-RoadSideAlert-2024-rel-v1.1.asn J2735-SCPR-2024-ph-v1.1.asn J2735-SCPS-2024-ph-v1.1.asn J2735-SPAT-2024-rel-v1.1.1.asn J2735-SignalRequestMessage-2024-rel-v1.1.asn J2735-SignalStatusMessage-2024-rel-v1.1.asn J2735-TSPAT-2024-ph-v1.1.asn J2735-TestMessages-2024-rel-v1.1.asn J2735-TrafficLightStatusMessage-2024-rel-v1.1.2.asn J2735-TravelerInformation-2024-rel-v1.1.2.asn J2945-3-RoadWeatherMessage-2024-rel-v2.1.asn J2945-4-RoadSafetyMessage-2024-rel-v1.1.1.asn J2945-6-CooperativeControlMessage-2024-rel-v1.1.1.asn J2945-9-PersonalSafetyMessage2-2024-ph-v1.1.asn J2945-A-RGA-2024-ph-v1.1.asn J2945-C-ProbeDataConfig-2024-rel-v1.1.asn J2945-C-ProbeDataReport-2024-rel-v1.1.asn J3186-ManeuverSharingandCoordinatingMessage-2024-rel-v1.1.asn J3217-R-RoadUserChargingConfigMsg-2024-rel-v1.1.1.asn J3217-R-RoadUserChargingReportMsg-2024-rel-v1.1.asn J3217-TollAdvertisementMsg-2024-rel-v1.1.asn J3217-TollUsageAckMsg-2024-rel-v1.1.asn J3217-TollUsageMsg-2024-rel-v1.1.asn J3224-SensorDataSharingMessage-2024-rel-v1.1.asn */
 
 /* Input file: packet-j2735-template.c */
 
@@ -275,9 +275,9 @@ static int hf_j2735_adviceInstructionsMandatory;  /* AdviceInstructionsMandatory
 static int hf_j2735_laneRoadway;                  /* LaneRoadway */
 static int hf_j2735_alternateRoute;               /* AlternateRoute */
 static int hf_j2735_transitMode;                  /* TransitMode */
-static int hf_j2735_vehicleGroupAffected;         /* VehicleGroupAffectedDef */
-static int hf_j2735_travelerGroupAffected;        /* TravelerGroupAffected */
-static int hf_j2735_responderGroupAffected;       /* ResponderGroupAffected */
+static int hf_j2735_vehicleGroupAffected;         /* VehicleGroupAffectedJ2540 */
+static int hf_j2735_travelerGroupAffected;        /* TravelerGroupAffectedJ2540 */
+static int hf_j2735_responderGroupAffected;       /* ResponderGroupAffectedJ2540 */
 static int hf_j2735_incidentResponseEquipment;    /* IncidentResponseEquipmentJ2540 */
 static int hf_j2735_transitOperations;            /* TransitOperations */
 static int hf_j2735_regulatorySigns;              /* RegulatoryAndWarningSigns */
@@ -373,7 +373,7 @@ static int hf_j2735_doNotUse5;                    /* RTCMPackage */
 static int hf_j2735_fhwaVehicleClass;             /* RptVehicleClass */
 static int hf_j2735_trailers;                     /* TrailersJ2945Slash1B */
 static int hf_j2735_schoolBus;                    /* SchoolBusJ2945Slash1C */
-static int hf_j2735_notUsed;                      /* SSPindex */
+static int hf_j2735_doNotUse_01;                  /* SSPindex */
 static int hf_j2735_connection;                   /* PivotPointDescription */
 static int hf_j2735_units;                        /* TrailerUnitDescriptionList */
 static int hf_j2735_TrailerHistoryPointList_item;  /* TrailerHistoryPoint */
@@ -395,7 +395,7 @@ static int hf_j2735_rearWheelOffset;              /* Offset_B12 */
 static int hf_j2735_crumbData;                    /* TrailerHistoryPointList */
 static int hf_j2735_bumpers;                      /* BumperHeights */
 static int hf_j2735_mass_01;                      /* VehicleMass */
-static int hf_j2735_doNotUse_01;                  /* TrailerWeight */
+static int hf_j2735_doNotUse_02;                  /* TrailerWeight */
 static int hf_j2735_trailerPresent;               /* BOOLEAN */
 static int hf_j2735_pivotPoint;                   /* PivotPointDescription */
 static int hf_j2735_axles_01;                     /* Axles */
@@ -572,7 +572,6 @@ static int hf_j2735_events_01;                    /* VehicleEventFlags */
 static int hf_j2735_pathHistory;                  /* PathHistory */
 static int hf_j2735_pathPrediction;               /* PathPrediction */
 static int hf_j2735_lights;                       /* ExteriorLights */
-static int hf_j2735_timestamp;                    /* DDateTime */
 static int hf_j2735_offset1;                      /* VertOffset_B07 */
 static int hf_j2735_offset2;                      /* VertOffset_B08 */
 static int hf_j2735_offset3;                      /* VertOffset_B09 */
@@ -866,7 +865,7 @@ static int hf_j2735_outboundOn;                   /* IntersectionAccessPoint */
 static int hf_j2735_status_04;                    /* PrioritizationResponseStatus */
 static int hf_j2735_sigStatus;                    /* SignalStatusPackageList */
 static int hf_j2735_header;                       /* Header */
-static int hf_j2735_traffiLightID;                /* TrafficLightID */
+static int hf_j2735_trafficLightID;               /* TrafficLightID */
 static int hf_j2735_operationStatus;              /* TrafficLightOperationStatus */
 static int hf_j2735_controllerStatus;             /* TrafficLightControllerStatus */
 static int hf_j2735_cyclecounter;                 /* TimeInSecond_B16 */
@@ -951,18 +950,19 @@ static int hf_j2735_mutcdCode;                    /* MUTCDCode */
 static int hf_j2735_crc;                          /* MsgCRC */
 static int hf_j2735_SegmentAttributeLLList_item;  /* SegmentAttributeLL */
 static int hf_j2735_TravelerDataFrameList_item;   /* TravelerDataFrame */
+static int hf_j2735_doNotUse1_01;                 /* SSPindex */
 static int hf_j2735_frameType;                    /* TravelerInfoType */
 static int hf_j2735_msgId;                        /* T_msgId */
 static int hf_j2735_roadSignID;                   /* RoadSignID */
 static int hf_j2735_startYear;                    /* DYear */
 static int hf_j2735_startTime_02;                 /* MinuteOfTheYear */
 static int hf_j2735_durationTime;                 /* MinutesDuration */
-static int hf_j2735_priority_01;                  /* SignPrority */
-static int hf_j2735_notUsed1;                     /* SSPindex */
+static int hf_j2735_priority_01;                  /* SignPriority */
+static int hf_j2735_doNotUse2_01;                 /* SSPindex */
 static int hf_j2735_regions;                      /* SEQUENCE_SIZE_1_16_OF_GeographicalPath */
 static int hf_j2735_regions_item;                 /* GeographicalPath */
-static int hf_j2735_notUsed2;                     /* SSPindex */
-static int hf_j2735_notUsed3;                     /* SSPindex */
+static int hf_j2735_doNotUse3_01;                 /* SSPindex */
+static int hf_j2735_doNotUse4_01;                 /* SSPindex */
 static int hf_j2735_content;                      /* T_content */
 static int hf_j2735_advisory;                     /* ITIScodesAndText */
 static int hf_j2735_workZone;                     /* WorkZone */
@@ -1130,7 +1130,6 @@ static int hf_j2735_RSMPolygon_item;              /* NodePointLLE */
 static int hf_j2735_urlLink;                      /* IA5String_SIZE_1_500 */
 static int hf_j2735_partII_01;                    /* SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent */
 static int hf_j2735_partII_item_01;               /* CCMPartIIcontent */
-static int hf_j2735_partII_Id_01;                 /* CCMPartII_Id */
 static int hf_j2735_partII_Value_01;              /* T_partII_Value_01 */
 static int hf_j2735_longCntrlState;               /* LongitudinalControlState */
 static int hf_j2735_targetId;                     /* TemporaryID */
@@ -1152,7 +1151,7 @@ static int hf_j2735_totalMass;                    /* TotalMass */
 static int hf_j2735_maxAvailAccel;                /* MaxAvailableAcceleration */
 static int hf_j2735_maxAvailDecel;                /* MaxAvailableDeceleration */
 static int hf_j2735_ccmFaultMode;                 /* CCMFaultMode */
-static int hf_j2735_maneuverID;                   /* ManeuverID */
+static int hf_j2735_maneuverID;                   /* CCMManeuverID */
 static int hf_j2735_accelTimeConst_01;            /* TimeConstant */
 static int hf_j2735_decelTimeConst;               /* TimeConstant */
 static int hf_j2735_yaw_01;                       /* Yaw */
@@ -1395,9 +1394,9 @@ static int hf_j2735_workZoneCharDetect_01;        /* NULL */
 static int hf_j2735_inclWeatherDetect_01;         /* NULL */
 static int hf_j2735_railrdCrossActiv;             /* NULL */
 static int hf_j2735_drawBridgeActiv;              /* NULL */
-static int hf_j2735_meanVerticalVariation_01;     /* MeanVariationC */
+static int hf_j2735_meanVerticalVariation_01;     /* MeanVariationRpt */
 static int hf_j2735_verticalVariationStdDev_01;   /* StdDev */
-static int hf_j2735_meanHorizontalVariation_01;   /* MeanVariationC */
+static int hf_j2735_meanHorizontalVariation_01;   /* MeanVariationRpt */
 static int hf_j2735_horizontalVariationStdDev_01;  /* StdDev */
 static int hf_j2735_intersectionID_01;            /* IntersectionID */
 static int hf_j2735_trafficMetrics;               /* RptTrafficMetrics */
@@ -1455,6 +1454,7 @@ static int hf_j2735_hVPosXYConf;                  /* PositionalAccuracy */
 static int hf_j2735_mSCMType;                     /* MSCMType */
 static int hf_j2735_sourceID;                     /* TemporaryID */
 static int hf_j2735_destinationIDs;               /* TemporaryIDList */
+static int hf_j2735_maneuverID_01;                /* ManeuverID */
 static int hf_j2735_maneuver_01;                  /* Maneuver */
 static int hf_j2735_responseFlag;                 /* ResponseFlag */
 static int hf_j2735_reasonCode;                   /* ReasonCode */
@@ -1470,6 +1470,9 @@ static int hf_j2735_minSpeed;                     /* Speed */
 static int hf_j2735_maxSpeed;                     /* Speed */
 static int hf_j2735_executantVehPos;              /* PositionOffsetXYZ */
 static int hf_j2735_executantVehPosConfidence;    /* PositionConfidenceSet */
+static int hf_j2735_offsetX;                      /* ObjectDistance */
+static int hf_j2735_offsetY;                      /* ObjectDistance */
+static int hf_j2735_offsetZ;                      /* ObjectDistance */
 static int hf_j2735_tRRType;                      /* TRRType */
 static int hf_j2735_tRRLocation;                  /* TRRLocation */
 static int hf_j2735_tRRLocationType1;             /* TRRLocationType1 */
@@ -1547,6 +1550,7 @@ static int hf_j2735_tamSequenceNum;               /* MsgCount */
 static int hf_j2735_totalTams;                    /* INTEGER_1_10_ */
 static int hf_j2735_tamNum;                       /* INTEGER_1_10_ */
 static int hf_j2735_tollChargerInfo;              /* TollChargerInfo */
+static int hf_j2735_timestamp;                    /* DDateTime */
 static int hf_j2735_tumInstructions;              /* TumInstructions */
 static int hf_j2735_tollPointMap;                 /* TollPointMap */
 static int hf_j2735_tumPublicKey;                 /* OCTET_STRING_SIZE_32 */
@@ -1673,7 +1677,7 @@ static int hf_j2735_objType;                      /* ObjectType */
 static int hf_j2735_objTypeCfd;                   /* ClassificationConfidence */
 static int hf_j2735_objectID;                     /* ObjectID */
 static int hf_j2735_measurementTime;              /* MeasurementTimeOffset */
-static int hf_j2735_pos_01;                       /* PositionOffsetXYZ */
+static int hf_j2735_pos_01;                       /* PositionOffsetXYZj3224 */
 static int hf_j2735_speedConfidence_01;           /* SpeedConfidence */
 static int hf_j2735_speedZ;                       /* Speed */
 static int hf_j2735_speedConfidenceZ;             /* SpeedConfidence */
@@ -1692,15 +1696,17 @@ static int hf_j2735_classConf;                    /* ClassificationConfidence */
 static int hf_j2735_radius_01;                    /* AttachmentRadius */
 static int hf_j2735_obstSize;                     /* ObstacleSize */
 static int hf_j2735_obstSizeConfidence;           /* ObstacleSizeConfidence */
-static int hf_j2735_offsetX;                      /* ObjectDistance */
-static int hf_j2735_offsetY;                      /* ObjectDistance */
-static int hf_j2735_offsetZ;                      /* ObjectDistance */
+static int hf_j2735_offsetX_01;                   /* ObjectDistancej3224 */
+static int hf_j2735_offsetY_01;                   /* ObjectDistancej3224 */
+static int hf_j2735_offsetZ_01;                   /* ObjectDistancej3224 */
 static int hf_j2735_pitch_01;                     /* PitchDetected */
 static int hf_j2735_roll_01;                      /* RollDetected */
 static int hf_j2735_yaw_02;                       /* YawDetected */
 static int hf_j2735_pitchConfidence;              /* HeadingConfidence */
 static int hf_j2735_rollConfidence;               /* HeadingConfidence */
 static int hf_j2735_yawConfidence;                /* HeadingConfidence */
+static int hf_j2735_pitchRate_01;                 /* PitchRatej3224 */
+static int hf_j2735_rollRate_01;                  /* RollRatej3224 */
 static int hf_j2735_pitchRateConfidence;          /* PitchRateConfidence */
 static int hf_j2735_rollRateConfidence;           /* RollRateConfidence */
 static int hf_j2735_vehicleWidthConfidence;       /* SizeValueConfidence */
@@ -1948,578 +1954,579 @@ static int ett_j2735 = -1;
 
 /*--- Included file: packet-j2735-ett.c ---*/
 #line 1 "./asn1/j2735/packet-j2735-ett.c"
-static gint ett_j2735_AbsolutePosition2d;
-static gint ett_j2735_AbsolutePosition3d;
-static gint ett_j2735_AxleWeightLimit;
-static gint ett_j2735_AxleWeightLimits;
-static gint ett_j2735_DateCompact;
-static gint ett_j2735_DieselEmissionValues;
-static gint ett_j2735_DriverCharacteristics;
-static gint ett_j2735_Distance;
-static gint ett_j2735_DurationEfc;
-static gint ett_j2735_EngineDetails;
-static gint ett_j2735_ExhaustEmissionValues;
-static gint ett_j2735_NumberOfAxles;
-static gint ett_j2735_ObeId;
-static gint ett_j2735_Particulate;
-static gint ett_j2735_PassengerCapacity;
-static gint ett_j2735_PaymentFee;
-static gint ett_j2735_Period;
-static gint ett_j2735_Provider;
-static gint ett_j2735_RelativePosition3d;
-static gint ett_j2735_SessionClass;
-static gint ett_j2735_SessionLocation;
-static gint ett_j2735_SignedValue;
-static gint ett_j2735_SoundLevel;
-static gint ett_j2735_TimeCompact;
-static gint ett_j2735_TrailerDetails;
-static gint ett_j2735_AxlesWeightLimits;
-static gint ett_j2735_ChargeObjectId;
-static gint ett_j2735_ContractValidity;
-static gint ett_j2735_DateAndTime;
-static gint ett_j2735_EnvironmentalCharacteristics;
-static gint ett_j2735_Lpn;
-static gint ett_j2735_PaymentMeans;
-static gint ett_j2735_Point;
-static gint ett_j2735_PurseBalance;
-static gint ett_j2735_TrailerCharacteristics;
-static gint ett_j2735_ValidityOfContract;
-static gint ett_j2735_VehicleAxlesNumber;
-static gint ett_j2735_VehicleDimensions;
-static gint ett_j2735_VehicleWeightLimits;
-static gint ett_j2735_EfcContextMark;
-static gint ett_j2735_ReceiptContract;
-static gint ett_j2735_ReceiptData;
-static gint ett_j2735_ReceiptFinancialPart;
-static gint ett_j2735_ReceiptServicePart;
-static gint ett_j2735_UserId;
-static gint ett_j2735_VehicleAxles;
-static gint ett_j2735_VehicleSpecificCharacteristics;
-static gint ett_j2735_AggregatedSingleTariffClassSession;
-static gint ett_j2735_DetectedChargeObject;
-static gint ett_j2735_TariffClassDescription;
-static gint ett_j2735_VehicleDescription;
-static gint ett_j2735_ITISEventType;
-static gint ett_j2735_ITIScodesAndTextJ2540;
-static gint ett_j2735_ITIScodesAndTextJ2540_item;
-static gint ett_j2735_T_item;
-static gint ett_j2735_LatitudeDMS2;
-static gint ett_j2735_LongitudeDMS2;
-static gint ett_j2735_Node_LLdms_48b;
-static gint ett_j2735_Node_LLdms_80b;
-static gint ett_j2735_LaneDataAttribute_addGrpB;
-static gint ett_j2735_MovementEvent_addGrpB;
-static gint ett_j2735_NodeOffsetPointXY_addGrpB;
-static gint ett_j2735_Position3D_addGrpB;
-static gint ett_j2735_TimeMarkB;
-static gint ett_j2735_AltitudeC;
-static gint ett_j2735_PrioritizationResponse;
-static gint ett_j2735_PrioritizationResponseList;
-static gint ett_j2735_ConnectionManeuverAssist_addGrpC;
-static gint ett_j2735_IntersectionState_addGrpC;
-static gint ett_j2735_MapData_addGrpC;
-static gint ett_j2735_Position3D_addGrpC;
-static gint ett_j2735_RestrictionUserType_addGrpC;
-static gint ett_j2735_SignalHeadLocation;
-static gint ett_j2735_SignalHeadLocationList;
-static gint ett_j2735_VehicleToLanePosition;
-static gint ett_j2735_VehicleToLanePositionList;
-static gint ett_j2735_BasicSafetyMessage;
-static gint ett_j2735_SEQUENCE_SIZE_1_8_OF_PartIIcontent;
-static gint ett_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension;
-static gint ett_j2735_PartIIcontent;
-static gint ett_j2735_DisabledVehicle;
-static gint ett_j2735_EventDescription;
-static gint ett_j2735_SEQUENCE_SIZE_1_8_OF_ITIScodes;
-static gint ett_j2735_ObstacleDetection;
-static gint ett_j2735_PivotPointDescription;
-static gint ett_j2735_RTCMPackage;
-static gint ett_j2735_SpecialVehicleExtensions;
-static gint ett_j2735_SpeedProfileMeasurementList;
-static gint ett_j2735_SpeedProfile;
-static gint ett_j2735_SupplementalVehicleExtensions;
-static gint ett_j2735_TrailerData;
-static gint ett_j2735_TrailerHistoryPointList;
-static gint ett_j2735_TrailerHistoryPoint;
-static gint ett_j2735_TrailerUnitDescriptionList;
-static gint ett_j2735_TrailerUnitDescription;
-static gint ett_j2735_VehicleData;
-static gint ett_j2735_WeatherProbe;
-static gint ett_j2735_WeatherReport;
-static gint ett_j2735_RegionalExtension;
-static gint ett_j2735_AccelerationSet4Way;
-static gint ett_j2735_AntennaOffsetSet;
-static gint ett_j2735_BrakeSystemStatus;
-static gint ett_j2735_BSMcoreData;
-static gint ett_j2735_BumperHeights;
-static gint ett_j2735_ComputedLane;
-static gint ett_j2735_T_offsetXaxis;
-static gint ett_j2735_T_offsetYaxis;
-static gint ett_j2735_DDate;
-static gint ett_j2735_DDateTime;
-static gint ett_j2735_DFullTime;
-static gint ett_j2735_DMonthDay;
-static gint ett_j2735_DTime;
-static gint ett_j2735_DYearMonth;
-static gint ett_j2735_EmergencyDetails;
-static gint ett_j2735_FullPositionVector;
-static gint ett_j2735_Header;
-static gint ett_j2735_IntersectionAccessPoint;
-static gint ett_j2735_IntersectionReferenceID;
-static gint ett_j2735_LaneDataAttribute;
-static gint ett_j2735_LaneDataAttributeList;
-static gint ett_j2735_Node_LLmD_64b;
-static gint ett_j2735_Node_XY_20b;
-static gint ett_j2735_Node_XY_22b;
-static gint ett_j2735_Node_XY_24b;
-static gint ett_j2735_Node_XY_26b;
-static gint ett_j2735_Node_XY_28b;
-static gint ett_j2735_Node_XY_32b;
-static gint ett_j2735_NodeAttributeSetXY;
-static gint ett_j2735_NodeAttributeXYList;
-static gint ett_j2735_NodeListXY;
-static gint ett_j2735_NodeOffsetPointXY;
-static gint ett_j2735_NodeSetXY;
-static gint ett_j2735_NodeXY;
-static gint ett_j2735_PathHistory;
-static gint ett_j2735_PathHistoryPointList;
-static gint ett_j2735_PathHistoryPoint;
-static gint ett_j2735_PathPrediction;
-static gint ett_j2735_Position3D;
-static gint ett_j2735_PositionalAccuracy;
-static gint ett_j2735_PositionConfidenceSet;
-static gint ett_j2735_PrivilegedEvents;
-static gint ett_j2735_RegulatorySpeedLimit;
-static gint ett_j2735_RequestorType;
-static gint ett_j2735_RoadSegmentReferenceID;
-static gint ett_j2735_RTCMheader;
-static gint ett_j2735_RTCMmessageList;
-static gint ett_j2735_SegmentAttributeXYList;
-static gint ett_j2735_SpeedandHeadingandThrottleConfidence;
-static gint ett_j2735_SpeedLimitList;
-static gint ett_j2735_SchoolBusJ2945Slash1C;
-static gint ett_j2735_TrailersJ2945Slash1B;
-static gint ett_j2735_TrailerUnitDescJ2945Slash1B;
-static gint ett_j2735_Axles;
-static gint ett_j2735_TransmissionAndSpeed;
-static gint ett_j2735_VehicleClassification;
-static gint ett_j2735_VehicleID;
-static gint ett_j2735_VehicleSafetyExtensions;
-static gint ett_j2735_VehicleSize;
-static gint ett_j2735_VerticalOffset;
-static gint ett_j2735_WiperSet;
-static gint ett_j2735_BrakeAppliedStatus;
-static gint ett_j2735_ExteriorLights;
-static gint ett_j2735_FrictionInformation;
-static gint ett_j2735_DescriptionOfRoadSurface;
-static gint ett_j2735_PortlandCement;
-static gint ett_j2735_AsphaltOrTar;
-static gint ett_j2735_Gravel;
-static gint ett_j2735_Grass;
-static gint ett_j2735_Cinders;
-static gint ett_j2735_Rock;
-static gint ett_j2735_Ice;
-static gint ett_j2735_Snow;
-static gint ett_j2735_RoadRoughness;
-static gint ett_j2735_GNSSstatus;
-static gint ett_j2735_HeadingSlice;
-static gint ett_j2735_PrivilegedEventFlags;
-static gint ett_j2735_RoadAuthorityID;
-static gint ett_j2735_TransitStatus;
-static gint ett_j2735_VehicleEventFlags;
-static gint ett_j2735_VerticalAccelerationThreshold;
-static gint ett_j2735_CommonSafetyRequest;
-static gint ett_j2735_RequestedItemList;
-static gint ett_j2735_EmergencyVehicleAlert;
-static gint ett_j2735_ITIScodesAndText;
-static gint ett_j2735_ITIScodesAndText_item;
-static gint ett_j2735_T_item_01;
-static gint ett_j2735_IntersectionCollision;
-static gint ett_j2735_ApproachOrLane;
-static gint ett_j2735_MapData;
-static gint ett_j2735_ConnectingLane;
-static gint ett_j2735_Connection;
-static gint ett_j2735_ConnectsToList;
-static gint ett_j2735_DataParameters;
-static gint ett_j2735_GenericLane;
-static gint ett_j2735_IntersectionGeometry;
-static gint ett_j2735_IntersectionGeometryList;
-static gint ett_j2735_LaneAttributes;
-static gint ett_j2735_LaneList;
-static gint ett_j2735_LaneTypeAttributes;
-static gint ett_j2735_OverlayLaneList;
-static gint ett_j2735_PreemptPriorityList;
-static gint ett_j2735_SignalControlZone;
-static gint ett_j2735_RestrictionClassAssignment;
-static gint ett_j2735_RestrictionClassList;
-static gint ett_j2735_RestrictionUserTypeList;
-static gint ett_j2735_RestrictionUserType;
-static gint ett_j2735_RoadLaneSetList;
-static gint ett_j2735_RoadSegmentList;
-static gint ett_j2735_RoadSegment;
-static gint ett_j2735_AllowedManeuvers;
-static gint ett_j2735_LaneAttributes_Barrier;
-static gint ett_j2735_LaneAttributes_Bike;
-static gint ett_j2735_LaneAttributes_Crosswalk;
-static gint ett_j2735_LaneAttributes_Parking;
-static gint ett_j2735_LaneAttributes_Sidewalk;
-static gint ett_j2735_LaneAttributes_Striping;
-static gint ett_j2735_LaneAttributes_TrackedVehicle;
-static gint ett_j2735_LaneAttributes_Vehicle;
-static gint ett_j2735_LaneDirection;
-static gint ett_j2735_LaneSharing;
-static gint ett_j2735_MessageFrame;
-static gint ett_j2735_NMEAcorrections;
-static gint ett_j2735_PersonalSafetyMessage;
-static gint ett_j2735_PropelledInformation;
-static gint ett_j2735_PersonalAssistive;
-static gint ett_j2735_PersonalDeviceUsageState;
-static gint ett_j2735_PublicSafetyAndRoadWorkerActivity;
-static gint ett_j2735_PublicSafetyDirectingTrafficSubType;
-static gint ett_j2735_UserSizeAndBehaviour;
-static gint ett_j2735_ProbeDataManagement;
-static gint ett_j2735_T_term;
-static gint ett_j2735_T_snapshot;
-static gint ett_j2735_Sample;
-static gint ett_j2735_SnapshotDistance;
-static gint ett_j2735_SnapshotTime;
-static gint ett_j2735_VehicleStatusRequest;
-static gint ett_j2735_VehicleStatusRequestList;
-static gint ett_j2735_ProbeVehicleData;
-static gint ett_j2735_SEQUENCE_SIZE_1_32_OF_Snapshot;
-static gint ett_j2735_AccelSteerYawRateConfidence;
-static gint ett_j2735_ConfidenceSet;
-static gint ett_j2735_J1939data;
-static gint ett_j2735_TireDataList;
-static gint ett_j2735_TireData;
-static gint ett_j2735_AxleWeightList;
-static gint ett_j2735_AxleWeightSet;
-static gint ett_j2735_Snapshot;
-static gint ett_j2735_VehicleIdent;
-static gint ett_j2735_T_vehicleClass;
-static gint ett_j2735_VehicleStatus;
-static gint ett_j2735_T_steering;
-static gint ett_j2735_T_accelSets;
-static gint ett_j2735_T_object;
-static gint ett_j2735_T_vehicleData;
-static gint ett_j2735_T_weatherReport;
-static gint ett_j2735_RTCMcorrections;
-static gint ett_j2735_RoadSideAlert;
-static gint ett_j2735_SPAT;
-static gint ett_j2735_AdvisorySpeed;
-static gint ett_j2735_AdvisorySpeedList;
-static gint ett_j2735_ConnectionManeuverAssist;
-static gint ett_j2735_EnabledLaneList;
-static gint ett_j2735_IntersectionState;
-static gint ett_j2735_IntersectionStateList;
-static gint ett_j2735_ManeuverAssistList;
-static gint ett_j2735_MovementEventList;
-static gint ett_j2735_MovementEvent;
-static gint ett_j2735_MovementList;
-static gint ett_j2735_MovementState;
-static gint ett_j2735_TimeChangeDetails;
-static gint ett_j2735_IntersectionStatusObject;
-static gint ett_j2735_SignalRequestMessage;
-static gint ett_j2735_RequestorDescription;
-static gint ett_j2735_RequestorPositionVector;
-static gint ett_j2735_SignalRequestList;
-static gint ett_j2735_SignalRequestPackage;
-static gint ett_j2735_SignalRequest;
-static gint ett_j2735_TransitVehicleStatus;
-static gint ett_j2735_SignalStatusMessage;
-static gint ett_j2735_SignalRequesterInfo;
-static gint ett_j2735_SignalStatusList;
-static gint ett_j2735_SignalStatusPackageList;
-static gint ett_j2735_SignalStatusPackage;
-static gint ett_j2735_SignalStatus;
-static gint ett_j2735_TestMessage00;
-static gint ett_j2735_TestMessage01;
-static gint ett_j2735_TestMessage02;
-static gint ett_j2735_TestMessage03;
-static gint ett_j2735_TestMessage04;
-static gint ett_j2735_TestMessage05;
-static gint ett_j2735_TestMessage06;
-static gint ett_j2735_TestMessage07;
-static gint ett_j2735_TestMessage08;
-static gint ett_j2735_TestMessage09;
-static gint ett_j2735_TestMessage10;
-static gint ett_j2735_TestMessage11;
-static gint ett_j2735_TestMessage12;
-static gint ett_j2735_TestMessage13;
-static gint ett_j2735_TestMessage14;
-static gint ett_j2735_TestMessage15;
-static gint ett_j2735_TrafficLightStatusMessage;
-static gint ett_j2735_TrafficLightStatusList;
-static gint ett_j2735_TrafficLightStatus;
-static gint ett_j2735_TrafficLightControllerStatus;
-static gint ett_j2735_TrafficLightID;
-static gint ett_j2735_TrafficLightOperationStatus;
-static gint ett_j2735_TravelerInformation;
-static gint ett_j2735_Circle;
-static gint ett_j2735_GeographicalPath;
-static gint ett_j2735_T_description;
-static gint ett_j2735_GeometricProjection;
-static gint ett_j2735_ExitService;
-static gint ett_j2735_ExitService_item;
-static gint ett_j2735_T_item_02;
-static gint ett_j2735_GenericSignage;
-static gint ett_j2735_GenericSignage_item;
-static gint ett_j2735_T_item_03;
-static gint ett_j2735_SpeedLimit;
-static gint ett_j2735_SpeedLimit_item;
-static gint ett_j2735_T_item_04;
-static gint ett_j2735_WorkZone;
-static gint ett_j2735_WorkZone_item;
-static gint ett_j2735_T_item_05;
-static gint ett_j2735_Node_LL_24B;
-static gint ett_j2735_Node_LL_28B;
-static gint ett_j2735_Node_LL_32B;
-static gint ett_j2735_Node_LL_36B;
-static gint ett_j2735_Node_LL_44B;
-static gint ett_j2735_Node_LL_48B;
-static gint ett_j2735_NodeAttributeLLList;
-static gint ett_j2735_NodeAttributeSetLL;
-static gint ett_j2735_NodeListLL;
-static gint ett_j2735_NodeLL;
-static gint ett_j2735_NodeOffsetPointLL;
-static gint ett_j2735_NodeSetLL;
-static gint ett_j2735_OffsetSystem;
-static gint ett_j2735_T_offset;
-static gint ett_j2735_RegionList;
-static gint ett_j2735_RegionOffsets;
-static gint ett_j2735_RegionPointSet;
-static gint ett_j2735_RoadSignID;
-static gint ett_j2735_SegmentAttributeLLList;
-static gint ett_j2735_ShapePointSet;
-static gint ett_j2735_TravelerDataFrameList;
-static gint ett_j2735_TravelerDataFrame;
-static gint ett_j2735_T_msgId;
-static gint ett_j2735_SEQUENCE_SIZE_1_16_OF_GeographicalPath;
-static gint ett_j2735_T_content;
-static gint ett_j2735_TravelerDataFrameNewPartIIIContent;
-static gint ett_j2735_ValidRegion;
-static gint ett_j2735_T_area;
-static gint ett_j2735_RoadWeatherMessage;
-static gint ett_j2735_RoadWeatherUpload;
-static gint ett_j2735_SEQUENCE_SIZE_1_32_OF_VehicleReport;
-static gint ett_j2735_VehicleReport;
-static gint ett_j2735_RoadWeatherDownload;
-static gint ett_j2735_WDMSFleetData;
-static gint ett_j2735_NtcipPavementTreatment;
-static gint ett_j2735_SnapShot;
-static gint ett_j2735_NtcipEssData;
-static gint ett_j2735_NtcipAirTemperature;
-static gint ett_j2735_NtcipAtmosphericPressure;
-static gint ett_j2735_NtcipWind;
-static gint ett_j2735_NtcipRelativeHumidity;
-static gint ett_j2735_NtcipDewPoint;
-static gint ett_j2735_NtcipPavement;
-static gint ett_j2735_NtcipVisibility;
-static gint ett_j2735_NtcipVisibilitySituation;
-static gint ett_j2735_NtcipCloudSituation;
-static gint ett_j2735_NtcipPrecipitation;
-static gint ett_j2735_NtcipSolarRadiation;
-static gint ett_j2735_RoadSafetyMessage;
-static gint ett_j2735_SEQUENCE_SIZE_1_4_OF_ContentContainer;
-static gint ett_j2735_CommonContainer;
-static gint ett_j2735_SEQUENCE_SIZE_1_4_OF_RegionInfo;
-static gint ett_j2735_ContentContainer;
-static gint ett_j2735_CurveContainer;
-static gint ett_j2735_DynamicInfoContainer;
-static gint ett_j2735_SEQUENCE_SIZE_1_12_OF_ShortString;
-static gint ett_j2735_IncidentsContainer;
-static gint ett_j2735_SEQUENCE_SIZE_1_5_OF_ResponderGroupAffected;
-static gint ett_j2735_LaneClosureContainer;
-static gint ett_j2735_SEQUENCE_SIZE_1_10__OF_LaneInfo;
-static gint ett_j2735_ReducedSpeedZoneContainer;
-static gint ett_j2735_SituationalContainer;
-static gint ett_j2735_ApplicableHeading;
-static gint ett_j2735_AreaType;
-static gint ett_j2735_AudioLink;
-static gint ett_j2735_BroadRegion;
-static gint ett_j2735_BroadRegionArea;
-static gint ett_j2735_CrossLinking;
-static gint ett_j2735_SEQUENCE_SIZE_1_4__OF_AudioLink;
-static gint ett_j2735_SEQUENCE_SIZE_1_4__OF_VisualLink;
-static gint ett_j2735_SEQUENCE_SIZE_1_4__OF_EventIdentifier;
-static gint ett_j2735_EventIdentifier;
-static gint ett_j2735_EventInfo;
-static gint ett_j2735_SEQUENCE_SIZE_1_5__OF_EventRecurrence;
-static gint ett_j2735_SEQUENCE_SIZE_1_10__OF_VehicleGroupAffected;
-static gint ett_j2735_EventRecurrence;
-static gint ett_j2735_LaneInfo;
-static gint ett_j2735_NodePointLLE;
-static gint ett_j2735_Obstructions;
-static gint ett_j2735_Offset3D;
-static gint ett_j2735_Path;
-static gint ett_j2735_PathList;
-static gint ett_j2735_PathPoints;
-static gint ett_j2735_RegionInfo;
-static gint ett_j2735_RegionUncertainty;
-static gint ett_j2735_RSMPolygon;
-static gint ett_j2735_VisualLink;
-static gint ett_j2735_CooperativeControlMessage;
-static gint ett_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent;
-static gint ett_j2735_CCMPartIIcontent;
-static gint ett_j2735_LightVehicleCCMExtensions;
-static gint ett_j2735_HeavyTruckCCMExtensions;
-static gint ett_j2735_AccelTimeConstant;
-static gint ett_j2735_AxesMovement;
-static gint ett_j2735_CCMFaultMode;
-static gint ett_j2735_ProbeDataConfigMessage;
-static gint ett_j2735_ProbeDataConfig;
-static gint ett_j2735_ConfigDescriptor;
-static gint ett_j2735_CfgVehicleClass;
-static gint ett_j2735_ConfigBoundary;
-static gint ett_j2735_ConfigTemporalBoundary;
-static gint ett_j2735_CfgEventRecurrence;
-static gint ett_j2735_ConfigTriggers;
-static gint ett_j2735_CfgInstantaneousEventTriggers;
-static gint ett_j2735_CfgIntervalEvents;
-static gint ett_j2735_CfgTransitVehicleData;
-static gint ett_j2735_CfgInterval;
-static gint ett_j2735_CfgVehicleEvents;
-static gint ett_j2735_CfgKinematicEvents;
-static gint ett_j2735_CfgEvents;
-static gint ett_j2735_CfgHysteresis;
-static gint ett_j2735_CfgEmerAndTransitInfo;
-static gint ett_j2735_CfgMsgRecepIndicators;
-static gint ett_j2735_SEQUENCE_SIZE_1_8__OF_DSRCmsgID;
-static gint ett_j2735_CfgRoadwayEvents;
-static gint ett_j2735_CfgTrafficSigEncounters;
-static gint ett_j2735_SEQUENCE_SIZE_1_100_OF_IntersectionID;
-static gint ett_j2735_CfgRoadSignInfo;
-static gint ett_j2735_CfgRoadSignTypes;
-static gint ett_j2735_CfgCommSysPerfEvents;
-static gint ett_j2735_CfgAveragedAndSummaryTriggers;
-static gint ett_j2735_CfgAveragedTriggers;
-static gint ett_j2735_CfgSummaryTriggers;
-static gint ett_j2735_CfgLowSpeedCriteria;
-static gint ett_j2735_CfgStoppedCriteria;
-static gint ett_j2735_ProbeDataReportMessage;
-static gint ett_j2735_ReportCharacteristics;
-static gint ett_j2735_RptDevType;
-static gint ett_j2735_RptInstantaneousRecords;
-static gint ett_j2735_RptInstantaneousRecord;
-static gint ett_j2735_RptVelocity;
-static gint ett_j2735_RptInstantaneousRecordData;
-static gint ett_j2735_RptAveragedAndSummaryRecord;
-static gint ett_j2735_RptAvgAndSummaryRecordData;
-static gint ett_j2735_RptIntervalEvents;
-static gint ett_j2735_RptVehicleReport;
-static gint ett_j2735_RptTransitVehData;
-static gint ett_j2735_RptVehicleEvents;
-static gint ett_j2735_RptDriverAlertsAndWarnings;
-static gint ett_j2735_RptKinematicEvents;
-static gint ett_j2735_RptEvents;
-static gint ett_j2735_RptHysteresisRecord;
-static gint ett_j2735_RptHysteresis;
-static gint ett_j2735_RptRoadwayEvents;
-static gint ett_j2735_RptRoadRoughness;
-static gint ett_j2735_RptTrafficSigEncounters;
-static gint ett_j2735_RptTrafficMetrics;
-static gint ett_j2735_RptCommSysPerfEvents;
-static gint ett_j2735_RptAveragedRecord;
-static gint ett_j2735_RptSummaryRecord;
-static gint ett_j2735_RptEmissions;
-static gint ett_j2735_RptLocOfStops;
-static gint ett_j2735_ManeuverSharingAndCoordinatingMessage;
-static gint ett_j2735_TemporaryIDList;
-static gint ett_j2735_Maneuver;
-static gint ett_j2735_SubManeuverList;
-static gint ett_j2735_SubManeuver;
-static gint ett_j2735_CurrentStateData;
-static gint ett_j2735_TargetRoadResource;
-static gint ett_j2735_TRRLocation;
-static gint ett_j2735_TRRLocationType1;
-static gint ett_j2735_TRRLocationType2;
-static gint ett_j2735_TRRLocationType3;
-static gint ett_j2735_SurroundingVehicleInfo;
-static gint ett_j2735_RoadUserChargingConfigMessage;
-static gint ett_j2735_SEQUENCE_SIZE_1_999__OF_ChargerInfo;
-static gint ett_j2735_ChargerInfo;
-static gint ett_j2735_ChargingConfig;
-static gint ett_j2735_SEQUENCE_SIZE_1_999__OF_SubRegionChargingInfo;
-static gint ett_j2735_ConfigInfo;
-static gint ett_j2735_PrimaryRegionChargingInfo;
-static gint ett_j2735_T_chargingPrimaryRegion;
-static gint ett_j2735_PrimaryRegionState;
-static gint ett_j2735_SubRegionChargingInfo;
-static gint ett_j2735_AreaOrSegmentChargingInfo;
-static gint ett_j2735_SEQUENCE_SIZE_1_999__OF_ChargingAreaOrSegment;
-static gint ett_j2735_ChargingAreaOrSegment;
-static gint ett_j2735_Area;
-static gint ett_j2735_Segment;
-static gint ett_j2735_SEQUENCE_SIZE_1_999__OF_TollAdvertisementMessage;
-static gint ett_j2735_ChargingFees;
-static gint ett_j2735_ChargingUnits;
-static gint ett_j2735_RoadUserChargingReportMessage;
-static gint ett_j2735_UsageReport;
-static gint ett_j2735_FeeReport;
-static gint ett_j2735_UserData;
-static gint ett_j2735_UserFeeInfo;
-static gint ett_j2735_ItemizedPaymentReport;
-static gint ett_j2735_SEQUENCE_SIZE_1_999__OF_ItemizedChargerData;
-static gint ett_j2735_ItemizedChargerData;
-static gint ett_j2735_TripInfo;
-static gint ett_j2735_TimePeriod;
-static gint ett_j2735_TollAdvertisementMessage;
-static gint ett_j2735_TollAdvertisementInfo;
-static gint ett_j2735_TumInstructions;
-static gint ett_j2735_AckPolicy;
-static gint ett_j2735_TollChargesTable;
-static gint ett_j2735_T_tollTypeCharge;
-static gint ett_j2735_SEQUENCE_SIZE_1_64__OF_LaneChargesTable;
-static gint ett_j2735_SEQUENCE_SIZE_1_64__OF_ClosedNetworkChargesTable;
-static gint ett_j2735_LaneChargesTable;
-static gint ett_j2735_ClosedNetworkChargesTable;
-static gint ett_j2735_EntryChargesTable;
-static gint ett_j2735_ExitChargesTable;
-static gint ett_j2735_ExitInfo;
-static gint ett_j2735_TimeChargesTable;
-static gint ett_j2735_ChargesTable;
-static gint ett_j2735_VehTypeChargesTable;
-static gint ett_j2735_VehTypeCharges;
-static gint ett_j2735_SpecialCharges;
-static gint ett_j2735_OperatorDefined;
-static gint ett_j2735_WeightChargesTable;
-static gint ett_j2735_WeightCharges;
-static gint ett_j2735_TotalWeightCharges;
-static gint ett_j2735_PerAxleWeightCharges;
-static gint ett_j2735_AxlesChargesTable;
-static gint ett_j2735_AxlesCharges;
-static gint ett_j2735_TollPointMap;
-static gint ett_j2735_SEQUENCE_SIZE_1_64__OF_GenericLane;
-static gint ett_j2735_TollChargerInfo;
-static gint ett_j2735_TollUsageAckMessage;
-static gint ett_j2735_TumAck;
-static gint ett_j2735_TumAckHash;
-static gint ett_j2735_TollUsageMessage;
-static gint ett_j2735_TumData;
-static gint ett_j2735_TollUserData;
-static gint ett_j2735_VehicleAxlesAndWeightInfo;
-static gint ett_j2735_T_vehWeightPerAxle;
-static gint ett_j2735_VehicleId;
-static gint ett_j2735_LocAndTimeStamps;
-static gint ett_j2735_LocAndTimeStamp;
-static gint ett_j2735_LastTollPointInfos;
-static gint ett_j2735_LastTollPointInfo;
-static gint ett_j2735_SensorDataSharingMessage;
-static gint ett_j2735_DetectedObjectList;
-static gint ett_j2735_DetectedObjectData;
-static gint ett_j2735_DetectedObjectOptionalData;
-static gint ett_j2735_DetectedObjectCommonData;
-static gint ett_j2735_DetectedVehicleData;
-static gint ett_j2735_DetectedVRUData;
-static gint ett_j2735_DetectedObstacleData;
-static gint ett_j2735_PositionOffsetXYZ;
-static gint ett_j2735_Attitude;
-static gint ett_j2735_AttitudeConfidence;
-static gint ett_j2735_AngularVelocity;
-static gint ett_j2735_AngularVelocityConfidence;
-static gint ett_j2735_VehicleSizeConfidence;
-static gint ett_j2735_ObstacleSize;
-static gint ett_j2735_ObstacleSizeConfidence;
+static int ett_j2735_AbsolutePosition2d;
+static int ett_j2735_AbsolutePosition3d;
+static int ett_j2735_AxleWeightLimit;
+static int ett_j2735_AxleWeightLimits;
+static int ett_j2735_DateCompact;
+static int ett_j2735_DieselEmissionValues;
+static int ett_j2735_DriverCharacteristics;
+static int ett_j2735_Distance;
+static int ett_j2735_DurationEfc;
+static int ett_j2735_EngineDetails;
+static int ett_j2735_ExhaustEmissionValues;
+static int ett_j2735_NumberOfAxles;
+static int ett_j2735_ObeId;
+static int ett_j2735_Particulate;
+static int ett_j2735_PassengerCapacity;
+static int ett_j2735_PaymentFee;
+static int ett_j2735_Period;
+static int ett_j2735_Provider;
+static int ett_j2735_RelativePosition3d;
+static int ett_j2735_SessionClass;
+static int ett_j2735_SessionLocation;
+static int ett_j2735_SignedValue;
+static int ett_j2735_SoundLevel;
+static int ett_j2735_TimeCompact;
+static int ett_j2735_TrailerDetails;
+static int ett_j2735_AxlesWeightLimits;
+static int ett_j2735_ChargeObjectId;
+static int ett_j2735_ContractValidity;
+static int ett_j2735_DateAndTime;
+static int ett_j2735_EnvironmentalCharacteristics;
+static int ett_j2735_Lpn;
+static int ett_j2735_PaymentMeans;
+static int ett_j2735_Point;
+static int ett_j2735_PurseBalance;
+static int ett_j2735_TrailerCharacteristics;
+static int ett_j2735_ValidityOfContract;
+static int ett_j2735_VehicleAxlesNumber;
+static int ett_j2735_VehicleDimensions;
+static int ett_j2735_VehicleWeightLimits;
+static int ett_j2735_EfcContextMark;
+static int ett_j2735_ReceiptContract;
+static int ett_j2735_ReceiptData;
+static int ett_j2735_ReceiptFinancialPart;
+static int ett_j2735_ReceiptServicePart;
+static int ett_j2735_UserId;
+static int ett_j2735_VehicleAxles;
+static int ett_j2735_VehicleSpecificCharacteristics;
+static int ett_j2735_AggregatedSingleTariffClassSession;
+static int ett_j2735_DetectedChargeObject;
+static int ett_j2735_TariffClassDescription;
+static int ett_j2735_VehicleDescription;
+static int ett_j2735_ITISEventType;
+static int ett_j2735_ITIScodesAndTextJ2540;
+static int ett_j2735_ITIScodesAndTextJ2540_item;
+static int ett_j2735_T_item;
+static int ett_j2735_LatitudeDMS2;
+static int ett_j2735_LongitudeDMS2;
+static int ett_j2735_Node_LLdms_48b;
+static int ett_j2735_Node_LLdms_80b;
+static int ett_j2735_LaneDataAttribute_addGrpB;
+static int ett_j2735_MovementEvent_addGrpB;
+static int ett_j2735_NodeOffsetPointXY_addGrpB;
+static int ett_j2735_Position3D_addGrpB;
+static int ett_j2735_TimeMarkB;
+static int ett_j2735_AltitudeC;
+static int ett_j2735_PrioritizationResponse;
+static int ett_j2735_PrioritizationResponseList;
+static int ett_j2735_ConnectionManeuverAssist_addGrpC;
+static int ett_j2735_IntersectionState_addGrpC;
+static int ett_j2735_MapData_addGrpC;
+static int ett_j2735_Position3D_addGrpC;
+static int ett_j2735_RestrictionUserType_addGrpC;
+static int ett_j2735_SignalHeadLocation;
+static int ett_j2735_SignalHeadLocationList;
+static int ett_j2735_VehicleToLanePosition;
+static int ett_j2735_VehicleToLanePositionList;
+static int ett_j2735_BasicSafetyMessage;
+static int ett_j2735_SEQUENCE_SIZE_1_8_OF_PartIIcontent;
+static int ett_j2735_SEQUENCE_SIZE_1_4_OF_RegionalExtension;
+static int ett_j2735_PartIIcontent;
+static int ett_j2735_DisabledVehicle;
+static int ett_j2735_EventDescription;
+static int ett_j2735_SEQUENCE_SIZE_1_8_OF_ITIScodes;
+static int ett_j2735_ObstacleDetection;
+static int ett_j2735_PivotPointDescription;
+static int ett_j2735_RTCMPackage;
+static int ett_j2735_SpecialVehicleExtensions;
+static int ett_j2735_SpeedProfileMeasurementList;
+static int ett_j2735_SpeedProfile;
+static int ett_j2735_SupplementalVehicleExtensions;
+static int ett_j2735_TrailerData;
+static int ett_j2735_TrailerHistoryPointList;
+static int ett_j2735_TrailerHistoryPoint;
+static int ett_j2735_TrailerUnitDescriptionList;
+static int ett_j2735_TrailerUnitDescription;
+static int ett_j2735_VehicleData;
+static int ett_j2735_WeatherProbe;
+static int ett_j2735_WeatherReport;
+static int ett_j2735_RegionalExtension;
+static int ett_j2735_AccelerationSet4Way;
+static int ett_j2735_AntennaOffsetSet;
+static int ett_j2735_BrakeSystemStatus;
+static int ett_j2735_BSMcoreData;
+static int ett_j2735_BumperHeights;
+static int ett_j2735_ComputedLane;
+static int ett_j2735_T_offsetXaxis;
+static int ett_j2735_T_offsetYaxis;
+static int ett_j2735_DDate;
+static int ett_j2735_DDateTime;
+static int ett_j2735_DFullTime;
+static int ett_j2735_DMonthDay;
+static int ett_j2735_DTime;
+static int ett_j2735_DYearMonth;
+static int ett_j2735_EmergencyDetails;
+static int ett_j2735_FullPositionVector;
+static int ett_j2735_Header;
+static int ett_j2735_IntersectionAccessPoint;
+static int ett_j2735_IntersectionReferenceID;
+static int ett_j2735_LaneDataAttribute;
+static int ett_j2735_LaneDataAttributeList;
+static int ett_j2735_Node_LLmD_64b;
+static int ett_j2735_Node_XY_20b;
+static int ett_j2735_Node_XY_22b;
+static int ett_j2735_Node_XY_24b;
+static int ett_j2735_Node_XY_26b;
+static int ett_j2735_Node_XY_28b;
+static int ett_j2735_Node_XY_32b;
+static int ett_j2735_NodeAttributeSetXY;
+static int ett_j2735_NodeAttributeXYList;
+static int ett_j2735_NodeListXY;
+static int ett_j2735_NodeOffsetPointXY;
+static int ett_j2735_NodeSetXY;
+static int ett_j2735_NodeXY;
+static int ett_j2735_PathHistory;
+static int ett_j2735_PathHistoryPointList;
+static int ett_j2735_PathHistoryPoint;
+static int ett_j2735_PathPrediction;
+static int ett_j2735_Position3D;
+static int ett_j2735_PositionalAccuracy;
+static int ett_j2735_PositionConfidenceSet;
+static int ett_j2735_PrivilegedEvents;
+static int ett_j2735_RegulatorySpeedLimit;
+static int ett_j2735_RequestorType;
+static int ett_j2735_RoadSegmentReferenceID;
+static int ett_j2735_RTCMheader;
+static int ett_j2735_RTCMmessageList;
+static int ett_j2735_SegmentAttributeXYList;
+static int ett_j2735_SpeedandHeadingandThrottleConfidence;
+static int ett_j2735_SpeedLimitList;
+static int ett_j2735_SchoolBusJ2945Slash1C;
+static int ett_j2735_TrailersJ2945Slash1B;
+static int ett_j2735_TrailerUnitDescJ2945Slash1B;
+static int ett_j2735_Axles;
+static int ett_j2735_TransmissionAndSpeed;
+static int ett_j2735_VehicleClassification;
+static int ett_j2735_VehicleID;
+static int ett_j2735_VehicleSafetyExtensions;
+static int ett_j2735_VehicleSize;
+static int ett_j2735_VerticalOffset;
+static int ett_j2735_WiperSet;
+static int ett_j2735_BrakeAppliedStatus;
+static int ett_j2735_ExteriorLights;
+static int ett_j2735_FrictionInformation;
+static int ett_j2735_DescriptionOfRoadSurface;
+static int ett_j2735_PortlandCement;
+static int ett_j2735_AsphaltOrTar;
+static int ett_j2735_Gravel;
+static int ett_j2735_Grass;
+static int ett_j2735_Cinders;
+static int ett_j2735_Rock;
+static int ett_j2735_Ice;
+static int ett_j2735_Snow;
+static int ett_j2735_RoadRoughness;
+static int ett_j2735_GNSSstatus;
+static int ett_j2735_HeadingSlice;
+static int ett_j2735_PrivilegedEventFlags;
+static int ett_j2735_RoadAuthorityID;
+static int ett_j2735_TransitStatus;
+static int ett_j2735_VehicleEventFlags;
+static int ett_j2735_VerticalAccelerationThreshold;
+static int ett_j2735_CommonSafetyRequest;
+static int ett_j2735_RequestedItemList;
+static int ett_j2735_EmergencyVehicleAlert;
+static int ett_j2735_ITIScodesAndText;
+static int ett_j2735_ITIScodesAndText_item;
+static int ett_j2735_T_item_01;
+static int ett_j2735_IntersectionCollision;
+static int ett_j2735_ApproachOrLane;
+static int ett_j2735_MapData;
+static int ett_j2735_ConnectingLane;
+static int ett_j2735_Connection;
+static int ett_j2735_ConnectsToList;
+static int ett_j2735_DataParameters;
+static int ett_j2735_GenericLane;
+static int ett_j2735_IntersectionGeometry;
+static int ett_j2735_IntersectionGeometryList;
+static int ett_j2735_LaneAttributes;
+static int ett_j2735_LaneList;
+static int ett_j2735_LaneTypeAttributes;
+static int ett_j2735_OverlayLaneList;
+static int ett_j2735_PreemptPriorityList;
+static int ett_j2735_SignalControlZone;
+static int ett_j2735_RestrictionClassAssignment;
+static int ett_j2735_RestrictionClassList;
+static int ett_j2735_RestrictionUserTypeList;
+static int ett_j2735_RestrictionUserType;
+static int ett_j2735_RoadLaneSetList;
+static int ett_j2735_RoadSegmentList;
+static int ett_j2735_RoadSegment;
+static int ett_j2735_AllowedManeuvers;
+static int ett_j2735_LaneAttributes_Barrier;
+static int ett_j2735_LaneAttributes_Bike;
+static int ett_j2735_LaneAttributes_Crosswalk;
+static int ett_j2735_LaneAttributes_Parking;
+static int ett_j2735_LaneAttributes_Sidewalk;
+static int ett_j2735_LaneAttributes_Striping;
+static int ett_j2735_LaneAttributes_TrackedVehicle;
+static int ett_j2735_LaneAttributes_Vehicle;
+static int ett_j2735_LaneDirection;
+static int ett_j2735_LaneSharing;
+static int ett_j2735_MessageFrame;
+static int ett_j2735_NMEAcorrections;
+static int ett_j2735_PersonalSafetyMessage;
+static int ett_j2735_PropelledInformation;
+static int ett_j2735_PersonalAssistive;
+static int ett_j2735_PersonalDeviceUsageState;
+static int ett_j2735_PublicSafetyAndRoadWorkerActivity;
+static int ett_j2735_PublicSafetyDirectingTrafficSubType;
+static int ett_j2735_UserSizeAndBehaviour;
+static int ett_j2735_ProbeDataManagement;
+static int ett_j2735_T_term;
+static int ett_j2735_T_snapshot;
+static int ett_j2735_Sample;
+static int ett_j2735_SnapshotDistance;
+static int ett_j2735_SnapshotTime;
+static int ett_j2735_VehicleStatusRequest;
+static int ett_j2735_VehicleStatusRequestList;
+static int ett_j2735_ProbeVehicleData;
+static int ett_j2735_SEQUENCE_SIZE_1_32_OF_Snapshot;
+static int ett_j2735_AccelSteerYawRateConfidence;
+static int ett_j2735_ConfidenceSet;
+static int ett_j2735_J1939data;
+static int ett_j2735_TireDataList;
+static int ett_j2735_TireData;
+static int ett_j2735_AxleWeightList;
+static int ett_j2735_AxleWeightSet;
+static int ett_j2735_Snapshot;
+static int ett_j2735_VehicleIdent;
+static int ett_j2735_T_vehicleClass;
+static int ett_j2735_VehicleStatus;
+static int ett_j2735_T_steering;
+static int ett_j2735_T_accelSets;
+static int ett_j2735_T_object;
+static int ett_j2735_T_vehicleData;
+static int ett_j2735_T_weatherReport;
+static int ett_j2735_RTCMcorrections;
+static int ett_j2735_RoadSideAlert;
+static int ett_j2735_SPAT;
+static int ett_j2735_AdvisorySpeed;
+static int ett_j2735_AdvisorySpeedList;
+static int ett_j2735_ConnectionManeuverAssist;
+static int ett_j2735_EnabledLaneList;
+static int ett_j2735_IntersectionState;
+static int ett_j2735_IntersectionStateList;
+static int ett_j2735_ManeuverAssistList;
+static int ett_j2735_MovementEventList;
+static int ett_j2735_MovementEvent;
+static int ett_j2735_MovementList;
+static int ett_j2735_MovementState;
+static int ett_j2735_TimeChangeDetails;
+static int ett_j2735_IntersectionStatusObject;
+static int ett_j2735_SignalRequestMessage;
+static int ett_j2735_RequestorDescription;
+static int ett_j2735_RequestorPositionVector;
+static int ett_j2735_SignalRequestList;
+static int ett_j2735_SignalRequestPackage;
+static int ett_j2735_SignalRequest;
+static int ett_j2735_TransitVehicleStatus;
+static int ett_j2735_SignalStatusMessage;
+static int ett_j2735_SignalRequesterInfo;
+static int ett_j2735_SignalStatusList;
+static int ett_j2735_SignalStatusPackageList;
+static int ett_j2735_SignalStatusPackage;
+static int ett_j2735_SignalStatus;
+static int ett_j2735_TestMessage00;
+static int ett_j2735_TestMessage01;
+static int ett_j2735_TestMessage02;
+static int ett_j2735_TestMessage03;
+static int ett_j2735_TestMessage04;
+static int ett_j2735_TestMessage05;
+static int ett_j2735_TestMessage06;
+static int ett_j2735_TestMessage07;
+static int ett_j2735_TestMessage08;
+static int ett_j2735_TestMessage09;
+static int ett_j2735_TestMessage10;
+static int ett_j2735_TestMessage11;
+static int ett_j2735_TestMessage12;
+static int ett_j2735_TestMessage13;
+static int ett_j2735_TestMessage14;
+static int ett_j2735_TestMessage15;
+static int ett_j2735_TrafficLightStatusMessage;
+static int ett_j2735_TrafficLightStatusList;
+static int ett_j2735_TrafficLightStatus;
+static int ett_j2735_TrafficLightControllerStatus;
+static int ett_j2735_TrafficLightID;
+static int ett_j2735_TrafficLightOperationStatus;
+static int ett_j2735_TravelerInformation;
+static int ett_j2735_Circle;
+static int ett_j2735_GeographicalPath;
+static int ett_j2735_T_description;
+static int ett_j2735_GeometricProjection;
+static int ett_j2735_ExitService;
+static int ett_j2735_ExitService_item;
+static int ett_j2735_T_item_02;
+static int ett_j2735_GenericSignage;
+static int ett_j2735_GenericSignage_item;
+static int ett_j2735_T_item_03;
+static int ett_j2735_SpeedLimit;
+static int ett_j2735_SpeedLimit_item;
+static int ett_j2735_T_item_04;
+static int ett_j2735_WorkZone;
+static int ett_j2735_WorkZone_item;
+static int ett_j2735_T_item_05;
+static int ett_j2735_Node_LL_24B;
+static int ett_j2735_Node_LL_28B;
+static int ett_j2735_Node_LL_32B;
+static int ett_j2735_Node_LL_36B;
+static int ett_j2735_Node_LL_44B;
+static int ett_j2735_Node_LL_48B;
+static int ett_j2735_NodeAttributeLLList;
+static int ett_j2735_NodeAttributeSetLL;
+static int ett_j2735_NodeListLL;
+static int ett_j2735_NodeLL;
+static int ett_j2735_NodeOffsetPointLL;
+static int ett_j2735_NodeSetLL;
+static int ett_j2735_OffsetSystem;
+static int ett_j2735_T_offset;
+static int ett_j2735_RegionList;
+static int ett_j2735_RegionOffsets;
+static int ett_j2735_RegionPointSet;
+static int ett_j2735_RoadSignID;
+static int ett_j2735_SegmentAttributeLLList;
+static int ett_j2735_ShapePointSet;
+static int ett_j2735_TravelerDataFrameList;
+static int ett_j2735_TravelerDataFrame;
+static int ett_j2735_T_msgId;
+static int ett_j2735_SEQUENCE_SIZE_1_16_OF_GeographicalPath;
+static int ett_j2735_T_content;
+static int ett_j2735_TravelerDataFrameNewPartIIIContent;
+static int ett_j2735_ValidRegion;
+static int ett_j2735_T_area;
+static int ett_j2735_RoadWeatherMessage;
+static int ett_j2735_RoadWeatherUpload;
+static int ett_j2735_SEQUENCE_SIZE_1_32_OF_VehicleReport;
+static int ett_j2735_VehicleReport;
+static int ett_j2735_RoadWeatherDownload;
+static int ett_j2735_WDMSFleetData;
+static int ett_j2735_NtcipPavementTreatment;
+static int ett_j2735_SnapShot;
+static int ett_j2735_NtcipEssData;
+static int ett_j2735_NtcipAirTemperature;
+static int ett_j2735_NtcipAtmosphericPressure;
+static int ett_j2735_NtcipWind;
+static int ett_j2735_NtcipRelativeHumidity;
+static int ett_j2735_NtcipDewPoint;
+static int ett_j2735_NtcipPavement;
+static int ett_j2735_NtcipVisibility;
+static int ett_j2735_NtcipVisibilitySituation;
+static int ett_j2735_NtcipCloudSituation;
+static int ett_j2735_NtcipPrecipitation;
+static int ett_j2735_NtcipSolarRadiation;
+static int ett_j2735_RoadSafetyMessage;
+static int ett_j2735_SEQUENCE_SIZE_1_4_OF_ContentContainer;
+static int ett_j2735_CommonContainer;
+static int ett_j2735_SEQUENCE_SIZE_1_4_OF_RegionInfo;
+static int ett_j2735_ContentContainer;
+static int ett_j2735_CurveContainer;
+static int ett_j2735_DynamicInfoContainer;
+static int ett_j2735_SEQUENCE_SIZE_1_12_OF_ShortString;
+static int ett_j2735_IncidentsContainer;
+static int ett_j2735_SEQUENCE_SIZE_1_5_OF_ResponderGroupAffected;
+static int ett_j2735_LaneClosureContainer;
+static int ett_j2735_SEQUENCE_SIZE_1_10__OF_LaneInfo;
+static int ett_j2735_ReducedSpeedZoneContainer;
+static int ett_j2735_SituationalContainer;
+static int ett_j2735_ApplicableHeading;
+static int ett_j2735_AreaType;
+static int ett_j2735_AudioLink;
+static int ett_j2735_BroadRegion;
+static int ett_j2735_BroadRegionArea;
+static int ett_j2735_CrossLinking;
+static int ett_j2735_SEQUENCE_SIZE_1_4__OF_AudioLink;
+static int ett_j2735_SEQUENCE_SIZE_1_4__OF_VisualLink;
+static int ett_j2735_SEQUENCE_SIZE_1_4__OF_EventIdentifier;
+static int ett_j2735_EventIdentifier;
+static int ett_j2735_EventInfo;
+static int ett_j2735_SEQUENCE_SIZE_1_5__OF_EventRecurrence;
+static int ett_j2735_SEQUENCE_SIZE_1_10__OF_VehicleGroupAffected;
+static int ett_j2735_EventRecurrence;
+static int ett_j2735_LaneInfo;
+static int ett_j2735_NodePointLLE;
+static int ett_j2735_Obstructions;
+static int ett_j2735_Offset3D;
+static int ett_j2735_Path;
+static int ett_j2735_PathList;
+static int ett_j2735_PathPoints;
+static int ett_j2735_RegionInfo;
+static int ett_j2735_RegionUncertainty;
+static int ett_j2735_RSMPolygon;
+static int ett_j2735_VisualLink;
+static int ett_j2735_CooperativeControlMessage;
+static int ett_j2735_SEQUENCE_SIZE_1_8_OF_CCMPartIIcontent;
+static int ett_j2735_CCMPartIIcontent;
+static int ett_j2735_LightVehicleCCMExtensions;
+static int ett_j2735_HeavyTruckCCMExtensions;
+static int ett_j2735_AccelTimeConstant;
+static int ett_j2735_AxesMovement;
+static int ett_j2735_CCMFaultMode;
+static int ett_j2735_ProbeDataConfigMessage;
+static int ett_j2735_ProbeDataConfig;
+static int ett_j2735_ConfigDescriptor;
+static int ett_j2735_CfgVehicleClass;
+static int ett_j2735_ConfigBoundary;
+static int ett_j2735_ConfigTemporalBoundary;
+static int ett_j2735_CfgEventRecurrence;
+static int ett_j2735_ConfigTriggers;
+static int ett_j2735_CfgInstantaneousEventTriggers;
+static int ett_j2735_CfgIntervalEvents;
+static int ett_j2735_CfgTransitVehicleData;
+static int ett_j2735_CfgInterval;
+static int ett_j2735_CfgVehicleEvents;
+static int ett_j2735_CfgKinematicEvents;
+static int ett_j2735_CfgEvents;
+static int ett_j2735_CfgHysteresis;
+static int ett_j2735_CfgEmerAndTransitInfo;
+static int ett_j2735_CfgMsgRecepIndicators;
+static int ett_j2735_SEQUENCE_SIZE_1_8__OF_DSRCmsgID;
+static int ett_j2735_CfgRoadwayEvents;
+static int ett_j2735_CfgTrafficSigEncounters;
+static int ett_j2735_SEQUENCE_SIZE_1_100_OF_IntersectionID;
+static int ett_j2735_CfgRoadSignInfo;
+static int ett_j2735_CfgRoadSignTypes;
+static int ett_j2735_CfgCommSysPerfEvents;
+static int ett_j2735_CfgAveragedAndSummaryTriggers;
+static int ett_j2735_CfgAveragedTriggers;
+static int ett_j2735_CfgSummaryTriggers;
+static int ett_j2735_CfgLowSpeedCriteria;
+static int ett_j2735_CfgStoppedCriteria;
+static int ett_j2735_ProbeDataReportMessage;
+static int ett_j2735_ReportCharacteristics;
+static int ett_j2735_RptDevType;
+static int ett_j2735_RptInstantaneousRecords;
+static int ett_j2735_RptInstantaneousRecord;
+static int ett_j2735_RptVelocity;
+static int ett_j2735_RptInstantaneousRecordData;
+static int ett_j2735_RptAveragedAndSummaryRecord;
+static int ett_j2735_RptAvgAndSummaryRecordData;
+static int ett_j2735_RptIntervalEvents;
+static int ett_j2735_RptVehicleReport;
+static int ett_j2735_RptTransitVehData;
+static int ett_j2735_RptVehicleEvents;
+static int ett_j2735_RptDriverAlertsAndWarnings;
+static int ett_j2735_RptKinematicEvents;
+static int ett_j2735_RptEvents;
+static int ett_j2735_RptHysteresisRecord;
+static int ett_j2735_RptHysteresis;
+static int ett_j2735_RptRoadwayEvents;
+static int ett_j2735_RptRoadRoughness;
+static int ett_j2735_RptTrafficSigEncounters;
+static int ett_j2735_RptTrafficMetrics;
+static int ett_j2735_RptCommSysPerfEvents;
+static int ett_j2735_RptAveragedRecord;
+static int ett_j2735_RptSummaryRecord;
+static int ett_j2735_RptEmissions;
+static int ett_j2735_RptLocOfStops;
+static int ett_j2735_ManeuverSharingAndCoordinatingMessage;
+static int ett_j2735_TemporaryIDList;
+static int ett_j2735_Maneuver;
+static int ett_j2735_SubManeuverList;
+static int ett_j2735_SubManeuver;
+static int ett_j2735_CurrentStateData;
+static int ett_j2735_PositionOffsetXYZ;
+static int ett_j2735_TargetRoadResource;
+static int ett_j2735_TRRLocation;
+static int ett_j2735_TRRLocationType1;
+static int ett_j2735_TRRLocationType2;
+static int ett_j2735_TRRLocationType3;
+static int ett_j2735_SurroundingVehicleInfo;
+static int ett_j2735_RoadUserChargingConfigMessage;
+static int ett_j2735_SEQUENCE_SIZE_1_999__OF_ChargerInfo;
+static int ett_j2735_ChargerInfo;
+static int ett_j2735_ChargingConfig;
+static int ett_j2735_SEQUENCE_SIZE_1_999__OF_SubRegionChargingInfo;
+static int ett_j2735_ConfigInfo;
+static int ett_j2735_PrimaryRegionChargingInfo;
+static int ett_j2735_T_chargingPrimaryRegion;
+static int ett_j2735_PrimaryRegionState;
+static int ett_j2735_SubRegionChargingInfo;
+static int ett_j2735_AreaOrSegmentChargingInfo;
+static int ett_j2735_SEQUENCE_SIZE_1_999__OF_ChargingAreaOrSegment;
+static int ett_j2735_ChargingAreaOrSegment;
+static int ett_j2735_Area;
+static int ett_j2735_Segment;
+static int ett_j2735_SEQUENCE_SIZE_1_999__OF_TollAdvertisementMessage;
+static int ett_j2735_ChargingFees;
+static int ett_j2735_ChargingUnits;
+static int ett_j2735_RoadUserChargingReportMessage;
+static int ett_j2735_UsageReport;
+static int ett_j2735_FeeReport;
+static int ett_j2735_UserData;
+static int ett_j2735_UserFeeInfo;
+static int ett_j2735_ItemizedPaymentReport;
+static int ett_j2735_SEQUENCE_SIZE_1_999__OF_ItemizedChargerData;
+static int ett_j2735_ItemizedChargerData;
+static int ett_j2735_TripInfo;
+static int ett_j2735_TimePeriod;
+static int ett_j2735_TollAdvertisementMessage;
+static int ett_j2735_TollAdvertisementInfo;
+static int ett_j2735_TumInstructions;
+static int ett_j2735_AckPolicy;
+static int ett_j2735_TollChargesTable;
+static int ett_j2735_T_tollTypeCharge;
+static int ett_j2735_SEQUENCE_SIZE_1_64__OF_LaneChargesTable;
+static int ett_j2735_SEQUENCE_SIZE_1_64__OF_ClosedNetworkChargesTable;
+static int ett_j2735_LaneChargesTable;
+static int ett_j2735_ClosedNetworkChargesTable;
+static int ett_j2735_EntryChargesTable;
+static int ett_j2735_ExitChargesTable;
+static int ett_j2735_ExitInfo;
+static int ett_j2735_TimeChargesTable;
+static int ett_j2735_ChargesTable;
+static int ett_j2735_VehTypeChargesTable;
+static int ett_j2735_VehTypeCharges;
+static int ett_j2735_SpecialCharges;
+static int ett_j2735_OperatorDefined;
+static int ett_j2735_WeightChargesTable;
+static int ett_j2735_WeightCharges;
+static int ett_j2735_TotalWeightCharges;
+static int ett_j2735_PerAxleWeightCharges;
+static int ett_j2735_AxlesChargesTable;
+static int ett_j2735_AxlesCharges;
+static int ett_j2735_TollPointMap;
+static int ett_j2735_SEQUENCE_SIZE_1_64__OF_GenericLane;
+static int ett_j2735_TollChargerInfo;
+static int ett_j2735_TollUsageAckMessage;
+static int ett_j2735_TumAck;
+static int ett_j2735_TumAckHash;
+static int ett_j2735_TollUsageMessage;
+static int ett_j2735_TumData;
+static int ett_j2735_TollUserData;
+static int ett_j2735_VehicleAxlesAndWeightInfo;
+static int ett_j2735_T_vehWeightPerAxle;
+static int ett_j2735_VehicleId;
+static int ett_j2735_LocAndTimeStamps;
+static int ett_j2735_LocAndTimeStamp;
+static int ett_j2735_LastTollPointInfos;
+static int ett_j2735_LastTollPointInfo;
+static int ett_j2735_SensorDataSharingMessage;
+static int ett_j2735_DetectedObjectList;
+static int ett_j2735_DetectedObjectData;
+static int ett_j2735_DetectedObjectOptionalData;
+static int ett_j2735_DetectedObjectCommonData;
+static int ett_j2735_DetectedVehicleData;
+static int ett_j2735_DetectedVRUData;
+static int ett_j2735_DetectedObstacleData;
+static int ett_j2735_PositionOffsetXYZj3224;
+static int ett_j2735_Attitude;
+static int ett_j2735_AttitudeConfidence;
+static int ett_j2735_AngularVelocity;
+static int ett_j2735_AngularVelocityConfidence;
+static int ett_j2735_VehicleSizeConfidence;
+static int ett_j2735_ObstacleSize;
+static int ett_j2735_ObstacleSizeConfidence;
 
 /*--- End of included file: packet-j2735-ett.c ---*/
 #line 48 "./asn1/j2735/packet-j2735-template.c"
@@ -2538,7 +2545,10 @@ static dissector_table_t j2735_partii_id_dissector_table;
 typedef enum _PartII_Id_enum {
   vehicleSafetyExt =   0,
   specialVehicleExt =   1,
-  supplementalVehicleExt =   2
+  supplementalVehicleExt =   2,
+  vehicleSafetyCCMExt =   0,
+  lightVehicleCCMExt =   1,
+  heavyTruckCCMExt =   2
 } PartII_Id_enum;
 
 typedef enum _DSRCmsgID_enum {
@@ -2692,7 +2702,7 @@ dissect_j2735_Int4Unsigned(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _
 static int
 dissect_j2735_Int4Signed(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            G_MININT32, 2147483647U, NULL, FALSE);
+                                                            INT32_MIN, 2147483647U, NULL, FALSE);
 
   return offset;
 }
@@ -2702,7 +2712,7 @@ dissect_j2735_Int4Signed(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_
 static int
 dissect_j2735_Int8Unsigned(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer_64b(tvb, offset, actx, tree, hf_index,
-                                                            0U, G_GUINT64_CONSTANT(9223372036854775807), NULL, FALSE);
+                                                            0U, UINT64_C(9223372036854775807), NULL, FALSE);
 
   return offset;
 }
@@ -2712,7 +2722,7 @@ dissect_j2735_Int8Unsigned(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _
 static int
 dissect_j2735_Int8Signed(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer_64b(tvb, offset, actx, tree, hf_index,
-                                                            G_GINT64_CONSTANT(-9223372036854775808), G_GUINT64_CONSTANT(9223372036854775807), NULL, FALSE);
+                                                            INT64_C(-9223372036854775808), UINT64_C(9223372036854775807), NULL, FALSE);
 
   return offset;
 }
@@ -5259,14 +5269,14 @@ static const value_string j2735_ITISgroups_vals[] = {
   {  28, "adviceInstructionsRecommendations" },
   {  29, "adviceInstructionsMandatory" },
   {  30, "qualifiers" },
-  {  31, "genericLocationsJ2540" },
+  {  31, "genericLocations" },
   {  32, "laneRoadway" },
   {  33, "alternateRoute" },
   {  34, "units" },
   {  35, "transitMode" },
   {  36, "vehicleGroupAffected" },
   {  37, "travelerGroupAffected" },
-  {  38, "responderGroupAffectedJ2540" },
+  {  38, "responderGroupAffected" },
   {  39, "incidentResponseEquipment" },
   {  40, "assetStatus" },
   {  41, "roadsideAssets" },
@@ -9679,7 +9689,7 @@ dissect_j2735_TransitOperations(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *a
 }
 
 
-static const value_string j2735_TravelerGroupAffected_vals[] = {
+static const value_string j2735_TravelerGroupAffectedJ2540_vals[] = {
   { 9473, "through-traffic" },
   { 9474, "holiday-traffic" },
   { 9475, "residents" },
@@ -9700,7 +9710,7 @@ static const value_string j2735_TravelerGroupAffected_vals[] = {
 
 
 static int
-dissect_j2735_TravelerGroupAffected(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_TravelerGroupAffectedJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -9949,7 +9959,7 @@ dissect_j2735_ValidManeuvers(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx
 }
 
 
-static const value_string j2735_VehicleGroupAffectedDef_vals[] = {
+static const value_string j2735_VehicleGroupAffectedJ2540_vals[] = {
   { 9217, "all-vehicles" },
   { 9218, "bicycles" },
   { 9219, "motorcycles" },
@@ -10000,7 +10010,7 @@ static const value_string j2735_VehicleGroupAffectedDef_vals[] = {
 
 
 static int
-dissect_j2735_VehicleGroupAffectedDef(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_VehicleGroupAffectedJ2540(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 65535U, NULL, FALSE);
 
@@ -10238,35 +10248,6 @@ dissect_j2735_WinterDrivingRestrictions(tvbuff_t *tvb _U_, int offset _U_, asn1_
 }
 
 
-static const value_string j2735_ResponderGroupAffected_vals[] = {
-  { 9729, "emergency-vehicle-units" },
-  { 9730, "federal-law-enforcement-units" },
-  { 9731, "state-police-units" },
-  { 9732, "county-police-units" },
-  { 9733, "local-police-units" },
-  { 9734, "ambulance-units" },
-  { 9735, "rescue-units" },
-  { 9736, "fire-units" },
-  { 9737, "hAZMAT-units" },
-  { 9738, "light-tow-unit" },
-  { 9739, "heavy-tow-unit" },
-  { 9740, "freeway-service-patrols" },
-  { 9741, "transportation-response-units" },
-  { 9742, "private-contractor-response-units" },
-  { 0, NULL }
-};
-
-static uint32_t ResponderGroupAffected_value_map[14+0] = {9729, 9730, 9731, 9732, 9733, 9734, 9735, 9736, 9737, 9738, 9739, 9740, 9741, 9742};
-
-static int
-dissect_j2735_ResponderGroupAffected(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     14, NULL, TRUE, 0, ResponderGroupAffected_value_map);
-
-  return offset;
-}
-
-
 static const value_string j2735_ITISEventType_vals[] = {
   {   0, "trafficConditions" },
   {   1, "accidentsAndIncidents" },
@@ -10342,9 +10323,9 @@ static const per_choice_t ITISEventType_choice[] = {
   {  29, &hf_j2735_laneRoadway   , ASN1_NO_EXTENSIONS     , dissect_j2735_LaneRoadway },
   {  30, &hf_j2735_alternateRoute, ASN1_NO_EXTENSIONS     , dissect_j2735_AlternateRoute },
   {  31, &hf_j2735_transitMode   , ASN1_NO_EXTENSIONS     , dissect_j2735_TransitMode },
-  {  32, &hf_j2735_vehicleGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_VehicleGroupAffectedDef },
-  {  33, &hf_j2735_travelerGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_TravelerGroupAffected },
-  {  34, &hf_j2735_responderGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_ResponderGroupAffected },
+  {  32, &hf_j2735_vehicleGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_VehicleGroupAffectedJ2540 },
+  {  33, &hf_j2735_travelerGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_TravelerGroupAffectedJ2540 },
+  {  34, &hf_j2735_responderGroupAffected, ASN1_NO_EXTENSIONS     , dissect_j2735_ResponderGroupAffectedJ2540 },
   {  35, &hf_j2735_incidentResponseEquipment, ASN1_NO_EXTENSIONS     , dissect_j2735_IncidentResponseEquipmentJ2540 },
   {  36, &hf_j2735_transitOperations, ASN1_NO_EXTENSIONS     , dissect_j2735_TransitOperations },
   {  37, &hf_j2735_regulatorySigns, ASN1_NO_EXTENSIONS     , dissect_j2735_RegulatoryAndWarningSigns },
@@ -11195,6 +11176,7 @@ static const value_string j2735_RegionId_vals[] = {
   {   1, "addGrpA" },
   {   2, "addGrpB" },
   {   3, "addGrpC" },
+  {   4, "addGrpD" },
   { 0, NULL }
 };
 
@@ -11743,6 +11725,9 @@ static const value_string j2735_PartII_Id_vals[] = {
   { vehicleSafetyExt, "vehicleSafetyExt" },
   { specialVehicleExt, "specialVehicleExt" },
   { supplementalVehicleExt, "supplementalVehicleExt" },
+  { vehicleSafetyCCMExt, "vehicleSafetyCCMExt" },
+  { lightVehicleCCMExt, "lightVehicleCCMExt" },
+  { heavyTruckCCMExt, "heavyTruckCCMExt" },
   { 0, NULL }
 };
 
@@ -11834,9 +11819,120 @@ dissect_j2735_ITIScodes(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 }
 
 
+static const value_string j2735_GenericLocations_vals[] = {
+  { 7937, "on-bridges" },
+  { 7938, "in-tunnels" },
+  { 7939, "entering-or-leaving-tunnels" },
+  { 7940, "on-ramps" },
+  { 7941, "in-road-construction-area" },
+  { 7942, "around-a-curve" },
+  { 8026, "on-curve" },
+  { 8009, "on-tracks" },
+  { 8025, "in-street" },
+  { 8027, "shoulder" },
+  { 7943, "on-minor-roads" },
+  { 7944, "in-the-opposing-lanes" },
+  { 7945, "adjacent-to-roadway" },
+  { 8024, "across-tracks" },
+  { 7946, "on-bend" },
+  { 8032, "intersection" },
+  { 7947, "entire-intersection" },
+  { 7948, "in-the-median" },
+  { 7949, "moved-to-side-of-road" },
+  { 7950, "moved-to-shoulder" },
+  { 7951, "on-the-roadway" },
+  { 8010, "dip" },
+  { 8011, "traffic-circle" },
+  { 8028, "crossover" },
+  { 8029, "cross-road" },
+  { 8030, "side-road" },
+  { 8014, "to" },
+  { 8015, "by" },
+  { 8016, "through" },
+  { 8017, "area-of" },
+  { 8018, "under" },
+  { 8019, "over" },
+  { 8020, "from" },
+  { 8021, "approaching" },
+  { 8022, "entering-at" },
+  { 8023, "exiting-at" },
+  { 7952, "in-shaded-areas" },
+  { 7953, "in-low-lying-areas" },
+  { 7954, "in-the-downtown-area" },
+  { 7955, "in-the-inner-city-area" },
+  { 7956, "in-parts" },
+  { 7957, "in-some-places" },
+  { 7958, "in-the-ditch" },
+  { 7959, "in-the-valley" },
+  { 7960, "on-hill-top" },
+  { 7961, "near-the-foothills" },
+  { 7962, "at-high-altitudes" },
+  { 7963, "near-the-lake" },
+  { 7964, "near-the-shore" },
+  { 8008, "nearby-basin" },
+  { 7965, "over-the-crest-of-a-hill" },
+  { 7966, "other-than-on-the-roadway" },
+  { 7967, "near-the-beach" },
+  { 7968, "near-beach-access-point" },
+  { 8006, "mountain-pass" },
+  { 7969, "lower-level" },
+  { 7970, "upper-level" },
+  { 7971, "airport" },
+  { 7972, "concourse" },
+  { 7973, "gate" },
+  { 7974, "baggage-claim" },
+  { 7975, "customs-point" },
+  { 8007, "reservation-center" },
+  { 7976, "station" },
+  { 7977, "platform" },
+  { 7978, "dock" },
+  { 7979, "depot" },
+  { 7980, "ev-charging-point" },
+  { 7981, "information-welcome-point" },
+  { 7982, "at-rest-area" },
+  { 7983, "at-service-area" },
+  { 7984, "at-weigh-station" },
+  { 8033, "roadside-park" },
+  { 7985, "picnic-areas" },
+  { 7986, "rest-area" },
+  { 7987, "service-stations" },
+  { 7988, "toilets" },
+  { 8031, "bus-stop" },
+  { 8012, "park-and-ride-lot" },
+  { 7989, "on-the-right" },
+  { 7990, "on-the-left" },
+  { 7991, "in-the-center" },
+  { 7992, "in-the-opposite-direction" },
+  { 7993, "cross-traffic" },
+  { 7994, "northbound-traffic" },
+  { 7995, "eastbound-traffic" },
+  { 7996, "southbound-traffic" },
+  { 7997, "westbound-traffic" },
+  { 7998, "north" },
+  { 7999, "south" },
+  { 8000, "east" },
+  { 8001, "west" },
+  { 8002, "northeast" },
+  { 8003, "northwest" },
+  { 8004, "southeast" },
+  { 8005, "southwest" },
+  { 0, NULL }
+};
+
+static uint32_t GenericLocations_value_map[96+0] = {7937, 7938, 7939, 7940, 7941, 7942, 8026, 8009, 8025, 8027, 7943, 7944, 7945, 8024, 7946, 8032, 7947, 7948, 7949, 7950, 7951, 8010, 8011, 8028, 8029, 8030, 8014, 8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023, 7952, 7953, 7954, 7955, 7956, 7957, 7958, 7959, 7960, 7961, 7962, 7963, 7964, 8008, 7965, 7966, 7967, 7968, 8006, 7969, 7970, 7971, 7972, 7973, 7974, 7975, 8007, 7976, 7977, 7978, 7979, 7980, 7981, 7982, 7983, 7984, 8033, 7985, 7986, 7987, 7988, 8031, 8012, 7989, 7990, 7991, 7992, 7993, 7994, 7995, 7996, 7997, 7998, 7999, 8000, 8001, 8002, 8003, 8004, 8005};
+
+static int
+dissect_j2735_GenericLocations(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
+                                     96, NULL, TRUE, 0, GenericLocations_value_map);
+
+  return offset;
+}
+
+
 static const per_sequence_t DisabledVehicle_sequence[] = {
   { &hf_j2735_statusDetails , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ITIScodes },
-  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_ITIS_GenericLocations },
+  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_GenericLocations },
   { NULL, 0, 0, NULL }
 };
 
@@ -12082,7 +12178,7 @@ static const per_sequence_t ObstacleDetection_sequence[] = {
   { &hf_j2735_obDist        , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ObstacleDistance },
   { &hf_j2735_obDirect      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ObstacleDirection },
   { &hf_j2735_description_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ITIScodes },
-  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_ITIS_GenericLocations },
+  { &hf_j2735_locationDetails, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_GenericLocations },
   { &hf_j2735_dateTime      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_DDateTime },
   { &hf_j2735_vertEvent     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VerticalAccelerationThreshold },
   { NULL, 0, 0, NULL }
@@ -12311,7 +12407,7 @@ dissect_j2735_PrivilegedEventFlags(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t
 
 
 static const per_sequence_t PrivilegedEvents_sequence[] = {
-  { &hf_j2735_notUsed       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_doNotUse_01   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
   { &hf_j2735_event         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PrivilegedEventFlags },
   { NULL, 0, 0, NULL }
 };
@@ -12347,7 +12443,7 @@ dissect_j2735_ResponseType(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _
 
 
 static const per_sequence_t EmergencyDetails_sequence[] = {
-  { &hf_j2735_notUsed       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_doNotUse_01   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
   { &hf_j2735_sirenUse      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SirenInUse },
   { &hf_j2735_lightsUse     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_LightbarInUse },
   { &hf_j2735_multi         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MultiVehicleResponse },
@@ -12522,7 +12618,7 @@ dissect_j2735_TrailerUnitDescriptionList(tvbuff_t *tvb _U_, int offset _U_, asn1
 
 
 static const per_sequence_t TrailerData_sequence[] = {
-  { &hf_j2735_notUsed       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_doNotUse_01   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
   { &hf_j2735_connection    , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PivotPointDescription },
   { &hf_j2735_units         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TrailerUnitDescriptionList },
   { NULL, 0, 0, NULL }
@@ -12884,6 +12980,35 @@ dissect_j2735_IncidentResponseEquipment(tvbuff_t *tvb _U_, int offset _U_, asn1_
 }
 
 
+static const value_string j2735_ResponderGroupAffected_vals[] = {
+  { 9729, "emergency-vehicle-units" },
+  { 9730, "federal-law-enforcement-units" },
+  { 9731, "state-police-units" },
+  { 9732, "county-police-units" },
+  { 9733, "local-police-units" },
+  { 9734, "ambulance-units" },
+  { 9735, "rescue-units" },
+  { 9736, "fire-units" },
+  { 9737, "hAZMAT-units" },
+  { 9738, "light-tow-unit" },
+  { 9739, "heavy-tow-unit" },
+  { 9740, "freeway-service-patrols" },
+  { 9741, "transportation-response-units" },
+  { 9742, "private-contractor-response-units" },
+  { 0, NULL }
+};
+
+static uint32_t ResponderGroupAffected_value_map[14+0] = {9729, 9730, 9731, 9732, 9733, 9734, 9735, 9736, 9737, 9738, 9739, 9740, 9741, 9742};
+
+static int
+dissect_j2735_ResponderGroupAffected(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
+                                     14, NULL, TRUE, 0, ResponderGroupAffected_value_map);
+
+  return offset;
+}
+
+
 static const value_string j2735_FuelType_vals[] = {
   {   0, "unknownFuel" },
   {   1, "gasoline" },
@@ -13000,7 +13125,7 @@ static const per_sequence_t VehicleData_sequence[] = {
   { &hf_j2735_height        , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VehicleHeight },
   { &hf_j2735_bumpers       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_BumperHeights },
   { &hf_j2735_mass_01       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_VehicleMass },
-  { &hf_j2735_doNotUse_01   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TrailerWeight },
+  { &hf_j2735_doNotUse_02   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TrailerWeight },
   { &hf_j2735_trailerPresent, ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_BOOLEAN },
   { &hf_j2735_pivotPoint    , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_PivotPointDescription },
   { &hf_j2735_axles_01      , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_Axles },
@@ -14468,8 +14593,6 @@ static const per_sequence_t VehicleSafetyExtensions_sequence[] = {
   { &hf_j2735_pathHistory   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_PathHistory },
   { &hf_j2735_pathPrediction, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_PathPrediction },
   { &hf_j2735_lights        , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ExteriorLights },
-  { &hf_j2735_timestamp     , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_DDateTime },
-  { &hf_j2735_height        , ASN1_NOT_EXTENSION_ROOT, ASN1_OPTIONAL    , dissect_j2735_VehicleHeight },
   { NULL, 0, 0, NULL }
 };
 
@@ -15230,117 +15353,6 @@ static int
 dissect_j2735_EmergencyVehicleAlert(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_EmergencyVehicleAlert, EmergencyVehicleAlert_sequence);
-
-  return offset;
-}
-
-
-static const value_string j2735_GenericLocationsDef_vals[] = {
-  { 7937, "on-bridges" },
-  { 7938, "in-tunnels" },
-  { 7939, "entering-or-leaving-tunnels" },
-  { 7940, "on-ramps" },
-  { 7941, "in-road-construction-area" },
-  { 7942, "around-a-curve" },
-  { 8026, "on-curve" },
-  { 8009, "on-tracks" },
-  { 8025, "in-street" },
-  { 8027, "shoulder" },
-  { 7943, "on-minor-roads" },
-  { 7944, "in-the-opposing-lanes" },
-  { 7945, "adjacent-to-roadway" },
-  { 8024, "across-tracks" },
-  { 7946, "on-bend" },
-  { 8032, "intersection" },
-  { 7947, "entire-intersection" },
-  { 7948, "in-the-median" },
-  { 7949, "moved-to-side-of-road" },
-  { 7950, "moved-to-shoulder" },
-  { 7951, "on-the-roadway" },
-  { 8010, "dip" },
-  { 8011, "traffic-circle" },
-  { 8028, "crossover" },
-  { 8029, "cross-road" },
-  { 8030, "side-road" },
-  { 8014, "to" },
-  { 8015, "by" },
-  { 8016, "through" },
-  { 8017, "area-of" },
-  { 8018, "under" },
-  { 8019, "over" },
-  { 8020, "from" },
-  { 8021, "approaching" },
-  { 8022, "entering-at" },
-  { 8023, "exiting-at" },
-  { 7952, "in-shaded-areas" },
-  { 7953, "in-low-lying-areas" },
-  { 7954, "in-the-downtown-area" },
-  { 7955, "in-the-inner-city-area" },
-  { 7956, "in-parts" },
-  { 7957, "in-some-places" },
-  { 7958, "in-the-ditch" },
-  { 7959, "in-the-valley" },
-  { 7960, "on-hill-top" },
-  { 7961, "near-the-foothills" },
-  { 7962, "at-high-altitudes" },
-  { 7963, "near-the-lake" },
-  { 7964, "near-the-shore" },
-  { 8008, "nearby-basin" },
-  { 7965, "over-the-crest-of-a-hill" },
-  { 7966, "other-than-on-the-roadway" },
-  { 7967, "near-the-beach" },
-  { 7968, "near-beach-access-point" },
-  { 8006, "mountain-pass" },
-  { 7969, "lower-level" },
-  { 7970, "upper-level" },
-  { 7971, "airport" },
-  { 7972, "concourse" },
-  { 7973, "gate" },
-  { 7974, "baggage-claim" },
-  { 7975, "customs-point" },
-  { 8007, "reservation-center" },
-  { 7976, "station" },
-  { 7977, "platform" },
-  { 7978, "dock" },
-  { 7979, "depot" },
-  { 7980, "ev-charging-point" },
-  { 7981, "information-welcome-point" },
-  { 7982, "at-rest-area" },
-  { 7983, "at-service-area" },
-  { 7984, "at-weigh-station" },
-  { 8033, "roadside-park" },
-  { 7985, "picnic-areas" },
-  { 7986, "rest-area" },
-  { 7987, "service-stations" },
-  { 7988, "toilets" },
-  { 8031, "bus-stop" },
-  { 8012, "park-and-ride-lot" },
-  { 7989, "on-the-right" },
-  { 7990, "on-the-left" },
-  { 7991, "in-the-center" },
-  { 7992, "in-the-opposite-direction" },
-  { 7993, "cross-traffic" },
-  { 7994, "northbound-traffic" },
-  { 7995, "eastbound-traffic" },
-  { 7996, "southbound-traffic" },
-  { 7997, "westbound-traffic" },
-  { 7998, "north" },
-  { 7999, "south" },
-  { 8000, "east" },
-  { 8001, "west" },
-  { 8002, "northeast" },
-  { 8003, "northwest" },
-  { 8004, "southeast" },
-  { 8005, "southwest" },
-  { 0, NULL }
-};
-
-static uint32_t GenericLocationsDef_value_map[96+0] = {7937, 7938, 7939, 7940, 7941, 7942, 8026, 8009, 8025, 8027, 7943, 7944, 7945, 8024, 7946, 8032, 7947, 7948, 7949, 7950, 7951, 8010, 8011, 8028, 8029, 8030, 8014, 8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023, 7952, 7953, 7954, 7955, 7956, 7957, 7958, 7959, 7960, 7961, 7962, 7963, 7964, 8008, 7965, 7966, 7967, 7968, 8006, 7969, 7970, 7971, 7972, 7973, 7974, 7975, 8007, 7976, 7977, 7978, 7979, 7980, 7981, 7982, 7983, 7984, 8033, 7985, 7986, 7987, 7988, 8031, 8012, 7989, 7990, 7991, 7992, 7993, 7994, 7995, 7996, 7997, 7998, 7999, 8000, 8001, 8002, 8003, 8004, 8005};
-
-static int
-dissect_j2735_GenericLocationsDef(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     96, NULL, TRUE, 0, GenericLocationsDef_value_map);
 
   return offset;
 }
@@ -18747,24 +18759,11 @@ dissect_j2735_TimeInSecond_B8(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *act
 }
 
 
-static const value_string j2735_TrafficLightDirectionCode_vals[] = {
-  {   0, "unavailable" },
-  {   1, "north" },
-  {   2, "east" },
-  {   3, "south" },
-  {   4, "west" },
-  {   5, "northeast" },
-  {   6, "southeast" },
-  {   7, "southwest" },
-  {   8, "northwest" },
-  { 0, NULL }
-};
-
 
 static int
 dissect_j2735_TrafficLightDirectionCode(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_enumerated(tvb, offset, actx, tree, hf_index,
-                                     9, NULL, TRUE, 0, NULL);
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            0U, 359U, NULL, FALSE);
 
   return offset;
 }
@@ -18818,7 +18817,7 @@ dissect_j2735_TrafficLightStatusList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx
 
 
 static const per_sequence_t TrafficLightStatusMessage_sequence[] = {
-  { &hf_j2735_traffiLightID , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TrafficLightID },
+  { &hf_j2735_trafficLightID, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TrafficLightID },
   { &hf_j2735_long_01       , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_Longitude },
   { &hf_j2735_lat_03        , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_Latitude },
   { &hf_j2735_operationStatus, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TrafficLightOperationStatus },
@@ -18960,7 +18959,7 @@ dissect_j2735_MinutesDuration(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *act
 
 
 static int
-dissect_j2735_SignPrority(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_SignPriority(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 7U, NULL, FALSE);
 
@@ -19882,17 +19881,17 @@ dissect_j2735_TravelerDataFrameNewPartIIIContent(tvbuff_t *tvb _U_, int offset _
 
 
 static const per_sequence_t TravelerDataFrame_sequence[] = {
-  { &hf_j2735_notUsed       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_doNotUse1_01  , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
   { &hf_j2735_frameType     , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TravelerInfoType },
   { &hf_j2735_msgId         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_T_msgId },
   { &hf_j2735_startYear     , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_DYear },
   { &hf_j2735_startTime_02  , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MinuteOfTheYear },
   { &hf_j2735_durationTime  , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MinutesDuration },
-  { &hf_j2735_priority_01   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignPrority },
-  { &hf_j2735_notUsed1      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_priority_01   , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SignPriority },
+  { &hf_j2735_doNotUse2_01  , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
   { &hf_j2735_regions       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SEQUENCE_SIZE_1_16_OF_GeographicalPath },
-  { &hf_j2735_notUsed2      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
-  { &hf_j2735_notUsed3      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_doNotUse3_01  , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
+  { &hf_j2735_doNotUse4_01  , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SSPindex },
   { &hf_j2735_content       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_T_content },
   { &hf_j2735_url           , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_URL_Short },
   { &hf_j2735_contentNew    , ASN1_NOT_EXTENSION_ROOT, ASN1_NOT_OPTIONAL, dissect_j2735_TravelerDataFrameNewPartIIIContent },
@@ -21539,23 +21538,6 @@ dissect_j2735_RoadSafetyMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *a
 }
 
 
-static const value_string j2735_CCMPartII_Id_vals[] = {
-  {   0, "vehicleSafetyCCMExt" },
-  {   1, "lightVehicleCCMExt" },
-  {   2, "heavyTruckCCMExt" },
-  { 0, NULL }
-};
-
-
-static int
-dissect_j2735_CCMPartII_Id(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            0U, 63U, NULL, FALSE);
-
-  return offset;
-}
-
-
 
 static int
 dissect_j2735_T_partII_Value_01(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
@@ -21566,7 +21548,7 @@ dissect_j2735_T_partII_Value_01(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *a
 
 
 static const per_sequence_t CCMPartIIcontent_sequence[] = {
-  { &hf_j2735_partII_Id_01  , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_CCMPartII_Id },
+  { &hf_j2735_partII_Id     , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_PartII_Id },
   { &hf_j2735_partII_Value_01, ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_T_partII_Value_01 },
   { NULL, 0, 0, NULL }
 };
@@ -21604,6 +21586,16 @@ static int
 dissect_j2735_CooperativeControlMessage(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_CooperativeControlMessage, CooperativeControlMessage_sequence);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_CCMPartII_Id(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            0U, 63U, NULL, FALSE);
 
   return offset;
 }
@@ -21769,7 +21761,7 @@ dissect_j2735_Roll(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, prot
 static int
 dissect_j2735_PitchRate(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -32767, 32767U, NULL, FALSE);
+                                                            -3000, 3001U, NULL, FALSE);
 
   return offset;
 }
@@ -21779,7 +21771,7 @@ dissect_j2735_PitchRate(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_,
 static int
 dissect_j2735_RollRate(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -32767, 32767U, NULL, FALSE);
+                                                            -3000, 3001U, NULL, FALSE);
 
   return offset;
 }
@@ -21855,7 +21847,7 @@ dissect_j2735_CCMFaultMode(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _
 }
 
 
-static const value_string j2735_ManeuverID_vals[] = {
+static const value_string j2735_CCMManeuverID_vals[] = {
   {   0, "unavailable" },
   {   1, "stayAtRestManCtl" },
   {   2, "stayAtRestAutoLonCtl" },
@@ -21893,7 +21885,7 @@ static const value_string j2735_ManeuverID_vals[] = {
 
 
 static int
-dissect_j2735_ManeuverID(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_CCMManeuverID(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 255U, NULL, FALSE);
 
@@ -21918,7 +21910,7 @@ static const per_sequence_t HeavyTruckCCMExtensions_sequence[] = {
   { &hf_j2735_maxAvailAccel , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MaxAvailableAcceleration },
   { &hf_j2735_maxAvailDecel , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MaxAvailableDeceleration },
   { &hf_j2735_ccmFaultMode  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_CCMFaultMode },
-  { &hf_j2735_maneuverID    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ManeuverID },
+  { &hf_j2735_maneuverID    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_CCMManeuverID },
   { &hf_j2735_frontCutIn    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_FrontCutIn },
   { NULL, 0, 0, NULL }
 };
@@ -21927,26 +21919,6 @@ static int
 dissect_j2735_HeavyTruckCCMExtensions(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
                                    ett_j2735_HeavyTruckCCMExtensions, HeavyTruckCCMExtensions_sequence);
-
-  return offset;
-}
-
-
-
-static int
-dissect_j2735_PitchRate6(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -3000, 3001U, NULL, FALSE);
-
-  return offset;
-}
-
-
-
-static int
-dissect_j2735_RollRate6(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
-  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
-                                                            -3000, 3001U, NULL, FALSE);
 
   return offset;
 }
@@ -23062,7 +23034,7 @@ dissect_j2735_RptVehicleEvents(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *ac
 
 
 static int
-dissect_j2735_MeanVariationC(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+dissect_j2735_MeanVariationRpt(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
                                                             0U, 25000U, NULL, FALSE);
 
@@ -23071,9 +23043,9 @@ dissect_j2735_MeanVariationC(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx
 
 
 static const per_sequence_t RptRoadRoughness_sequence[] = {
-  { &hf_j2735_meanVerticalVariation_01, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MeanVariationC },
+  { &hf_j2735_meanVerticalVariation_01, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MeanVariationRpt },
   { &hf_j2735_verticalVariationStdDev_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_StdDev },
-  { &hf_j2735_meanHorizontalVariation_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MeanVariationC },
+  { &hf_j2735_meanHorizontalVariation_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_MeanVariationRpt },
   { &hf_j2735_horizontalVariationStdDev_01, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_StdDev },
   { NULL, 0, 0, NULL }
 };
@@ -23491,6 +23463,16 @@ dissect_j2735_TemporaryIDList(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *act
 
 
 static int
+dissect_j2735_ManeuverID(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            0U, 255U, NULL, FALSE);
+
+  return offset;
+}
+
+
+
+static int
 dissect_j2735_TemporaryIDPointer(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
   offset = dissect_per_bit_string(tvb, offset, actx, tree, hf_index,
                                      1, 32, FALSE, NULL, 0, NULL, NULL);
@@ -23800,7 +23782,7 @@ static const per_sequence_t ManeuverSharingAndCoordinatingMessage_sequence[] = {
   { &hf_j2735_mSCMType      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MSCMType },
   { &hf_j2735_sourceID      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TemporaryID },
   { &hf_j2735_destinationIDs, ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_TemporaryIDList },
-  { &hf_j2735_maneuverID    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ManeuverID },
+  { &hf_j2735_maneuverID_01 , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ManeuverID },
   { &hf_j2735_maneuver_01   , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_Maneuver },
   { &hf_j2735_responseFlag  , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ResponseFlag },
   { &hf_j2735_reasonCode    , ASN1_EXTENSION_ROOT    , ASN1_OPTIONAL    , dissect_j2735_ReasonCode },
@@ -25420,13 +25402,39 @@ dissect_j2735_MeasurementTimeOffset(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_
 }
 
 
+
+static int
+dissect_j2735_ObjectDistancej3224(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            -32767, 32767U, NULL, FALSE);
+
+  return offset;
+}
+
+
+static const per_sequence_t PositionOffsetXYZj3224_sequence[] = {
+  { &hf_j2735_offsetX_01    , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_ObjectDistancej3224 },
+  { &hf_j2735_offsetY_01    , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_ObjectDistancej3224 },
+  { &hf_j2735_offsetZ_01    , ASN1_NO_EXTENSIONS     , ASN1_OPTIONAL    , dissect_j2735_ObjectDistancej3224 },
+  { NULL, 0, 0, NULL }
+};
+
+static int
+dissect_j2735_PositionOffsetXYZj3224(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_sequence(tvb, offset, actx, tree, hf_index,
+                                   ett_j2735_PositionOffsetXYZj3224, PositionOffsetXYZj3224_sequence);
+
+  return offset;
+}
+
+
 static const per_sequence_t DetectedObjectCommonData_sequence[] = {
   { &hf_j2735_objType       , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ObjectType },
   { &hf_j2735_objTypeCfd    , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ClassificationConfidence },
   { &hf_j2735_objectID      , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_ObjectID },
   { &hf_j2735_measurementTime, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_MeasurementTimeOffset },
   { &hf_j2735_timeConfidence, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_TimeConfidence },
-  { &hf_j2735_pos_01        , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PositionOffsetXYZ },
+  { &hf_j2735_pos_01        , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PositionOffsetXYZj3224 },
   { &hf_j2735_posConfidence , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_PositionConfidenceSet },
   { &hf_j2735_speed         , ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_Speed },
   { &hf_j2735_speedConfidence_01, ASN1_EXTENSION_ROOT    , ASN1_NOT_OPTIONAL, dissect_j2735_SpeedConfidence },
@@ -25513,9 +25521,29 @@ dissect_j2735_AttitudeConfidence(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *
 }
 
 
+
+static int
+dissect_j2735_PitchRatej3224(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            -32767, 32767U, NULL, FALSE);
+
+  return offset;
+}
+
+
+
+static int
+dissect_j2735_RollRatej3224(tvbuff_t *tvb _U_, int offset _U_, asn1_ctx_t *actx _U_, proto_tree *tree _U_, int hf_index _U_) {
+  offset = dissect_per_constrained_integer(tvb, offset, actx, tree, hf_index,
+                                                            -32767, 32767U, NULL, FALSE);
+
+  return offset;
+}
+
+
 static const per_sequence_t AngularVelocity_sequence[] = {
-  { &hf_j2735_pitchRate     , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_PitchRate },
-  { &hf_j2735_rollRate      , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_RollRate },
+  { &hf_j2735_pitchRate_01  , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_PitchRatej3224 },
+  { &hf_j2735_rollRate_01   , ASN1_NO_EXTENSIONS     , ASN1_NOT_OPTIONAL, dissect_j2735_RollRatej3224 },
   { NULL, 0, 0, NULL }
 };
 
@@ -27008,16 +27036,16 @@ void proto_register_j2735(void) {
         NULL, HFILL }},
     { &hf_j2735_vehicleGroupAffected,
       { "vehicleGroupAffected", "j2735.vehicleGroupAffected",
-        FT_UINT32, BASE_DEC, VALS(j2735_VehicleGroupAffectedDef_vals), 0,
-        "VehicleGroupAffectedDef", HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_VehicleGroupAffectedJ2540_vals), 0,
+        "VehicleGroupAffectedJ2540", HFILL }},
     { &hf_j2735_travelerGroupAffected,
       { "travelerGroupAffected", "j2735.travelerGroupAffected",
-        FT_UINT32, BASE_DEC, VALS(j2735_TravelerGroupAffected_vals), 0,
-        NULL, HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_TravelerGroupAffectedJ2540_vals), 0,
+        "TravelerGroupAffectedJ2540", HFILL }},
     { &hf_j2735_responderGroupAffected,
       { "responderGroupAffected", "j2735.responderGroupAffected",
-        FT_UINT32, BASE_DEC, VALS(j2735_ResponderGroupAffected_vals), 0,
-        NULL, HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_ResponderGroupAffectedJ2540_vals), 0,
+        "ResponderGroupAffectedJ2540", HFILL }},
     { &hf_j2735_incidentResponseEquipment,
       { "incidentResponseEquipment", "j2735.incidentResponseEquipment",
         FT_UINT32, BASE_DEC, VALS(j2735_IncidentResponseEquipmentJ2540_vals), 0,
@@ -27263,8 +27291,8 @@ void proto_register_j2735(void) {
         FT_UINT32, BASE_DEC, NULL, 0,
         "ITIScodes", HFILL }},
     { &hf_j2735_locationDetails,
-      { "locationDetails", "j2735.locationDetails_element",
-        FT_NONE, BASE_NONE, NULL, 0,
+      { "locationDetails", "j2735.locationDetails",
+        FT_UINT32, BASE_DEC, VALS(j2735_GenericLocations_vals), 0,
         "GenericLocations", HFILL }},
     { &hf_j2735_typeEvent,
       { "typeEvent", "j2735.typeEvent",
@@ -27398,8 +27426,8 @@ void proto_register_j2735(void) {
       { "schoolBus", "j2735.schoolBus_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "SchoolBusJ2945Slash1C", HFILL }},
-    { &hf_j2735_notUsed,
-      { "notUsed", "j2735.notUsed",
+    { &hf_j2735_doNotUse_01,
+      { "doNotUse", "j2735.doNotUse",
         FT_UINT32, BASE_DEC, NULL, 0,
         "SSPindex", HFILL }},
     { &hf_j2735_connection,
@@ -27486,7 +27514,7 @@ void proto_register_j2735(void) {
       { "mass", "j2735.mass",
         FT_UINT32, BASE_DEC, NULL, 0,
         "VehicleMass", HFILL }},
-    { &hf_j2735_doNotUse_01,
+    { &hf_j2735_doNotUse_02,
       { "doNotUse", "j2735.doNotUse",
         FT_UINT32, BASE_DEC, NULL, 0,
         "TrailerWeight", HFILL }},
@@ -28194,10 +28222,6 @@ void proto_register_j2735(void) {
       { "lights", "j2735.lights",
         FT_BYTES, BASE_NONE, NULL, 0,
         "ExteriorLights", HFILL }},
-    { &hf_j2735_timestamp,
-      { "timestamp", "j2735.timestamp_element",
-        FT_NONE, BASE_NONE, NULL, 0,
-        "DDateTime", HFILL }},
     { &hf_j2735_offset1,
       { "offset1", "j2735.offset1",
         FT_INT32, BASE_DEC, NULL, 0,
@@ -29370,10 +29394,10 @@ void proto_register_j2735(void) {
       { "header", "j2735.header_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_traffiLightID,
-      { "traffiLightID", "j2735.traffiLightID",
+    { &hf_j2735_trafficLightID,
+      { "trafficLightID", "j2735.trafficLightID",
         FT_UINT32, BASE_DEC, VALS(j2735_TrafficLightID_vals), 0,
-        "TrafficLightID", HFILL }},
+        NULL, HFILL }},
     { &hf_j2735_operationStatus,
       { "operationStatus", "j2735.operationStatus",
         FT_BYTES, BASE_NONE, NULL, 0,
@@ -29440,7 +29464,7 @@ void proto_register_j2735(void) {
         "TimeInSecond_B8", HFILL }},
     { &hf_j2735_directionCode,
       { "directionCode", "j2735.directionCode",
-        FT_UINT32, BASE_DEC, VALS(j2735_TrafficLightDirectionCode_vals), 0,
+        FT_UINT32, BASE_DEC, NULL, 0,
         "TrafficLightDirectionCode", HFILL }},
     { &hf_j2735_reserved,
       { "reserved", "j2735.reserved",
@@ -29710,6 +29734,10 @@ void proto_register_j2735(void) {
       { "TravelerDataFrame", "j2735.TravelerDataFrame_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
+    { &hf_j2735_doNotUse1_01,
+      { "doNotUse1", "j2735.doNotUse1",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        "SSPindex", HFILL }},
     { &hf_j2735_frameType,
       { "frameType", "j2735.frameType",
         FT_UINT32, BASE_DEC, VALS(j2735_TravelerInfoType_vals), 0,
@@ -29737,9 +29765,9 @@ void proto_register_j2735(void) {
     { &hf_j2735_priority_01,
       { "priority", "j2735.priority",
         FT_UINT32, BASE_DEC, NULL, 0,
-        "SignPrority", HFILL }},
-    { &hf_j2735_notUsed1,
-      { "notUsed1", "j2735.notUsed1",
+        "SignPriority", HFILL }},
+    { &hf_j2735_doNotUse2_01,
+      { "doNotUse2", "j2735.doNotUse2",
         FT_UINT32, BASE_DEC, NULL, 0,
         "SSPindex", HFILL }},
     { &hf_j2735_regions,
@@ -29750,12 +29778,12 @@ void proto_register_j2735(void) {
       { "GeographicalPath", "j2735.GeographicalPath_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_notUsed2,
-      { "notUsed2", "j2735.notUsed2",
+    { &hf_j2735_doNotUse3_01,
+      { "doNotUse3", "j2735.doNotUse3",
         FT_UINT32, BASE_DEC, NULL, 0,
         "SSPindex", HFILL }},
-    { &hf_j2735_notUsed3,
-      { "notUsed3", "j2735.notUsed3",
+    { &hf_j2735_doNotUse4_01,
+      { "doNotUse4", "j2735.doNotUse4",
         FT_UINT32, BASE_DEC, NULL, 0,
         "SSPindex", HFILL }},
     { &hf_j2735_content,
@@ -30426,10 +30454,6 @@ void proto_register_j2735(void) {
       { "CCMPartIIcontent", "j2735.CCMPartIIcontent_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
-    { &hf_j2735_partII_Id_01,
-      { "partII-Id", "j2735.partII_Id",
-        FT_UINT32, BASE_DEC, VALS(j2735_CCMPartII_Id_vals), 0,
-        "CCMPartII_Id", HFILL }},
     { &hf_j2735_partII_Value_01,
       { "partII-Value", "j2735.partII_Value_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -30516,8 +30540,8 @@ void proto_register_j2735(void) {
         NULL, HFILL }},
     { &hf_j2735_maneuverID,
       { "maneuverID", "j2735.maneuverID",
-        FT_UINT32, BASE_DEC, VALS(j2735_ManeuverID_vals), 0,
-        NULL, HFILL }},
+        FT_UINT32, BASE_DEC, VALS(j2735_CCMManeuverID_vals), 0,
+        "CCMManeuverID", HFILL }},
     { &hf_j2735_accelTimeConst_01,
       { "accelTimeConst", "j2735.accelTimeConst",
         FT_UINT32, BASE_DEC, NULL, 0,
@@ -31489,7 +31513,7 @@ void proto_register_j2735(void) {
     { &hf_j2735_meanVerticalVariation_01,
       { "meanVerticalVariation", "j2735.meanVerticalVariation",
         FT_UINT32, BASE_DEC, NULL, 0,
-        "MeanVariationC", HFILL }},
+        "MeanVariationRpt", HFILL }},
     { &hf_j2735_verticalVariationStdDev_01,
       { "verticalVariationStdDev", "j2735.verticalVariationStdDev",
         FT_UINT32, BASE_DEC, NULL, 0,
@@ -31497,7 +31521,7 @@ void proto_register_j2735(void) {
     { &hf_j2735_meanHorizontalVariation_01,
       { "meanHorizontalVariation", "j2735.meanHorizontalVariation",
         FT_UINT32, BASE_DEC, NULL, 0,
-        "MeanVariationC", HFILL }},
+        "MeanVariationRpt", HFILL }},
     { &hf_j2735_horizontalVariationStdDev_01,
       { "horizontalVariationStdDev", "j2735.horizontalVariationStdDev",
         FT_UINT32, BASE_DEC, NULL, 0,
@@ -31726,6 +31750,10 @@ void proto_register_j2735(void) {
       { "destinationIDs", "j2735.destinationIDs",
         FT_UINT32, BASE_DEC, NULL, 0,
         "TemporaryIDList", HFILL }},
+    { &hf_j2735_maneuverID_01,
+      { "maneuverID", "j2735.maneuverID",
+        FT_UINT32, BASE_DEC, NULL, 0,
+        NULL, HFILL }},
     { &hf_j2735_maneuver_01,
       { "maneuver", "j2735.maneuver_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -31786,6 +31814,18 @@ void proto_register_j2735(void) {
       { "executantVehPosConfidence", "j2735.executantVehPosConfidence_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "PositionConfidenceSet", HFILL }},
+    { &hf_j2735_offsetX,
+      { "offsetX", "j2735.offsetX",
+        FT_INT32, BASE_DEC, NULL, 0,
+        "ObjectDistance", HFILL }},
+    { &hf_j2735_offsetY,
+      { "offsetY", "j2735.offsetY",
+        FT_INT32, BASE_DEC, NULL, 0,
+        "ObjectDistance", HFILL }},
+    { &hf_j2735_offsetZ,
+      { "offsetZ", "j2735.offsetZ",
+        FT_INT32, BASE_DEC, NULL, 0,
+        "ObjectDistance", HFILL }},
     { &hf_j2735_tRRType,
       { "tRRType", "j2735.tRRType",
         FT_UINT32, BASE_DEC, VALS(j2735_TRRType_vals), 0,
@@ -32094,6 +32134,10 @@ void proto_register_j2735(void) {
       { "tollChargerInfo", "j2735.tollChargerInfo_element",
         FT_NONE, BASE_NONE, NULL, 0,
         NULL, HFILL }},
+    { &hf_j2735_timestamp,
+      { "timestamp", "j2735.timestamp_element",
+        FT_NONE, BASE_NONE, NULL, 0,
+        "DDateTime", HFILL }},
     { &hf_j2735_tumInstructions,
       { "tumInstructions", "j2735.tumInstructions_element",
         FT_NONE, BASE_NONE, NULL, 0,
@@ -32601,7 +32645,7 @@ void proto_register_j2735(void) {
     { &hf_j2735_pos_01,
       { "pos", "j2735.pos_element",
         FT_NONE, BASE_NONE, NULL, 0,
-        "PositionOffsetXYZ", HFILL }},
+        "PositionOffsetXYZj3224", HFILL }},
     { &hf_j2735_speedConfidence_01,
       { "speedConfidence", "j2735.speedConfidence",
         FT_UINT32, BASE_DEC, VALS(j2735_SpeedConfidence_vals), 0,
@@ -32674,18 +32718,18 @@ void proto_register_j2735(void) {
       { "obstSizeConfidence", "j2735.obstSizeConfidence_element",
         FT_NONE, BASE_NONE, NULL, 0,
         "ObstacleSizeConfidence", HFILL }},
-    { &hf_j2735_offsetX,
+    { &hf_j2735_offsetX_01,
       { "offsetX", "j2735.offsetX",
         FT_INT32, BASE_DEC, NULL, 0,
-        "ObjectDistance", HFILL }},
-    { &hf_j2735_offsetY,
+        "ObjectDistancej3224", HFILL }},
+    { &hf_j2735_offsetY_01,
       { "offsetY", "j2735.offsetY",
         FT_INT32, BASE_DEC, NULL, 0,
-        "ObjectDistance", HFILL }},
-    { &hf_j2735_offsetZ,
+        "ObjectDistancej3224", HFILL }},
+    { &hf_j2735_offsetZ_01,
       { "offsetZ", "j2735.offsetZ",
         FT_INT32, BASE_DEC, NULL, 0,
-        "ObjectDistance", HFILL }},
+        "ObjectDistancej3224", HFILL }},
     { &hf_j2735_pitch_01,
       { "pitch", "j2735.pitch",
         FT_INT32, BASE_DEC, NULL, 0,
@@ -32710,6 +32754,14 @@ void proto_register_j2735(void) {
       { "yawConfidence", "j2735.yawConfidence",
         FT_UINT32, BASE_DEC, VALS(j2735_HeadingConfidence_vals), 0,
         "HeadingConfidence", HFILL }},
+    { &hf_j2735_pitchRate_01,
+      { "pitchRate", "j2735.pitchRate",
+        FT_INT32, BASE_DEC, NULL, 0,
+        "PitchRatej3224", HFILL }},
+    { &hf_j2735_rollRate_01,
+      { "rollRate", "j2735.rollRate",
+        FT_INT32, BASE_DEC, NULL, 0,
+        "RollRatej3224", HFILL }},
     { &hf_j2735_pitchRateConfidence,
       { "pitchRateConfidence", "j2735.pitchRateConfidence",
         FT_UINT32, BASE_DEC, VALS(j2735_PitchRateConfidence_vals), 0,
@@ -34150,6 +34202,7 @@ void proto_register_j2735(void) {
     &ett_j2735_SubManeuverList,
     &ett_j2735_SubManeuver,
     &ett_j2735_CurrentStateData,
+    &ett_j2735_PositionOffsetXYZ,
     &ett_j2735_TargetRoadResource,
     &ett_j2735_TRRLocation,
     &ett_j2735_TRRLocationType1,
@@ -34233,7 +34286,7 @@ void proto_register_j2735(void) {
     &ett_j2735_DetectedVehicleData,
     &ett_j2735_DetectedVRUData,
     &ett_j2735_DetectedObstacleData,
-    &ett_j2735_PositionOffsetXYZ,
+    &ett_j2735_PositionOffsetXYZj3224,
     &ett_j2735_Attitude,
     &ett_j2735_AttitudeConfidence,
     &ett_j2735_AngularVelocity,

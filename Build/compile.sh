@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export WIRESHARK_VERSION_EXTRA=-J2735-20240528
+export WIRESHARK_VERSION_EXTRA=-J2735-20240916
 
 rm -rf wireshark-ninja
 mkdir -p wireshark-ninja

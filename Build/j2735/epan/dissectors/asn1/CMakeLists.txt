@@ -28,6 +28,7 @@ set(ASN1_SRC_DIRS
 	cmip
 	cmp
 	cms
+	cosem
 	credssp
 	crmf
 	dap
@@ -35,11 +36,11 @@ set(ASN1_SRC_DIRS
 	dop
 	dsp
 	e1ap
-    e2ap
+	e2ap
 	ess
 	f1ap
 	ftam
-    gdt
+	gdt
 	glow
 	goose
 	gprscdr
@@ -107,6 +108,7 @@ set(ASN1_SRC_DIRS
 	q932-ros
 	qsig
 	ranap
+	rc-v3
 	rnsap
 	ros
 	rrc

@@ -24,6 +24,11 @@ Use latest release build only, using SAE J2735-2023 and above
 2. apt-get -f install
 
 For DIY folks, the gory details for building Wireshark on Linux is here: https://www.wireshark.org/docs/wsdg_html_chunked/ChSrcBuildFirstTime.html#_building_on_unix
+Scripts for Ubuntu and RedHat Linux (RHEL) are available:
+1. ubuntu-clone.sh - will clone the Wireshark repository
+2. ubuntu-setup.sh - will install packages and environment for building
+3. ubuntu-compile.sh - will build Wireshark for you
+4. ubuntu-package.sh - will build debian packages for easy installation
 
 **Windows Installer** (don't install over existing production release)
 1. Run install.bat to combine split files and run installer

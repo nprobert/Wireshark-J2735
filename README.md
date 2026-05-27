@@ -17,7 +17,7 @@
 3. The J2735-2023 release is backwards incompatible with J2735-2020 using the BSM frame VehicleData, which is not specified in J2945/1.
 
 **Releases**
-Use latest release build only, using SAE J2735-2023 and above
+Use latest release build only, using SAE J2735-2024 and above
 
 **Linux (Debian/Ubuntu) Packages**
 1. dpkg -i *.deb

@@ -39,16 +39,16 @@ static dissector_handle_t j2735_handle;
 #endif
 
 /* Initialize the protocol and registered fields */
-int proto_j2735 = -1;
+static int proto_j2735;
 #include "packet-j2735-hf.c"
 
 /* Initialize the subtree pointers */
-static int ett_j2735 = -1;
+static int ett_j2735;
 #include "packet-j2735-ett.c"
 
 /* Global variables */
-static guint32 DSRCmsgID;
-static guint32 PartII_Id;
+static uint32_t DSRCmsgID;
+static uint32_t PartII_Id;
 
 static dissector_table_t dsrcmsgid_dissector_table;
 static dissector_table_t j2735_partii_id_dissector_table;
@@ -57,12 +57,12 @@ static dissector_table_t j2735_partii_id_dissector_table;
 
 static int dissect_j2735_DSRCmsgID_msg(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void *data _U_)
 {
-    return (dissector_try_uint_new(dsrcmsgid_dissector_table, DSRCmsgID, tvb, pinfo, tree, FALSE, NULL)) ? tvb_captured_length(tvb) : 0;
+    return (dissector_try_uint_with_data(dsrcmsgid_dissector_table, DSRCmsgID, tvb, pinfo, tree, FALSE, NULL)) ? tvb_captured_length(tvb) : 0;
 }
 
 static int dissect_j2735_partii_value(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void *data _U_)
 {
-    return (dissector_try_uint_new(j2735_partii_id_dissector_table, PartII_Id, tvb, pinfo, tree, FALSE, NULL)) ? tvb_captured_length(tvb) : 0;
+    return (dissector_try_uint_with_data(j2735_partii_id_dissector_table, PartII_Id, tvb, pinfo, tree, FALSE, NULL)) ? tvb_captured_length(tvb) : 0;
 }
 
 #include "packet-j2735-fn.c"
@@ -98,7 +98,7 @@ void proto_register_j2735(void) {
   };
 
   /* List of subtrees */
-  static gint *ett[] = {
+  static int *ett[] = {
       &ett_j2735,
 #include "packet-j2735-ettarr.c"
   };

@@ -20,8 +20,8 @@
 Use latest release build only, using SAE J2735-2024 and above
 
 **Linux (Debian/Ubuntu) Packages**
-1. dpkg -i *.deb
-2. apt-get -f install
+1. sudo dpkg -i *.deb
+2. sudo apt update --fix-missing; sudo apt-get -f install
 
 For DIY folks, the gory details for building Wireshark on Linux is here: https://www.wireshark.org/docs/wsdg_html_chunked/ChSrcBuildFirstTime.html#_building_on_unix
 Scripts for Ubuntu and RedHat Linux (RHEL) are available:
@@ -30,10 +30,16 @@ Scripts for Ubuntu and RedHat Linux (RHEL) are available:
 3. ubuntu-compile.sh - will build Wireshark for you
 4. ubuntu-package.sh - will build debian packages for easy installation
 
-**Windows Installer** (don't install over existing production release)
-1. Run install.bat to combine split files and run installer
-
 For DIY folks, the build for Windows is here: https://www.wireshark.org/docs/wsdg_html_chunked/ChSetupWin32.html
+**Windows Build**
+1. You'll need to download and install Qt6 from qt.io
+2. Run the Qt Maintenance Tool to install the Qt5 Core Compatibility package
+3. win-setup.bat - will clone the Wireshark repository and copy the J2735 files
+4. win-compile.bat = will build the application
+5. win-package.bat - will build the installer
+6. I use HJSplit to split the installer into 2 files to fit into the Git repository
+**Windows Installer** (don't install over existing production release)
+7. Run install.bat to combine split files and run installer
 
 **Sources**
 1. git clone https://code.wireshark.org/review/wireshark

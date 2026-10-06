@@ -50,6 +50,9 @@ For DIY folks, the build for Windows is here: https://www.wireshark.org/docs/wsd
 **Issues**
 1. Does not dissect 3rd party regional extensions to J2735 as this required modified ASN.1 to compiled with
 
+**Examples**
+1. Using tshark, if you know the PSID:  tshark -r c:\pcaps\test.pcap -Y "wsmp.psid == 129" -T json > c:\pcaps\test_rtcm_verbose.json
+
 **I cannot release the ASN.1 file for SAE J2735 because it is copyrighted material!  However the J2735 documentation and J2945 ASN.1 are free from SAE here:**
 1. https://www.sae.org/standards/j2735_202409-v2x-communications-message-set-dictionary
 2. https://www.sae.org/standards/content/j2735ASN_202409/

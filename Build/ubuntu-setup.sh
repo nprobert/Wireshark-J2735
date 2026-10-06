@@ -9,8 +9,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "=== Installing build dependencies ==="
-if [ -f wireshark/tools/debian-setup.sh ]; then
-	sudo wireshark/tools/debian-setup.sh --install-optional --install-deb-deps --install-test-deps
+if [ -f wireshark/tools/os_setup/debian-setup.sh ]; then
+	sudo wireshark/tools/os_setup/debian-setup.sh --install-optional --install-deb-deps --install-test-deps
 else
 	echo "ERROR: wireshark source not found. Run ubuntu-clone.sh first."
 	exit 1

@@ -9,8 +9,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
 echo "=== Installing build dependencies ==="
-if [ -f wireshark/tools/rpm-setup.sh ]; then
-	sudo wireshark/tools/rpm-setup.sh --install-optional
+if [ -f wireshark/tools/os_setup/rpm-setup.sh ]; then
+	sudo wireshark/tools/os_setup/rpm-setup.sh --install-optional
 else
 	echo "ERROR: wireshark source not found. Run rhel-clone.sh first."
 	exit 1

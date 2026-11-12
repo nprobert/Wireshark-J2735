@@ -2,8 +2,13 @@
 **Wireshark custom build with DSRC (IEEE 802.11p, WSMP and 1609.2) support and SAE J2735 Dissector**
 1. Wireshark builds have moved to Ubuntu 24.04 and higher, Windows 10/11 and 4.7.X development branch, 64-bit only
 2. Wireshark 3.0.0 added support for EU ITS, WSMP and 1609.2 thanks to ETSI and Wireshark Devs
-3. Supports the IEEE 1609.2, 1609.3-WSMP and SAE J2735-2023 standards
+3. Supports the IEEE 1609.2, 1609.3-WSMP, 1609.3-WSA and SAE J2735-2023 standards
 4. IEEE 1609.3 is not fully supported and 1609.4 will probably never be supported
+
+**IEEE 1609.3 WAVE Service Advertisement (WSA)**
+1. `Build/ieee1609dot3/epan/dissectors/packet-wsa.c` decodes WSAs (PSID 0x87): header extensions (location, repeat rate, advertiser ID), Service Info (PSID, channel index, provider service context, IPv6/port/MAC, thresholds), Channel Info (operating class, channel, power, data rate, EDCA, channel access) and the WAVE Routing Advertisement
+2. It is hand-written against the 1609.3-2020 UPER layout, so no IEEE ASN.1 files are needed or included
+3. Display filter `wsa`, e.g. `wsa.service.psid == 0x20` or `wsa.channel.number == 183`
 
 **C-V2X**
 1. Does not support C-V2X cellular stack yet, but most C-V2X OBU vendors will output a special packet:

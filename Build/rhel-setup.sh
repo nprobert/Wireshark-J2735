@@ -45,4 +45,18 @@ fi
 # that is already compiled via the dissectors CMakeLists.txt entry above.
 
 echo ""
+echo "=== Copying IEEE 1609.3 WSA dissector ==="
+
+# Hand-written WSA dissector (registered on 1609.2 PSID 0x87); no ASN.1 needed
+cp ./ieee1609dot3/epan/dissectors/packet-wsa.c "$DEST/"
+
+# Add packet-wsa.c to dissectors CMakeLists.txt (before packet-wsmp.c, alphabetical order)
+if ! grep -q 'packet-wsa\.c' "$DEST/CMakeLists.txt"; then
+	sed -i '/\/packet-wsmp\.c/i\\t${CMAKE_CURRENT_SOURCE_DIR}/packet-wsa.c' "$DEST/CMakeLists.txt"
+	echo "Added packet-wsa.c to $DEST/CMakeLists.txt"
+else
+	echo "packet-wsa.c already in $DEST/CMakeLists.txt"
+fi
+
+echo ""
 echo "=== Setup complete ==="

@@ -47,7 +47,7 @@ static dissector_handle_t j2735_handle;
 #endif
 
 /* Initialize the protocol and registered fields */
-int proto_j2735 = -1;
+static int proto_j2735;
 
 /*--- Included file: packet-j2735-hf.c ---*/
 #line 1 "./asn1/j2735/packet-j2735-hf.c"
